@@ -14,12 +14,38 @@ const MAX_PER_RUN = 40;
 const dryRun = process.argv.includes('--dry-run');
 
 const norm = (t) => String(t || '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-  .replace(/[™®©]/g, '').replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-const platformOf = (text) => /switch[\s_-]*2/i.test(text) ? 'switch2' : /switch/i.test(text) ? 'switch1' : null;
+  .replace(/[™®©]/g, '').replace(/[’']/g, '').replace(/\+/g, ' plus ').replace(/&/g, ' and ')
+  .replace(/[^a-z0-9]+/g, ' ').trim();
+
+// nintendo.com product addresses end in "-switch" (Switch 1) or "-switch-2" (Switch 2),
+// e.g. /store/products/mario-kart-8-deluxe-switch/. Score how well an address fits a game:
+// right platform, not an amiibo or other merchandise, and a name as close as possible.
+function score(title, chart, href) {
+  const slug = (String(href).match(/\/products\/([^/?#]+)\/?$/) || [])[1] || '';
+  const suffix = chart === 'switch2' ? /-switch-2$/ : /-switch$/;
+  if (!suffix.test(slug)) return 0;
+  if (/amiibo/.test(slug) && !/amiibo/i.test(title)) return 0;
+  const base = slug.replace(suffix, '').replace(/-/g, ' ');
+  const want = norm(title);
+  if (!want) return 0;
+  if (base === want) return 100;
+  if (base.startsWith(want + ' ')) return 60 - Math.min(40, base.length - want.length);
+  if (want.startsWith(base + ' ')) return 50 - Math.min(40, want.length - base.length);
+  if (base.includes(want)) return 30 - Math.min(20, (base.length - want.length) / 2);
+  return 0;
+}
 
 const history = JSON.parse(await fs.readFile(HISTORY, 'utf8'));
 let links = {};
 try { links = JSON.parse(await fs.readFile(OUT, 'utf8')); } catch { /* first run */ }
+
+// Drop saved links that don't pass the current checks, so they get looked up again.
+let dropped = 0;
+for (const [key, href] of Object.entries(links)) {
+  const i = key.indexOf('|');
+  if (score(key.slice(i + 1), key.slice(0, i), href) <= 0) { delete links[key]; dropped++; }
+}
+if (dropped) console.log(`Re-checking ${dropped} saved link(s) that looked wrong.`);
 
 const wanted = new Map();
 for (const day of Object.values(history.days || {})) {
@@ -30,7 +56,11 @@ for (const day of Object.values(history.days || {})) {
     }
   }
 }
-if (!wanted.size) { console.log('Every US game already has a link.'); process.exit(0); }
+if (!wanted.size) {
+  if (dropped) await fs.writeFile(OUT, JSON.stringify(links, null, 2) + '\n');
+  console.log('Every US game already has a link.');
+  process.exit(0);
+}
 console.log(`Looking up ${Math.min(wanted.size, MAX_PER_RUN)} of ${wanted.size} games without a link...`);
 
 const browser = await chromium.launch();
@@ -49,24 +79,16 @@ try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
       await page.waitForSelector('a[href*="/store/products/"]', { timeout: 30_000 });
       await page.waitForTimeout(3000);
-      const cards = await page.$$eval('a[href*="/store/products/"]', (as) => as.map((a) => ({
-        href: a.href.split(/[?#]/)[0],
-        text: ((a.closest('li, article') || a).innerText || '').trim(),
-      })));
-      const want = norm(title);
+      const hrefs = await page.$$eval('a[href*="/store/products/"]', (as) => as.map((a) => a.href.split(/[?#]/)[0]));
       let best = null, bestScore = 0;
-      for (const c of cards) {
-        const t = norm(c.text);
-        let score = 0;
-        if (t.includes(want)) score += 2;
-        else if (want.length > 12 && t.includes(want.slice(0, Math.floor(want.length * 0.7)))) score += 1;
-        if (score && platformOf(c.text) === chart) score += 1;
-        if (score > bestScore) { best = c; bestScore = score; }
+      for (const href of new Set(hrefs)) {
+        const sc = score(title, chart, href);
+        if (sc > bestScore) { best = href; bestScore = sc; }
       }
-      if (best && bestScore >= 2) {
-        links[key] = best.href;
+      if (best) {
+        links[key] = best;
         found++;
-        console.log(`  found   ${title} (${chart}) -> ${best.href}`);
+        console.log(`  found   ${title} (${chart}) -> ${best}`);
       } else {
         console.log(`  no match ${title} (${chart})`);
       }
@@ -79,7 +101,7 @@ try {
 }
 
 console.log(`Found ${found} new link(s).`);
-if (dryRun || !found) process.exit(0);
+if (dryRun || (!found && !dropped)) process.exit(0);
 const sorted = Object.fromEntries(Object.entries(links).sort(([a], [b]) => a.localeCompare(b)));
 await fs.writeFile(OUT, JSON.stringify(sorted, null, 2) + '\n');
 console.log(`Saved ${OUT}`);
