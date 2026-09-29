@@ -1,0 +1,12 @@
+{
+  "name": "STREAK-TENDO - eShop #1 Top Game by Day",
+  "short_name": "STREAK-TENDO",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F8F6F1",
+  "theme_color": "#2B48D6",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "eshop-number-one",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "test-scrape": "node scripts/scrape.mjs --dry-run"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
