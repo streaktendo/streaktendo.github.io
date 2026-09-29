@@ -136,11 +136,15 @@ async function readChart(context, chart) {
     for (let i = 0; i < 3; i++) { await page.mouse.wheel(0, 1200); await page.waitForTimeout(700); }
     await page.waitForTimeout(1500);
 
+    // Work through the list in order so each rank is read relative to the one before it.
     let prev = 0;
-    const games = (await page.evaluate(extract, CHART_SELECTOR))
-      .map((g) => ({ ...splitRank(cleanTitle(g.title), prev), url: g.url, imageUrl: g.image }))
-      .filter((g) => g.title)
-      .map((g) => { prev = g.rank; return g; });
+    const games = [];
+    for (const g of await page.evaluate(extract, CHART_SELECTOR)) {
+      const r = splitRank(cleanTitle(g.title), prev);
+      if (!r.title) continue;
+      games.push({ ...r, url: g.url, imageUrl: g.image });
+      prev = r.rank;
+    }
 
     if (games.length < MIN_GAMES) {
       await saveDebug(page, chart.id, `Found only ${games.length} games.`);

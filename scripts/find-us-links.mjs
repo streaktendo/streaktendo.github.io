@@ -43,9 +43,12 @@ try {
   for (const [key, { chart, title }] of [...wanted].slice(0, MAX_PER_RUN)) {
     const url = `https://www.nintendo.com/us/search/#q=${encodeURIComponent(title)}&p=1&cat=gme&sort=df`;
     try {
+      // Load a blank page first: the search URLs differ only after the "#", so without
+      // this the browser keeps showing the previous search's results.
+      await page.goto('about:blank');
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
       await page.waitForSelector('a[href*="/store/products/"]', { timeout: 30_000 });
-      await page.waitForTimeout(1500);
+      await page.waitForTimeout(3000);
       const cards = await page.$$eval('a[href*="/store/products/"]', (as) => as.map((a) => ({
         href: a.href.split(/[?#]/)[0],
         text: ((a.closest('li, article') || a).innerText || '').trim(),
