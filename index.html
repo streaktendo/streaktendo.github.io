@@ -34,6 +34,11 @@ section{margin-top:44px}
 .hero-label{color:var(--muted);font-size:.95rem;margin:0 0 14px}
 .hero-art{display:block;width:min(100%,540px);margin:0 auto;border-radius:22px;box-shadow:0 18px 50px rgba(31,29,26,.18),0 2px 6px rgba(31,29,26,.08);background:var(--surface);overflow:hidden}
 .hero-art img{display:block;width:100%;height:auto}
+a.hero-art{transition:transform .2s ease,box-shadow .2s ease}
+a.hero-art:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(31,29,26,.22),0 2px 6px rgba(31,29,26,.08)}
+a.thumb{display:block}
+.name-link{color:inherit;text-decoration:none}
+.name-link:hover{text-decoration:underline;text-underline-offset:3px}
 .hero-game{font-size:clamp(1.8rem,6vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin:22px auto 8px;max-width:640px;overflow-wrap:anywhere}
 .hero-meta{color:var(--muted);font-size:1rem;margin:0}
 .pips{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:14px auto 0;max-width:540px}
@@ -111,8 +116,10 @@ var MONTHS_L=['January','February','March','April','May','June','July','August',
 var CHARTS=[['switch2','Switch 2'],['switch1','Switch 1']];
 // To add a region: add a line here and a data/<id>/history.json file.
 var REGIONS=[
-  {id:'us',label:'US',name:'the US',source:'Checked once a day from the US Best Sellers lists in the Nintendo Store app.'},
-  {id:'au',label:'Australia',name:'Australia',source:'Checked once a day from the Nintendo Australia store\'s digital-download charts.'}
+  {id:'us',label:'US',name:'the US',source:'Checked once a day from the US Best Sellers lists in the Nintendo Store app.',
+   search:function(q){return 'https://www.nintendo.com/us/search/#q='+encodeURIComponent(q)+'&p=1&cat=gme&sort=df';}},
+  {id:'au',label:'Australia',name:'Australia',source:'Checked once a day from the Nintendo Australia store\'s digital-download charts.',
+   search:function(q){return 'https://store.nintendo.com.au/au/catalogsearch/result/?q='+encodeURIComponent(q);}}
 ];
 var region=pickRegion();
 function regionInfo(){return REGIONS.filter(function(r){return r.id===region;})[0]||REGIONS[0];}
@@ -122,6 +129,7 @@ function pickRegion(){
   try{saved=localStorage.getItem('streaktendo-region');}catch(e){}
   return ids.indexOf(saved)>=0?saved:ids[0];
 }
+var links={}, extraLinks={};
 var history=null, chart='switch2', winEnd=null, WIN=14, calY, calM, selDate=null, entries=[], images={};
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -133,7 +141,7 @@ function hue(name){var h=0,s=name.toLowerCase();for(var i=0;i<s.length;i++)h=(h*
 function col(name){return 'hsl('+hue(name)+' 55% var(--bar-l))';}
 function stripRank(t,rank){var m=String(t||'').match(/^#?(\d{1,3})[.):]?\s+(.+)$/);return m&&Number(m[1])===rank?m[2]:String(t||'');}
 function cleanList(list){var prev=0;return (list||[]).map(function(g){var t=String(g.title||''),r=prev+1,m=t.match(/^#?(\d{1,3})[.):]?\s+(.+)$/);
-  if(m&&Number(m[1])>prev&&Number(m[1])<=prev+5){r=Number(m[1]);t=m[2];}prev=r;return {rank:r,title:t,image:g.image};});}
+  if(m&&Number(m[1])>prev&&Number(m[1])<=prev+5){r=Number(m[1]);t=m[2];}prev=r;return {rank:r,title:t,image:g.image,url:g.url};});}
 function chartLabel(){return (CHARTS.filter(function(c){return c[0]===chart;})[0]||['',''])[1];}
 
 function art(game,eager){
@@ -142,12 +150,22 @@ function art(game,eager){
   return '<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
 }
 
+// Store link for a game: exact product page when known, otherwise a store search for its name.
+function buyUrl(game){
+  return links[chart+'|'+game]||links[game]||regionInfo().search(game);
+}
+function buyLink(game,inner,cls){
+  return '<a class="'+(cls||'')+'" href="'+esc(buyUrl(game))+'" target="_blank" rel="noopener" title="'+esc(game)+' in the Nintendo eShop">'+inner+'</a>';
+}
+
 function indexImages(){
-  images={};var days=history.days||{};
+  images={};links={};var days=history.days||{};
+  Object.keys(extraLinks||{}).forEach(function(k){links[k]=extraLinks[k];});
   var pri=function(src){return /\/art\//.test(src)?2:1;};
   var better=function(t,src){if(!src||/^https?:/.test(src))return;if(!images[t]||pri(src)>pri(images[t]))images[t]=src;};
   Object.keys(history.images||{}).forEach(function(t){better(cleanList([{title:t}])[0].title,history.images[t]);better(t,history.images[t]);});
-  Object.keys(days).forEach(function(d){var ch=days[d].charts||{};Object.keys(ch).forEach(function(k){cleanList(ch[k]).forEach(function(g){better(g.title,g.image);});});});
+  Object.keys(days).sort().forEach(function(d){var ch=days[d].charts||{};Object.keys(ch).forEach(function(k){cleanList(ch[k]).forEach(function(g){better(g.title,g.image);
+    if(/^https?:\/\//.test(g.url||'')){links[k+'|'+g.title]=g.url;links[g.title]=g.url;}});});});
 }
 function build(){
   var days=history.days||{};
@@ -174,7 +192,7 @@ function hero(st){
   var t=toNum(todayStr()), last=st[st.length-1], isToday=last.end===t;
   var label=(isToday?'Today\'s top '+chartLabel()+' game':'Top '+chartLabel()+' game on '+nice(last.end))+' in '+regionInfo().name;
   var pips='';for(var i=0;i<Math.min(last.len,60);i++)pips+='<span class="pip" style="background:'+col(last.game)+'"></span>';
-  return '<div class="hero"><p class="hero-label">'+esc(label)+'</p><div class="hero-art">'+art(last.game,true)+'</div>'+
+  return '<div class="hero"><p class="hero-label">'+esc(label)+'</p>'+buyLink(last.game,art(last.game,true),'hero-art')+
     '<div class="hero-game">'+esc(last.game)+'</div>'+
     '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
@@ -195,7 +213,7 @@ function detail(){
   if(!selDate)return '';
   var rec=(history.days||{})[selDate], list=rec&&rec.charts&&cleanList(rec.charts[chart]);
   var body=list&&list.length
-    ?'<ul class="list">'+list.map(function(g){var t=g.title;return '<li><span class="rank">'+g.rank+'</span><span class="thumb">'+art(t)+'</span><span class="grow">'+esc(t)+'</span></li>';}).join('')+'</ul>'
+    ?'<ul class="list">'+list.map(function(g){var t=g.title;return '<li><span class="rank">'+g.rank+'</span>'+buyLink(t,art(t),'thumb')+buyLink(t,esc(t),'grow name-link')+'</li>';}).join('')+'</ul>'
     :'<p class="empty">No chart was recorded this day.</p>';
   return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' top 10, '+nice(toNum(selDate))+'</strong>'+body+'</div>';
 }
@@ -224,7 +242,7 @@ function streakChart(st){
       var a=Math.max(s.start,start),b=Math.min(s.end,end),cls='gt-bar'+(s.start<start?' cut-l':'')+(s.end>end?' cut-r':'');
       return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
     var live=g===current&&st[st.length-1].end>=t-1;
-    return '<div class="gt-row"><div class="gt-name"><span class="thumb">'+art(g)+'</span><span class="grow">'+esc(g)+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
+    return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
   }).join(''):'<p class="empty">No days recorded in these two weeks.</p>';
   var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
   var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous two weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next two weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
@@ -252,7 +270,9 @@ function load(){
   try{localStorage.setItem('streaktendo-region',region);}catch(e){}
   try{var u=new URL(location.href);u.searchParams.set('region',region);window.history.replaceState(null,'',u);}catch(e){}
   selDate=null;winEnd=null;
-  fetch('data/'+region+'/history.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(h){
+  extraLinks={};
+  fetch('data/'+region+'/links.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(l){extraLinks=l||{};
+    return fetch('data/'+region+'/history.json',{cache:'no-store'});}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(h){
   history=h;indexImages();
   var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];
   var keys=Object.keys(h.days||{}).sort(), anchor=keys.length?keys[keys.length-1]:todayStr();
