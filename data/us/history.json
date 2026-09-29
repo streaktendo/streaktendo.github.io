@@ -116,6 +116,120 @@
           }
         ]
       }
+    },
+    "2026-09-29": {
+      "capturedAt": "2026-09-29T16:17:46Z",
+      "method": "app",
+      "no1": {
+        "switch2": "Fire Emblem: Fortune’s Weave",
+        "switch1": "Super Mario Party Jamboree"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Minecraft Dungeons II Deluxe Edition",
+            "image": "data/us/art/minecraft-dungeons-ii-deluxe-edition.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "EA SPORTS FC 27",
+            "image": "data/us/art/ea-sports-fc-27.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Diablo IV: Age of Hatred Collection",
+            "image": "data/us/art/diablo-iv-age-of-hatred-collection.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "LEGO Batman: Legacy of the Dark Knight",
+            "image": "data/us/art/lego-batman-legacy-of-the-dark-knight.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Middle-earth: Shadow Bundle",
+            "image": "data/us/art/middle-earth-shadow-bundle.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "RuneScape: Dragonwilds",
+            "image": "data/us/art/runescape-dragonwilds.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Super Mario Galaxy + Super Mario Galaxy 2",
+            "image": "data/us/art/super-mario-galaxy-super-mario-galaxy-2.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "The Legend of Zelda: Tears of the Kingdom",
+            "image": "data/us/art/the-legend-of-zelda-tears-of-the-kingdom.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "EA SPORTS FC 27",
+            "image": "data/us/art/ea-sports-fc-27.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Nintendo Switch Sports",
+            "image": "data/us/art/nintendo-switch-sports.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Super Mario Bros. Wonder",
+            "image": "data/us/art/super-mario-bros-wonder.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -140,5 +254,5 @@
     "Super Mario Bros. Wonder": "data/us/art/super-mario-bros-wonder.jpg",
     "Nintendo Switch Sports": "data/us/art/nintendo-switch-sports.jpg"
   },
-  "updatedAt": "2026-09-29T04:11:32Z"
+  "updatedAt": "2026-09-29T16:17:46Z"
 }
