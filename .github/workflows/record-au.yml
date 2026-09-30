@@ -33,7 +33,7 @@ jobs:
       - name: Read today's chart
         run: node scripts/scrape.mjs
 
-      - name: Find store links for US games
+      - name: Find store links and pictures for US games
         continue-on-error: true
         run: node scripts/find-us-links.mjs
 
@@ -42,7 +42,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/au
-          if [ -f data/us/links.json ]; then git add data/us/links.json; fi
+          for f in data/us/links.json data/us/web-art.json data/us/web-art; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
           if git diff --cached --quiet; then
             echo "No change to save."
           else
