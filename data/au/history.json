@@ -772,7 +772,7 @@
       }
     },
     "2026-09-30": {
-      "capturedAt": "2026-09-30T13:29:45.249Z",
+      "capturedAt": "2026-09-30T14:27:51.681Z",
       "no1": {
         "switch1": "Mario + Rabbids Sparks of Hope Gold Edition",
         "switch2": "Minecraft Dungeons II"
@@ -881,17 +881,17 @@
           },
           {
             "rank": 7,
-            "title": "Meccha Chameleon",
-            "url": "https://ec.nintendo.com/AU/en/titles/70010000135521",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/3/f3c3a1be1cf1c4a1364293da2040abb264ee4713fd546fb8b3c7f9755a57e1c6_1788968009.jpg",
-            "image": "data/au/art/meccha-chameleon.jpg"
-          },
-          {
-            "rank": 8,
             "title": "Pokémon Pokopia Expansion Pass",
             "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
             "image": "data/au/art/pokemon-pokopia-expansion-pass.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Meccha Chameleon",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000135521",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/3/f3c3a1be1cf1c4a1364293da2040abb264ee4713fd546fb8b3c7f9755a57e1c6_1788968009.jpg",
+            "image": "data/au/art/meccha-chameleon.jpg"
           },
           {
             "rank": 9,
@@ -901,7 +901,7 @@
             "image": "data/au/art/final-fantasy-vii-rebirth.jpg"
           },
           {
-            "rank": 10,
+            "rank": 11,
             "title": "Mario Kart World",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
@@ -925,7 +925,7 @@
       }
     }
   },
-  "updatedAt": "2026-09-30T13:29:45.249Z",
+  "updatedAt": "2026-09-30T14:27:51.681Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
