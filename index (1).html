@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>STREAK-TENDO - eShop #1 Top Game by Day</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="STREAK-TENDO">
+<meta name="theme-color" content="#F8F6F1">
+<!-- Visitor stats (GoatCounter). Pageviews are sent from the page script below. -->
+<script>
+  window.goatcounter = {no_onload: true};
+  // Visit the site with #toggle-goatcounter on the end to stop (or restart) counting your own visits in this browser.
+  if (location.hash === '#toggle-goatcounter') {
+    try {
+      var off = localStorage.getItem('skipgc') === 't';
+      localStorage.setItem('skipgc', off ? 'f' : 't');
+      alert(off ? 'GoatCounter will count this browser again.' : 'GoatCounter will ignore visits from this browser.');
+    } catch (e) {}
+  }
+</script>
+<script data-goatcounter="https://streaktendo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>
+:root{--bg:#F8F6F1;--surface:#FFFFFF;--ink:#1F1D1A;--muted:#6E6A62;--line:#E7E2D8;--accent:#2B48D6;--accent-ink:#FFFFFF;--bar-l:52%;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+#root{max-width:960px;margin:0 auto;padding:18px 16px 48px}
+.top-bar{display:flex;align-items:center;min-height:36px;padding-right:440px}
+/* Switch 1 / Switch 2 buttons follow you down the page */
+.switch-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:-36px;pointer-events:none}
+.switch-wrap .seg{pointer-events:auto;box-shadow:0 4px 16px rgba(31,29,26,.14)}
+@media (max-width:820px){.top-bar{padding-right:0;justify-content:center;text-align:center}.switch-wrap{justify-content:center;margin-top:12px}}
+h1{font-size:1rem;font-weight:600;margin:0;color:var(--muted)}
+h2{font-size:1.35rem;font-weight:800;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.95rem}
+section{margin-top:44px}
+
+/* Hero: the day's top game */
+.hero{margin-top:26px;text-align:center;animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+.hero-label{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.hero-art{display:block;width:min(100%,540px);margin:0 auto;border-radius:22px;box-shadow:0 18px 50px rgba(31,29,26,.18),0 2px 6px rgba(31,29,26,.08);background:var(--surface);overflow:hidden}
+.hero-art img{display:block;width:100%;height:auto}
+a.hero-art{transition:transform .2s ease,box-shadow .2s ease}
+a.hero-art:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(31,29,26,.22),0 2px 6px rgba(31,29,26,.08)}
+a.thumb{display:block}
+.name-link{color:inherit;text-decoration:none}
+.name-link:hover{text-decoration:underline;text-underline-offset:3px}
+.hero-game{font-size:clamp(1.8rem,6vw,3rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin:22px auto 8px;max-width:640px;overflow-wrap:anywhere}
+.hero-meta{color:var(--muted);font-size:1rem;margin:0}
+.pips{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:14px auto 0;max-width:540px}
+.pip{width:14px;height:14px;border-radius:4px}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero{animation:none}}
+
+/* Placeholder when a game has no image yet */
+.ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#fff;font-weight:800;text-align:center;padding:8%;line-height:1.1}
+.hero-art .ph{aspect-ratio:1;font-size:clamp(1.6rem,6vw,2.6rem)}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;color:var(--ink);font:inherit;font-size:.9rem;padding:6px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg.spaced{margin-bottom:12px}
+
+/* Calendar: one picture per day */
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-head strong{font-size:1.1rem}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;width:40px;height:40px;font:inherit;font-size:1.1rem;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.dow{font-size:.75rem;color:var(--muted);text-align:center;padding-bottom:2px}
+.day{aspect-ratio:1;border-radius:8px;border:1px solid var(--line);background:var(--bg);padding:0;font:inherit;color:var(--muted);cursor:pointer;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.day img{width:100%;height:100%;object-fit:cover;display:block}
+.day .ph{font-size:.55rem;padding:3px}
+.day.blank{visibility:hidden}
+.day.nodata{font-size:.75rem;cursor:default}
+.day.today{outline:2.5px solid var(--accent);outline-offset:1px}
+.day.sel{outline:2.5px solid var(--ink);outline-offset:1px}
+
+.list{margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.list li:first-child{border-top:0}
+.thumb{width:48px;height:48px;border-radius:8px;overflow:hidden;flex:none;background:var(--bg)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .ph{font-size:.5rem}
+.rank{width:1.6em;color:var(--muted);font-weight:600;text-align:right;flex:none}
+.grow{flex:1;min-width:0}
+.dates{color:var(--muted);font-size:.85rem}
+.len{font-weight:800;font-size:1.25rem;white-space:nowrap}
+.len small{font-size:.8rem;font-weight:400;color:var(--muted)}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px}
+.empty{color:var(--muted);padding:18px 4px}
+footer{margin-top:40px;color:var(--muted);font-size:.85rem;line-height:1.7}
+footer a{color:var(--accent);font-weight:600}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+/* Streak chart: 14 day columns, one row per game */
+.gt{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:2px}
+.gt-day{text-align:center;font-size:.78rem;color:var(--muted);line-height:1.2;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.gt-months{margin-bottom:4px}
+.gt-month{font-size:.8rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;border-left:1px solid var(--line);padding-left:4px}
+.gt-month:first-child{border-left:0;padding-left:0}
+.gt-day.now{color:var(--accent);font-weight:800}
+.gt-row{margin-top:12px}
+.gt-name{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;margin-bottom:5px;min-width:0}
+.gt-name .thumb{width:28px;height:28px;border-radius:6px}
+.gt-name .grow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gt-cell{grid-row:1;height:26px;background:var(--bg);border-radius:4px}
+.gt-bar{grid-row:1;z-index:1;height:26px;border-radius:7px;color:#fff;font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;min-width:0}
+.gt-bar.cut-l{border-top-left-radius:0;border-bottom-left-radius:0}
+.gt-bar.cut-r{border-top-right-radius:0;border-bottom-right-radius:0}
+.icon-btn:disabled{opacity:.35;cursor:default}
+@media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}.gt{gap:1px}.gt-bar{font-size:.62rem}}
+</style>
+</head>
+<body>
+<div id="root"><p class="sub">Loading…</p></div>
+<script>
+(function(){
+var DAY=86400000;
+var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var MONTHS_L=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var CHARTS=[['switch2','Switch 2'],['switch1','Switch 1']];
+// To add a region: add a line here and a data/<id>/history.json file.
+var REGIONS=[
+  {id:'us',label:'US',name:'the US',source:'Checked once a day from the US Best Sellers lists in the Nintendo Store app.',
+   search:function(q){return 'https://www.nintendo.com/us/search/#q='+encodeURIComponent(q)+'&p=1&cat=gme&sort=df';}},
+  {id:'au',label:'Australia',name:'Australia',source:'Checked once a day from the Nintendo Australia store\'s digital-download charts.',
+   search:function(q){return 'https://store.nintendo.com.au/au/catalogsearch/result/?q='+encodeURIComponent(q);}}
+];
+var region=pickRegion();
+function regionInfo(){return REGIONS.filter(function(r){return r.id===region;})[0]||REGIONS[0];}
+function pickRegion(){
+  var ids=REGIONS.map(function(r){return r.id;}), q=(new URLSearchParams(location.search).get('region')||'').toLowerCase(), saved=null;
+  if(ids.indexOf(q)>=0)return q;
+  try{saved=localStorage.getItem('streaktendo-region');}catch(e){}
+  return ids.indexOf(saved)>=0?saved:ids[0];
+}
+var links={}, extraLinks={};
+var history=null, chart='switch2', winEnd=null, WIN=14, calY, calM, selDate=null, entries=[], images={};
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function toNum(d){var p=d.split('-').map(Number);return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY);}
+function toStr(n){return new Date(n*DAY).toISOString().slice(0,10);}
+function todayStr(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+function nice(n){var d=new Date(n*DAY);return MONTHS[d.getUTCMonth()]+' '+d.getUTCDate();}
+function hue(name){var h=0,s=name.toLowerCase();for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return (h*137)%360;}
+function col(name){return 'hsl('+hue(name)+' 55% var(--bar-l))';}
+function stripRank(t,rank){var m=String(t||'').match(/^#?(\d{1,3})[.):]?\s+(.+)$/);return m&&Number(m[1])===rank?m[2]:String(t||'');}
+function cleanList(list){var prev=0;return (list||[]).map(function(g){var t=String(g.title||''),r=prev+1,m=t.match(/^#?(\d{1,3})[.):]?\s+(.+)$/);
+  if(m&&Number(m[1])>prev&&Number(m[1])<=prev+5){r=Number(m[1]);t=m[2];}prev=r;return {rank:r,title:t,image:g.image,url:g.url};});}
+function chartLabel(){return (CHARTS.filter(function(c){return c[0]===chart;})[0]||['',''])[1];}
+
+function art(game,eager){
+  var src=images[game];
+  if(src)return '<img src="'+esc(src)+'" alt="'+esc(game)+'"'+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async">';
+  return '<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
+}
+
+// Sends a pageview or event to GoatCounter once its script has loaded.
+function gc(vars){
+  try{if(localStorage.getItem('skipgc')==='t')return;}catch(e){}
+  var tries=0;
+  (function go(){
+    if(window.goatcounter&&window.goatcounter.count){try{window.goatcounter.count(vars);}catch(e){}}
+    else if(tries++<50)setTimeout(go,200);
+  })();
+}
+
+// Store link for a game: exact product page when known, otherwise a store search for its name.
+function buyUrl(game){
+  return links[chart+'|'+game]||links[game]||regionInfo().search(game);
+}
+function buyLink(game,inner,cls){
+  return '<a class="'+(cls||'')+'" href="'+esc(buyUrl(game))+'" target="_blank" rel="noopener" data-gc="'+esc('store/'+region+'/'+chart+'/'+game)+'" title="'+esc(game)+' in the Nintendo eShop">'+inner+'</a>';
+}
+
+function indexImages(){
+  images={};links={};var days=history.days||{};
+  Object.keys(extraLinks||{}).forEach(function(k){links[k]=extraLinks[k];});
+  var pri=function(src){return /\/art\//.test(src)?2:1;};
+  var better=function(t,src){if(!src||/^https?:/.test(src))return;if(!images[t]||pri(src)>pri(images[t]))images[t]=src;};
+  Object.keys(history.images||{}).forEach(function(t){better(cleanList([{title:t}])[0].title,history.images[t]);better(t,history.images[t]);});
+  Object.keys(days).sort().forEach(function(d){var ch=days[d].charts||{};Object.keys(ch).forEach(function(k){cleanList(ch[k]).forEach(function(g){better(g.title,g.image);
+    if(/^https?:\/\//.test(g.url||'')){links[k+'|'+g.title]=g.url;links[g.title]=g.url;}});});});
+}
+function build(){
+  var days=history.days||{};
+  entries=Object.keys(days).sort().filter(function(d){return days[d].no1&&days[d].no1[chart];}).map(function(d){return {date:d,game:stripRank(days[d].no1[chart],1)};});
+}
+function byDate(){var m={};entries.forEach(function(e){m[e.date]=e.game;});return m;}
+function streaks(){
+  var out=[],cur=null;
+  entries.forEach(function(e){var n=toNum(e.date);
+    if(cur&&cur.game===e.game&&n===cur.end+1)cur.end=n;else{cur={game:e.game,start:n,end:n};out.push(cur);}});
+  out.forEach(function(s){s.len=s.end-s.start+1;});
+  return out;
+}
+
+function topBar(){
+  var days=history.days||{}, avail=CHARTS.filter(function(c){return Object.keys(days).some(function(d){return days[d].no1&&days[d].no1[c[0]];});});
+  var seg=avail.length>1?'<div class="seg" role="group" aria-label="Which chart">'+avail.map(function(c){return '<button type="button" data-chart="'+c[0]+'" aria-pressed="'+(chart===c[0])+'">'+c[1]+'</button>';}).join('')+'</div>':'';
+  var reg='<div class="seg" role="group" aria-label="Which region">'+REGIONS.map(function(r){return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'">'+r.label+'</button>';}).join('')+'</div>';
+  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1></div><div class="switch-wrap">'+reg+seg+'</div>';
+}
+
+function hero(st){
+  if(!entries.length)return '<div class="hero"><div class="hero-game">Waiting for the first daily check</div><p class="hero-meta">The first entry appears after the scheduled job runs.</p></div>';
+  var t=toNum(todayStr()), last=st[st.length-1], isToday=last.end===t;
+  var label=(isToday?'Today\'s top '+chartLabel()+' game':'Top '+chartLabel()+' game on '+nice(last.end))+' in '+regionInfo().name;
+  var pips='';for(var i=0;i<Math.min(last.len,60);i++)pips+='<span class="pip" style="background:'+col(last.game)+'"></span>';
+  return '<div class="hero"><p class="hero-label">'+esc(label)+'</p>'+buyLink(last.game,art(last.game,true),'hero-art')+
+    '<div class="hero-game">'+esc(last.game)+'</div>'+
+    '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
+}
+
+function calendar(){
+  var map=byDate(), first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
+  var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
+  for(var i=0;i<startDow;i++)h+='<div class="day blank"></div>';
+  for(var d=1;d<=dim;d++){var ds=calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),g=map[ds];
+    var cls='day'+(g?'':' nodata')+(ds===t?' today':'')+(ds===selDate?' sel':'');
+    h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+nice(toNum(ds))+': '+esc(g)+'" title="'+nice(toNum(ds))+': '+esc(g)+'">'+art(g)+'</button>'
+        :'<div class="'+cls+'" aria-hidden="true">'+d+'</div>';}
+  h+='</div>';
+  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
+}
+
+function detail(){
+  if(!selDate)return '';
+  var rec=(history.days||{})[selDate], list=rec&&rec.charts&&cleanList(rec.charts[chart]);
+  var body=list&&list.length
+    ?'<ul class="list">'+list.map(function(g){var t=g.title;return '<li><span class="rank">'+g.rank+'</span>'+buyLink(t,art(t),'thumb')+buyLink(t,esc(t),'grow name-link')+'</li>';}).join('')+'</ul>'
+    :'<p class="empty">No chart was recorded this day.</p>';
+  return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' top 10, '+nice(toNum(selDate))+'</strong>'+body+'</div>';
+}
+
+function streakChart(st){
+  if(!entries.length)return '';
+  var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));
+  var end=winEnd===null?latest:Math.min(winEnd,latest), start=end-WIN+1, t=toNum(todayStr());
+  var vis=st.filter(function(s){return s.end>=start&&s.start<=end;});
+  var current=st[st.length-1].game, rows=[];
+  vis.slice().sort(function(a,b){return b.end-a.end;}).forEach(function(s){if(rows.indexOf(s.game)<0)rows.push(s.game);});
+  rows.sort(function(a,b){return (b===current)-(a===current);});
+  var head='<div class="gt gt-months">', runStart=start;
+  for(var n=start;n<=end+1;n++){
+    if(n>end||(n>start&&new Date(n*DAY).getUTCDate()===1)){
+      head+='<div class="gt-month" style="grid-column:'+(runStart-start+1)+' / '+(n-start+1)+'">'+(n-runStart>=2?MONTHS_L[new Date(runStart*DAY).getUTCMonth()]:'')+'</div>';
+      runStart=n;
+    }
+  }
+  head+='</div><div class="gt">';
+  for(var m=start;m<=end;m++){head+='<div class="gt-day'+(m===t?' now':'')+'">'+new Date(m*DAY).getUTCDate()+'</div>';}
+  head+='</div>';
+  var cells='';for(var i=0;i<WIN;i++)cells+='<div class="gt-cell" style="grid-column:'+(i+1)+'"></div>';
+  var body=rows.length?rows.map(function(g){
+    var bars=vis.filter(function(s){return s.game===g;}).map(function(s){
+      var a=Math.max(s.start,start),b=Math.min(s.end,end),cls='gt-bar'+(s.start<start?' cut-l':'')+(s.end>end?' cut-r':'');
+      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
+    var live=g===current&&st[st.length-1].end>=t-1;
+    return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
+  }).join(''):'<p class="empty">No days recorded in these two weeks.</p>';
+  var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
+  var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous two weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next two weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
+  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div></section>';
+}
+
+function render(){
+  build();
+  var st=streaks();
+  var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
+  document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+
+    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo.</footer>';
+}
+
+document.getElementById('root').addEventListener('click',function(e){
+  var el=e.target.closest('[data-win],[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
+  if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();}}
+  else if(el.dataset.chart){chart=el.dataset.chart;render();}
+  else if(el.dataset.win){var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));winEnd=Math.min((winEnd===null?latest:winEnd)+Number(el.dataset.win)*WIN,latest);if(winEnd===latest)winEnd=null;render();}
+  else if(el.dataset.cal){calM+=Number(el.dataset.cal);if(calM<0){calM=11;calY--;}if(calM>11){calM=0;calY++;}render();}
+  else if(el.dataset.day){selDate=selDate===el.dataset.day?null:el.dataset.day;render();var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
+});
+
+function load(){
+  try{localStorage.setItem('streaktendo-region',region);}catch(e){}
+  try{var u=new URL(location.href);u.searchParams.set('region',region);window.history.replaceState(null,'',u);}catch(e){}
+  selDate=null;winEnd=null;
+  gc({path:'/?region='+region,title:'STREAK-TENDO · '+regionInfo().label});
+  extraLinks={};
+  fetch('data/'+region+'/links.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(l){extraLinks=l||{};
+    return fetch('data/'+region+'/history.json',{cache:'no-store'});}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(h){
+  history=h;indexImages();
+  var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];
+  var keys=Object.keys(h.days||{}).sort(), anchor=keys.length?keys[keys.length-1]:todayStr();
+  var p=anchor.split('-').map(Number);calY=p[0];calM=p[1]-1;render();
+  }).catch(function(err){
+    history={days:{}};
+    var t=todayStr().split('-').map(Number);calY=t[0];calM=t[1]-1;render();
+    document.querySelector('.hero').innerHTML='<p class="empty">Couldn\'t load the '+esc(regionInfo().label)+' data ('+esc(err.message)+').</p>';
+  });
+}
+// Count clicks on store links, so you can see which games people go to buy.
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[data-gc]');
+  if(a)gc({path:a.getAttribute('data-gc'),title:a.getAttribute('title')||'',event:true});
+});
+load();
+})();
+</script>
+</body>
+</html>
