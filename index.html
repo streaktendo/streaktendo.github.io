@@ -12,15 +12,9 @@
 <meta name="theme-color" content="#F8F6F1">
 <!-- Visitor stats (GoatCounter). Pageviews are sent from the page script below. -->
 <script>
+  // Pageviews are sent by the page script. To stop counting your own visits in a browser,
+  // open the site with #toggle-goatcounter on the end; GoatCounter's script handles that.
   window.goatcounter = {no_onload: true};
-  // Visit the site with #toggle-goatcounter on the end to stop (or restart) counting your own visits in this browser.
-  if (location.hash === '#toggle-goatcounter') {
-    try {
-      var off = localStorage.getItem('skipgc') === 't';
-      localStorage.setItem('skipgc', off ? 'f' : 't');
-      alert(off ? 'GoatCounter will count this browser again.' : 'GoatCounter will ignore visits from this browser.');
-    } catch (e) {}
-  }
 </script>
 <script data-goatcounter="https://streaktendo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
