@@ -76,9 +76,6 @@ a.thumb{display:block}
 .day.blank{visibility:hidden}
 .day.nodata{font-size:.75rem;cursor:default}
 .day.today{outline:2.5px solid var(--accent);outline-offset:1px}
-.day.est{border-style:dashed}
-.day.est img,.day.est .ph{opacity:.5}
-.gt-est{grid-row:1;z-index:2;height:26px;pointer-events:none;background:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 3px,transparent 3px 7px)}
 .day.sel{outline:2.5px solid var(--ink);outline-offset:1px}
 
 .list{margin:0;padding:0;list-style:none}
@@ -217,25 +214,25 @@ function topBar(){
 function hero(st){
   if(!entries.length)return '<div class="hero"><div class="hero-game">Waiting for the first daily check</div><p class="hero-meta">The first entry appears after the scheduled job runs.</p></div>';
   var t=toNum(todayStr()), last=st[st.length-1], isToday=last.end===t;
-  var label=(isToday?'Today\'s top '+chartLabel()+' game':'Top '+chartLabel()+' game on '+nice(last.end))+' in '+regionInfo().name;
+  var label=isToday?'Today\'s top '+chartLabel()+' game in '+regionInfo().name
+    :'Top '+chartLabel()+' game in '+regionInfo().name+' as of '+nice(last.end)+', '+new Date(last.end*DAY).getUTCFullYear();
   var pips='';for(var i=0;i<Math.min(last.len,60);i++)pips+='<span class="pip" style="background:'+col(last.game)+'"></span>';
   return '<div class="hero"><p class="hero-label">'+esc(label)+'</p>'+buyLink(last.game,art(last.game,true),'hero-art')+
     '<div class="hero-game">'+esc(last.game)+'</div>'+
-    '<p class="hero-meta">'+(last.len===1?'First day on top':(last.est?'About ':'')+last.len+' days in a row, since '+(last.est?'about ':'')+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
+    '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
 function calendar(){
-  var map=byDate(), anyEst=false, first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
+  var map=byDate(), first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
   var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
   for(var i=0;i<startDow;i++)h+='<div class="day blank"></div>';
   for(var d=1;d<=dim;d++){var ds=calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),en=map[ds],g=en&&en.game;
-    if(en&&en.est)anyEst=true;
     var cls='day'+(g?'':' nodata')+(en&&en.est?' est':'')+(ds===t?' today':'')+(ds===selDate?' sel':'');
-    var tip=g?nice(toNum(ds))+': '+g+(en.est?' (estimated)':''):'';
+    var tip=g?nice(toNum(ds))+': '+g:'';
     h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+esc(tip)+'" title="'+esc(tip)+'">'+art(g)+'</button>'
         :'<div class="'+cls+'" aria-hidden="true">'+d+'</div>';}
   h+='</div>';
-  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.'+(anyEst?' Faded days are estimated from weekly charts.':'')+'</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
+  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
 }
 
 function detail(){
@@ -243,10 +240,9 @@ function detail(){
   var rec=(history.days||{})[selDate], list=rec&&rec.charts&&cleanList(rec.charts[chart]);
   var est=!(rec&&rec.no1&&rec.no1[chart])&&estFor(selDate);
   if(est){
-    var g=est.no1[chart], src=est.source&&est.source[chart];
-    return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' #1, '+nice(toNum(selDate))+' (estimated)</strong>'+
-      '<ul class="list"><li><span class="rank">1</span>'+buyLink(g,art(g),'thumb')+buyLink(g,esc(g),'grow name-link')+'</li></ul>'+
-      '<p class="sub" style="margin:8px 0 0">'+esc((est.basis&&est.basis[chart])||'Estimated from weekly charts')+'.'+(src?' <a class="name-link" style="text-decoration:underline" href="'+esc(src)+'" target="_blank" rel="noopener">Source</a>':'')+'</p></div>';
+    var g=est.no1[chart];
+    return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' #1, '+nice(toNum(selDate))+'</strong>'+
+      '<ul class="list"><li><span class="rank">1</span>'+buyLink(g,art(g),'thumb')+buyLink(g,esc(g),'grow name-link')+'</li></ul></div>';
   }
   var body=list&&list.length
     ?'<ul class="list">'+list.map(function(g){var t=g.title;return '<li><span class="rank">'+g.rank+'</span>'+buyLink(t,art(t),'thumb')+buyLink(t,esc(t),'grow name-link')+'</li>';}).join('')+'</ul>'
@@ -276,14 +272,13 @@ function streakChart(st){
   var body=rows.length?rows.map(function(g){
     var bars=vis.filter(function(s){return s.game===g;}).map(function(s){
       var a=Math.max(s.start,start),b=Math.min(s.end,end),cls='gt-bar'+(s.start<start?' cut-l':'')+(s.end>end?' cut-r':'');
-      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+(s.est?' (includes estimated days)':'')+'">'+(s.est?'~':'')+s.len+'d</div>'+
-        s.estDays.filter(function(n){return n>=start&&n<=end;}).map(function(n){return '<div class="gt-est" style="grid-column:'+(n-start+1)+'"></div>';}).join('');}).join('');
+      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
     var live=g===current&&st[st.length-1].end>=t-1;
     return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
   }).join(''):'<p class="empty">No days recorded in these two weeks.</p>';
   var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
   var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous two weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next two weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
-  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run; ~ and striped days are estimated from weekly charts.</p><div class="panel">'+nav+head+body+'</div></section>';
+  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div></section>';
 }
 
 function render(){
