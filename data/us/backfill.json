@@ -1,0 +1,22 @@
+{
+  "about": "Weekly US eShop chart snapshots used to estimate #1 games for days before daily tracking began. Edit this file, then run: python3 scripts/build_estimates.py us",
+  "max_gap_days": 14,
+  "observations": [
+    {"chart": "switch2", "date": "2026-08-16", "no1": "The Elder Scrolls IV: Oblivion Remastered", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"},
+    {"chart": "switch2", "date": "2026-08-23", "no1": "ELDEN RING Tarnished Edition", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"},
+    {"chart": "switch2", "date": "2026-08-30", "no1": "ELDEN RING Tarnished Edition", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"},
+    {"chart": "switch2", "date": "2026-09-06", "no1": "Orbitals", "source": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"},
+    {"chart": "switch2", "date": "2026-09-13", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"},
+    {"chart": "switch2", "date": "2026-09-20", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"},
+    {"chart": "switch2", "date": "2026-09-27", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/65463-switch-2-eshop-charts-for-sept-27th-2026"},
+
+    {"chart": "switch1", "date": "2026-09-05", "no1": "Tomodachi Life: Living the Dream", "source": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026"},
+    {"chart": "switch1", "date": "2026-09-12", "no1": "Tomodachi Life: Living the Dream", "source": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026"},
+    {"chart": "switch1", "date": "2026-09-19", "no1": "The Legend of Zelda: Tears of the Kingdom", "source": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026"},
+    {"chart": "switch1", "date": "2026-09-26", "no1": "Super Mario Galaxy + Super Mario Galaxy 2", "source": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026"}
+  ],
+  "changeovers": [
+    {"chart": "switch2", "game": "Orbitals", "first_day": "2026-09-03",
+     "reason": "Released September 3, 2026", "source": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"}
+  ]
+}

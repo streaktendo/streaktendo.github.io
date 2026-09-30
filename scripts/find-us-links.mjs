@@ -2,6 +2,10 @@
 // have one yet, and saves them in data/us/links.json as "chart|title": url.
 // The site falls back to a store search link for any game not found here.
 //
+// It also saves a picture from the product page for any game that has no picture
+// yet (games that never appeared in the app's lists, e.g. ones only in estimated
+// days), into data/us/web-art/ and data/us/web-art.json as "title": path.
+//
 //   node scripts/find-us-links.mjs            look up and save
 //   node scripts/find-us-links.mjs --dry-run  look up and print only
 
@@ -47,8 +51,15 @@ for (const [key, href] of Object.entries(links)) {
 }
 if (dropped) console.log(`Re-checking ${dropped} saved link(s) that looked wrong.`);
 
+// Also cover games that only appear in days estimated from weekly charts.
+let estimated = { days: {} };
+try { estimated = JSON.parse(await fs.readFile('data/us/estimated.json', 'utf8')); } catch { /* none yet */ }
+for (const day of Object.values(estimated.days || {})) {
+  day.charts = Object.fromEntries(Object.entries(day.no1 || {}).map(([chart, title]) => [chart, [{ title }]]));
+}
+
 const wanted = new Map();
-for (const day of Object.values(history.days || {})) {
+for (const day of [...Object.values(history.days || {}), ...Object.values(estimated.days || {})]) {
   for (const [chart, list] of Object.entries(day.charts || {})) {
     for (const g of list || []) {
       const key = `${chart}|${g.title}`;
@@ -56,12 +67,8 @@ for (const day of Object.values(history.days || {})) {
     }
   }
 }
-if (!wanted.size) {
-  if (dropped) await fs.writeFile(OUT, JSON.stringify(links, null, 2) + '\n');
-  console.log('Every US game already has a link.');
-  process.exit(0);
-}
-console.log(`Looking up ${Math.min(wanted.size, MAX_PER_RUN)} of ${wanted.size} games without a link...`);
+if (!wanted.size) console.log('Every US game already has a link.');
+else console.log(`Looking up ${Math.min(wanted.size, MAX_PER_RUN)} of ${wanted.size} games without a link...`);
 
 const browser = await chromium.launch();
 const page = await browser.newPage({
@@ -101,7 +108,66 @@ try {
 }
 
 console.log(`Found ${found} new link(s).`);
-if (dryRun || (!found && !dropped)) process.exit(0);
-const sorted = Object.fromEntries(Object.entries(links).sort(([a], [b]) => a.localeCompare(b)));
-await fs.writeFile(OUT, JSON.stringify(sorted, null, 2) + '\n');
-console.log(`Saved ${OUT}`);
+if (!dryRun && (found || dropped)) {
+  const sorted = Object.fromEntries(Object.entries(links).sort(([a], [b]) => a.localeCompare(b)));
+  await fs.writeFile(OUT, JSON.stringify(sorted, null, 2) + '\n');
+  console.log(`Saved ${OUT}`);
+}
+await savePictures();
+
+// ---------------------------------------------------------------- pictures
+async function savePictures() {
+  const ART_DIR = 'data/us/web-art';
+  const ART_INDEX = 'data/us/web-art.json';
+  let webArt = {};
+  try { webArt = JSON.parse(await fs.readFile(ART_INDEX, 'utf8')); } catch { /* first run */ }
+  const haveArt = new Set([...Object.keys(history.images || {}), ...Object.keys(webArt)]);
+  for (const day of Object.values(history.days || {})) {
+    for (const list of Object.values(day.charts || {})) for (const g of list || []) if (g.image) haveArt.add(g.title);
+  }
+  // Games with a store link but no picture anywhere yet.
+  const need = new Map();
+  for (const [key, url] of Object.entries(links)) {
+    const title = key.slice(key.indexOf('|') + 1);
+    if (!haveArt.has(title) && !need.has(title)) need.set(title, url);
+  }
+  if (!need.size) { console.log('Every US game already has a picture.'); return; }
+  console.log(`Fetching pictures for ${need.size} game(s) without one...`);
+  await fs.mkdir(ART_DIR, { recursive: true });
+  const slug = (t) => norm(t).replace(/ /g, '-').slice(0, 80) || 'game';
+  const browser2 = await chromium.launch();
+  const page2 = await browser2.newPage({ locale: 'en-US', userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36' });
+  let saved = 0;
+  try {
+    for (const [title, url] of need) {
+      try {
+        await page2.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+        await page2.waitForTimeout(2000);
+        const imgUrl = await page2.evaluate(() => {
+          const og = document.querySelector('meta[property="og:image"]')?.content;
+          if (og) return og;
+          const tw = document.querySelector('meta[name="twitter:image"]')?.content;
+          return tw || null;
+        });
+        if (!imgUrl) { console.log(`  no picture on page  ${title}`); continue; }
+        const res = await page2.request.get(new URL(imgUrl, url).href, { timeout: 30_000 });
+        const type = res.headers()['content-type'] || '';
+        if (!res.ok() || !type.startsWith('image/')) { console.log(`  download failed     ${title}`); continue; }
+        const ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('avif') ? 'avif' : 'jpg';
+        const path = `${ART_DIR}/${slug(title)}.${ext}`;
+        if (!dryRun) await fs.writeFile(path, await res.body());
+        webArt[title] = path;
+        saved++;
+        console.log(`  picture saved       ${title} -> ${path}`);
+      } catch (e) {
+        console.log(`  failed              ${title}: ${e.message.split('\n')[0]}`);
+      }
+    }
+  } finally {
+    await browser2.close();
+  }
+  if (!dryRun && saved) {
+    await fs.writeFile(ART_INDEX, JSON.stringify(Object.fromEntries(Object.entries(webArt).sort()), null, 2) + '\n');
+    console.log(`Saved ${ART_INDEX}`);
+  }
+}

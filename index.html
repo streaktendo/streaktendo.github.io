@@ -76,6 +76,9 @@ a.thumb{display:block}
 .day.blank{visibility:hidden}
 .day.nodata{font-size:.75rem;cursor:default}
 .day.today{outline:2.5px solid var(--accent);outline-offset:1px}
+.day.est{border-style:dashed}
+.day.est img,.day.est .ph{opacity:.5}
+.gt-est{grid-row:1;z-index:2;height:26px;pointer-events:none;background:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 3px,transparent 3px 7px)}
 .day.sel{outline:2.5px solid var(--ink);outline-offset:1px}
 
 .list{margin:0;padding:0;list-style:none}
@@ -136,7 +139,7 @@ function pickRegion(){
   try{saved=localStorage.getItem('streaktendo-region');}catch(e){}
   return ids.indexOf(saved)>=0?saved:ids[0];
 }
-var links={}, extraLinks={};
+var links={}, extraLinks={}, estimated={}, webArt={};
 var history=null, chart='switch2', winEnd=null, WIN=14, calY, calM, selDate=null, entries=[], images={};
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
@@ -178,22 +181,29 @@ function buyLink(game,inner,cls){
 function indexImages(){
   images={};links={};var days=history.days||{};
   Object.keys(extraLinks||{}).forEach(function(k){links[k]=extraLinks[k];});
+  // Pictures saved from store pages, used only for games with no picture from the charts.
+  Object.keys(webArt||{}).forEach(function(t){if(!images[t])images[t]=webArt[t];});
   var pri=function(src){return /\/art\//.test(src)?2:1;};
   var better=function(t,src){if(!src||/^https?:/.test(src))return;if(!images[t]||pri(src)>pri(images[t]))images[t]=src;};
   Object.keys(history.images||{}).forEach(function(t){better(cleanList([{title:t}])[0].title,history.images[t]);better(t,history.images[t]);});
   Object.keys(days).sort().forEach(function(d){var ch=days[d].charts||{};Object.keys(ch).forEach(function(k){cleanList(ch[k]).forEach(function(g){better(g.title,g.image);
     if(/^https?:\/\//.test(g.url||'')){links[k+'|'+g.title]=g.url;links[g.title]=g.url;}});});});
 }
+// Real daily records always win; estimated days (from weekly charts) only fill dates with no record.
+function estFor(d){var e=(estimated.days||{})[d];return e&&e.no1&&e.no1[chart]?e:null;}
 function build(){
-  var days=history.days||{};
-  entries=Object.keys(days).sort().filter(function(d){return days[d].no1&&days[d].no1[chart];}).map(function(d){return {date:d,game:stripRank(days[d].no1[chart],1)};});
+  var days=history.days||{}, all={};
+  Object.keys(days).forEach(function(d){if(days[d].no1&&days[d].no1[chart])all[d]={date:d,game:stripRank(days[d].no1[chart],1),est:false};});
+  Object.keys(estimated.days||{}).forEach(function(d){var e=estFor(d);if(e&&!all[d])all[d]={date:d,game:e.no1[chart],est:true};});
+  entries=Object.keys(all).sort().map(function(d){return all[d];});
 }
-function byDate(){var m={};entries.forEach(function(e){m[e.date]=e.game;});return m;}
+function byDate(){var m={};entries.forEach(function(e){m[e.date]=e;});return m;}
 function streaks(){
   var out=[],cur=null;
   entries.forEach(function(e){var n=toNum(e.date);
-    if(cur&&cur.game===e.game&&n===cur.end+1)cur.end=n;else{cur={game:e.game,start:n,end:n};out.push(cur);}});
-  out.forEach(function(s){s.len=s.end-s.start+1;});
+    if(cur&&cur.game===e.game&&n===cur.end+1)cur.end=n;else{cur={game:e.game,start:n,end:n,estDays:[]};out.push(cur);}
+    if(e.est)cur.estDays.push(n);});
+  out.forEach(function(s){s.len=s.end-s.start+1;s.est=s.estDays.length>0;});
   return out;
 }
 
@@ -211,24 +221,33 @@ function hero(st){
   var pips='';for(var i=0;i<Math.min(last.len,60);i++)pips+='<span class="pip" style="background:'+col(last.game)+'"></span>';
   return '<div class="hero"><p class="hero-label">'+esc(label)+'</p>'+buyLink(last.game,art(last.game,true),'hero-art')+
     '<div class="hero-game">'+esc(last.game)+'</div>'+
-    '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
+    '<p class="hero-meta">'+(last.len===1?'First day on top':(last.est?'About ':'')+last.len+' days in a row, since '+(last.est?'about ':'')+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
 function calendar(){
-  var map=byDate(), first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
+  var map=byDate(), anyEst=false, first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
   var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
   for(var i=0;i<startDow;i++)h+='<div class="day blank"></div>';
-  for(var d=1;d<=dim;d++){var ds=calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),g=map[ds];
-    var cls='day'+(g?'':' nodata')+(ds===t?' today':'')+(ds===selDate?' sel':'');
-    h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+nice(toNum(ds))+': '+esc(g)+'" title="'+nice(toNum(ds))+': '+esc(g)+'">'+art(g)+'</button>'
+  for(var d=1;d<=dim;d++){var ds=calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),en=map[ds],g=en&&en.game;
+    if(en&&en.est)anyEst=true;
+    var cls='day'+(g?'':' nodata')+(en&&en.est?' est':'')+(ds===t?' today':'')+(ds===selDate?' sel':'');
+    var tip=g?nice(toNum(ds))+': '+g+(en.est?' (estimated)':''):'';
+    h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+esc(tip)+'" title="'+esc(tip)+'">'+art(g)+'</button>'
         :'<div class="'+cls+'" aria-hidden="true">'+d+'</div>';}
   h+='</div>';
-  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
+  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.'+(anyEst?' Faded days are estimated from weekly charts.':'')+'</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
 }
 
 function detail(){
   if(!selDate)return '';
   var rec=(history.days||{})[selDate], list=rec&&rec.charts&&cleanList(rec.charts[chart]);
+  var est=!(rec&&rec.no1&&rec.no1[chart])&&estFor(selDate);
+  if(est){
+    var g=est.no1[chart], src=est.source&&est.source[chart];
+    return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' #1, '+nice(toNum(selDate))+' (estimated)</strong>'+
+      '<ul class="list"><li><span class="rank">1</span>'+buyLink(g,art(g),'thumb')+buyLink(g,esc(g),'grow name-link')+'</li></ul>'+
+      '<p class="sub" style="margin:8px 0 0">'+esc((est.basis&&est.basis[chart])||'Estimated from weekly charts')+'.'+(src?' <a class="name-link" style="text-decoration:underline" href="'+esc(src)+'" target="_blank" rel="noopener">Source</a>':'')+'</p></div>';
+  }
   var body=list&&list.length
     ?'<ul class="list">'+list.map(function(g){var t=g.title;return '<li><span class="rank">'+g.rank+'</span>'+buyLink(t,art(t),'thumb')+buyLink(t,esc(t),'grow name-link')+'</li>';}).join('')+'</ul>'
     :'<p class="empty">No chart was recorded this day.</p>';
@@ -257,13 +276,14 @@ function streakChart(st){
   var body=rows.length?rows.map(function(g){
     var bars=vis.filter(function(s){return s.game===g;}).map(function(s){
       var a=Math.max(s.start,start),b=Math.min(s.end,end),cls='gt-bar'+(s.start<start?' cut-l':'')+(s.end>end?' cut-r':'');
-      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
+      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+(s.est?' (includes estimated days)':'')+'">'+(s.est?'~':'')+s.len+'d</div>'+
+        s.estDays.filter(function(n){return n>=start&&n<=end;}).map(function(n){return '<div class="gt-est" style="grid-column:'+(n-start+1)+'"></div>';}).join('');}).join('');
     var live=g===current&&st[st.length-1].end>=t-1;
     return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
   }).join(''):'<p class="empty">No days recorded in these two weeks.</p>';
   var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
   var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous two weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next two weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
-  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div></section>';
+  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run; ~ and striped days are estimated from weekly charts.</p><div class="panel">'+nav+head+body+'</div></section>';
 }
 
 function render(){
@@ -288,8 +308,10 @@ function load(){
   try{var u=new URL(location.href);u.searchParams.set('region',region);window.history.replaceState(null,'',u);}catch(e){}
   selDate=null;winEnd=null;
   gc({path:'/?region='+region,title:'STREAK-TENDO · '+regionInfo().label});
-  extraLinks={};
-  fetch('data/'+region+'/links.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(l){extraLinks=l||{};
+  extraLinks={};estimated={};webArt={};
+  fetch('data/'+region+'/web-art.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(w){webArt=w||{};
+    return fetch('data/'+region+'/estimated.json',{cache:'no-store'});}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(e){estimated=e||{};
+    return fetch('data/'+region+'/links.json',{cache:'no-store'});}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(l){extraLinks=l||{};
     return fetch('data/'+region+'/history.json',{cache:'no-store'});}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(h){
   history=h;indexImages();
   var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];

@@ -1,0 +1,548 @@
+{
+  "region": "US",
+  "about": "Estimated from weekly charts; see backfill.json",
+  "days": {
+    "2026-08-16": {
+      "no1": {
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-17": {
+      "no1": {
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-18": {
+      "no1": {
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-19": {
+      "no1": {
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-20": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-21": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-22": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-23": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-24": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-25": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-26": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-27": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-28": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-29": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+      }
+    },
+    "2026-08-30": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
+      }
+    },
+    "2026-08-31": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Released September 3, 2026)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
+      }
+    },
+    "2026-09-01": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Released September 3, 2026)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
+      }
+    },
+    "2026-09-02": {
+      "no1": {
+        "switch2": "ELDEN RING Tarnished Edition"
+      },
+      "basis": {
+        "switch2": "Still #1 before the changeover (Released September 3, 2026)"
+      },
+      "source": {
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
+      }
+    },
+    "2026-09-03": {
+      "no1": {
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch2": "Took #1 (Released September 3, 2026)"
+      },
+      "source": {
+        "switch2": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
+      }
+    },
+    "2026-09-04": {
+      "no1": {
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch2": "Took #1 (Released September 3, 2026)"
+      },
+      "source": {
+        "switch2": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
+      }
+    },
+    "2026-09-05": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released September 3, 2026)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
+      }
+    },
+    "2026-09-06": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"
+      }
+    },
+    "2026-09-07": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"
+      }
+    },
+    "2026-09-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"
+      }
+    },
+    "2026-09-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Orbitals"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"
+      }
+    },
+    "2026-09-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-16": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-17": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-18": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-19": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+      }
+    },
+    "2026-09-20": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-21": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-22": {
+      "no1": {
+        "switch1": "The Legend of Zelda: Tears of the Kingdom",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-23": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-24": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-25": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-26": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026",
+        "switch2": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+      }
+    },
+    "2026-09-27": {
+      "no1": {
+        "switch1": "Super Mario Party Jamboree",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": null,
+        "switch2": "https://gonintendo.com/contents/65463-switch-2-eshop-charts-for-sept-27th-2026"
+      }
+    }
+  }
+}
