@@ -10,6 +10,19 @@
 <link rel="manifest" href="site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="STREAK-TENDO">
 <meta name="theme-color" content="#F8F6F1">
+<!-- Visitor stats (GoatCounter). Pageviews are sent from the page script below. -->
+<script>
+  window.goatcounter = {no_onload: true};
+  // Visit the site with #toggle-goatcounter on the end to stop (or restart) counting your own visits in this browser.
+  if (location.hash === '#toggle-goatcounter') {
+    try {
+      var off = localStorage.getItem('skipgc') === 't';
+      localStorage.setItem('skipgc', off ? 'f' : 't');
+      alert(off ? 'GoatCounter will count this browser again.' : 'GoatCounter will ignore visits from this browser.');
+    } catch (e) {}
+  }
+</script>
+<script data-goatcounter="https://streaktendo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
 <style>
@@ -150,12 +163,22 @@ function art(game,eager){
   return '<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
 }
 
+// Sends a pageview or event to GoatCounter once its script has loaded.
+function gc(vars){
+  try{if(localStorage.getItem('skipgc')==='t')return;}catch(e){}
+  var tries=0;
+  (function go(){
+    if(window.goatcounter&&window.goatcounter.count){try{window.goatcounter.count(vars);}catch(e){}}
+    else if(tries++<50)setTimeout(go,200);
+  })();
+}
+
 // Store link for a game: exact product page when known, otherwise a store search for its name.
 function buyUrl(game){
   return links[chart+'|'+game]||links[game]||regionInfo().search(game);
 }
 function buyLink(game,inner,cls){
-  return '<a class="'+(cls||'')+'" href="'+esc(buyUrl(game))+'" target="_blank" rel="noopener" title="'+esc(game)+' in the Nintendo eShop">'+inner+'</a>';
+  return '<a class="'+(cls||'')+'" href="'+esc(buyUrl(game))+'" target="_blank" rel="noopener" data-gc="'+esc('store/'+region+'/'+chart+'/'+game)+'" title="'+esc(game)+' in the Nintendo eShop">'+inner+'</a>';
 }
 
 function indexImages(){
@@ -270,6 +293,7 @@ function load(){
   try{localStorage.setItem('streaktendo-region',region);}catch(e){}
   try{var u=new URL(location.href);u.searchParams.set('region',region);window.history.replaceState(null,'',u);}catch(e){}
   selDate=null;winEnd=null;
+  gc({path:'/?region='+region,title:'STREAK-TENDO · '+regionInfo().label});
   extraLinks={};
   fetch('data/'+region+'/links.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}).then(function(l){extraLinks=l||{};
     return fetch('data/'+region+'/history.json',{cache:'no-store'});}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(h){
@@ -283,6 +307,11 @@ function load(){
     document.querySelector('.hero').innerHTML='<p class="empty">Couldn\'t load the '+esc(regionInfo().label)+' data ('+esc(err.message)+').</p>';
   });
 }
+// Count clicks on store links, so you can see which games people go to buy.
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[data-gc]');
+  if(a)gc({path:a.getAttribute('data-gc'),title:a.getAttribute('title')||'',event:true});
+});
 load();
 })();
 </script>
