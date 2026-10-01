@@ -26,7 +26,9 @@
 html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
 #root{max-width:960px;margin:0 auto;padding:18px 16px 48px}
-.top-bar{display:flex;align-items:center;min-height:36px;padding-right:440px}
+.top-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-height:36px;padding-right:440px}
+.nav-blog{color:var(--accent);font-weight:600;font-size:.95rem;text-decoration:none;white-space:nowrap}
+.nav-blog:hover{text-decoration:underline;text-underline-offset:3px}
 /* Switch 1 / Switch 2 buttons follow you down the page */
 .switch-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:-36px;pointer-events:none}
 .switch-wrap .seg{pointer-events:auto;box-shadow:0 4px 16px rgba(31,29,26,.14)}
@@ -74,6 +76,9 @@ a.thumb{display:block}
 .day img{width:100%;height:100%;object-fit:cover;display:block}
 .day .ph{font-size:.55rem;padding:3px}
 .day.blank{visibility:hidden}
+.cal-month{grid-column:1/-1;font-weight:800;font-size:1.05rem;padding:14px 2px 4px}
+.cal-month.first{padding-top:2px}
+.day.future{opacity:.45}
 .day.nodata{font-size:.75rem;cursor:default}
 .day.today{outline:2.5px solid var(--accent);outline-offset:1px}
 .day.sel{outline:2.5px solid var(--ink);outline-offset:1px}
@@ -137,7 +142,7 @@ function pickRegion(){
   return ids.indexOf(saved)>=0?saved:ids[0];
 }
 var links={}, extraLinks={}, estimated={}, webArt={};
-var history=null, chart='switch2', winEnd=null, WIN=14, calY, calM, selDate=null, entries=[], images={};
+var history=null, chart='switch2', winEnd=null, WIN=14, calEnd=null, selDate=null, entries=[], images={};
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function toNum(d){var p=d.split('-').map(Number);return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY);}
@@ -208,7 +213,7 @@ function topBar(){
   var days=history.days||{}, avail=CHARTS.filter(function(c){return Object.keys(days).some(function(d){return days[d].no1&&days[d].no1[c[0]];});});
   var seg=avail.length>1?'<div class="seg" role="group" aria-label="Which chart">'+avail.map(function(c){return '<button type="button" data-chart="'+c[0]+'" aria-pressed="'+(chart===c[0])+'">'+c[1]+'</button>';}).join('')+'</div>':'';
   var reg='<div class="seg" role="group" aria-label="Which region">'+REGIONS.map(function(r){return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'">'+r.label+'</button>';}).join('')+'</div>';
-  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1></div><div class="switch-wrap">'+reg+seg+'</div>';
+  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><a class="nav-blog" href="/blog/">Blog</a></div><div class="switch-wrap">'+reg+seg+'</div>';
 }
 
 function hero(st){
@@ -222,17 +227,41 @@ function hero(st){
     '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
+// Rolling calendar: the last 5 weeks, ending with the current week. Each month gets its
+// own heading, and a new month starts on a fresh row under that heading.
+var CAL_WEEKS=5, calShownStart=null;
 function calendar(){
-  var map=byDate(), first=new Date(Date.UTC(calY,calM,1)), startDow=first.getUTCDay(), dim=new Date(Date.UTC(calY,calM+1,0)).getUTCDate(), t=todayStr();
+  var map=byDate(), t=todayStr(), tn=toNum(t);
+  var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn);
+  var endWeek=latest+(6-new Date(latest*DAY).getUTCDay());   // Saturday of the latest week
+  var end=calEnd===null?endWeek:calEnd, start=end-CAL_WEEKS*7+1;
+  // Never show more than two months: start no earlier than the 1st of the previous month.
+  var ed=new Date(end*DAY), minStart=Math.round(Date.UTC(ed.getUTCFullYear(),ed.getUTCMonth()-1,1)/DAY);
+  if(start<minStart)start=minStart;
+  calShownStart=start;
   var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
-  for(var i=0;i<startDow;i++)h+='<div class="day blank"></div>';
-  for(var d=1;d<=dim;d++){var ds=calY+'-'+String(calM+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),en=map[ds],g=en&&en.game;
-    var cls='day'+(g?'':' nodata')+(en&&en.est?' est':'')+(ds===t?' today':'')+(ds===selDate?' sel':'');
-    var tip=g?nice(toNum(ds))+': '+g:'';
+  var curMonth=-1;
+  for(var n=start;n<=end;n++){
+    var dt=new Date(n*DAY), m=dt.getUTCMonth(), dow=dt.getUTCDay(), ds=toStr(n);
+    if(m!==curMonth){
+      var firstHead=curMonth===-1;
+      curMonth=m;
+      var y=dt.getUTCFullYear(), showYear=y!==new Date(tn*DAY).getUTCFullYear();
+      h+='<div class="cal-month'+(firstHead?' first':'')+'">'+MONTHS_L[m]+(showYear?' '+y:'')+'</div>';
+      for(var i=0;i<dow;i++)h+='<div class="day blank"></div>';
+    }
+    var en=map[ds], g=en&&en.game, future=n>tn;
+    var cls='day'+(g?'':' nodata')+(future?' future':'')+(ds===t?' today':'')+(ds===selDate?' sel':'');
+    var tip=g?nice(n)+': '+g:'';
     h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+esc(tip)+'" title="'+esc(tip)+'">'+art(g)+'</button>'
-        :'<div class="'+cls+'" aria-hidden="true">'+d+'</div>';}
+        :'<div class="'+cls+'" aria-hidden="true">'+dt.getUTCDate()+'</div>';
+  }
   h+='</div>';
-  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head"><button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month">‹</button><strong>'+MONTHS_L[calM]+' '+calY+'</strong><button type="button" class="icon-btn" data-cal="1" aria-label="Next month">›</button></div>'+h+'</div>'+detail()+'</section>';
+  var label=nice(start)+' – '+nice(end);
+  var canBack=entries.length&&start>toNum(entries[0].date), canFwd=end<endWeek;
+  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head">'+
+    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Earlier weeks"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
+    '<button type="button" class="icon-btn" data-cal="1" aria-label="Later weeks"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
 }
 
 function detail(){
@@ -286,7 +315,7 @@ function render(){
   var st=streaks();
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+
-    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo.</footer>';
+    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. <a href="/blog/">Blog</a></footer>';
 }
 
 document.getElementById('root').addEventListener('click',function(e){
@@ -294,7 +323,12 @@ document.getElementById('root').addEventListener('click',function(e){
   if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();}}
   else if(el.dataset.chart){chart=el.dataset.chart;render();}
   else if(el.dataset.win){var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));winEnd=Math.min((winEnd===null?latest:winEnd)+Number(el.dataset.win)*WIN,latest);if(winEnd===latest)winEnd=null;render();}
-  else if(el.dataset.cal){calM+=Number(el.dataset.cal);if(calM<0){calM=11;calY--;}if(calM>11){calM=0;calY++;}render();}
+  else if(el.dataset.cal){
+    var tn=toNum(todayStr()), latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), endWeek=latest+(6-new Date(latest*DAY).getUTCDay());
+    var cur=calEnd===null?endWeek:calEnd;
+    calEnd=Number(el.dataset.cal)<0?calShownStart-1:Math.min(cur+CAL_WEEKS*7,endWeek);
+    if(calEnd===endWeek)calEnd=null;
+    render();}
   else if(el.dataset.day){selDate=selDate===el.dataset.day?null:el.dataset.day;render();var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
 });
 
@@ -311,10 +345,10 @@ function load(){
   history=h;indexImages();
   var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];
   var keys=Object.keys(h.days||{}).sort(), anchor=keys.length?keys[keys.length-1]:todayStr();
-  var p=anchor.split('-').map(Number);calY=p[0];calM=p[1]-1;render();
+  calEnd=null;render();
   }).catch(function(err){
     history={days:{}};
-    var t=todayStr().split('-').map(Number);calY=t[0];calM=t[1]-1;render();
+    calEnd=null;render();
     document.querySelector('.hero').innerHTML='<p class="empty">Couldn\'t load the '+esc(regionInfo().label)+' data ('+esc(err.message)+').</p>';
   });
 }
