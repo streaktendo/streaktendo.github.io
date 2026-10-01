@@ -543,6 +543,20 @@
         "switch1": null,
         "switch2": "https://gonintendo.com/contents/65463-switch-2-eshop-charts-for-sept-27th-2026"
       }
+    },
+    "2026-09-30": {
+      "no1": {
+        "switch1": "Minecraft Dungeons II",
+        "switch2": "Fire Emblem: Fortune’s Weave"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": null,
+        "switch2": null
+      }
     }
   }
 }

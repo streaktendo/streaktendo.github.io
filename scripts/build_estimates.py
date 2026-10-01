@@ -16,7 +16,10 @@ import datetime as dt, json, sys, os
 
 region = sys.argv[1] if len(sys.argv) > 1 else 'us'
 base = os.path.join('data', region)
-cfg = json.load(open(os.path.join(base, 'backfill.json'), encoding='utf-8'))
+try:
+    cfg = json.load(open(os.path.join(base, 'backfill.json'), encoding='utf-8'))
+except FileNotFoundError:
+    cfg = {'observations': [], 'changeovers': []}
 try:
     real = json.load(open(os.path.join(base, 'history.json'), encoding='utf-8')).get('days', {})
 except FileNotFoundError:
@@ -32,16 +35,20 @@ def put(day, chart, game, basis, source):
     rec = days.setdefault(key, {'no1': {}, 'basis': {}, 'source': {}})
     rec['no1'][chart], rec['basis'][chart], rec['source'][chart] = game, basis, source
 
-charts = sorted({o['chart'] for o in cfg['observations']})
+charts = sorted({o['chart'] for o in cfg['observations']} |
+                {c for d in real.values() for c in (d.get('no1') or {})})
 for chart in charts:
     obs = sorted((o for o in cfg['observations'] if o['chart'] == chart), key=lambda o: o['date'])
-    # Real daily data acts as the final anchor so estimates join up with it.
-    first_real = next((d for d in sorted(real) if (real[d].get('no1') or {}).get(chart)), None)
     for o in obs:
         put(D(o['date']), chart, o['no1'], 'Weekly chart snapshot', o['source'])
-    anchors = [(D(o['date']), o['no1'], o['source']) for o in obs]
-    if first_real and (not anchors or D(first_real) > anchors[-1][0]):
-        anchors.append((D(first_real), real[first_real]['no1'][chart], None))
+    # Anchors: weekly snapshots plus every real daily record, so the same rules also
+    # fill days the daily check missed (e.g. a day the Mac couldn't run).
+    found = {o['date']: (D(o['date']), o['no1'], o['source']) for o in obs}
+    for d, rec in real.items():
+        g = (rec.get('no1') or {}).get(chart)
+        if g:
+            found[d] = (D(d), g, None)
+    anchors = [found[k] for k in sorted(found)]
     for (d0, a, src_a), (d1, b, src_b) in zip(anchors, anchors[1:]):
         gap = (d1 - d0).days
         if gap <= 1 or gap > max_gap:
