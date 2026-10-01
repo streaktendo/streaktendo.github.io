@@ -230,6 +230,120 @@
           }
         ]
       }
+    },
+    "2026-10-01": {
+      "capturedAt": "2026-10-01T15:39:29Z",
+      "method": "app",
+      "no1": {
+        "switch2": "Fire Emblem: Fortune’s Weave",
+        "switch1": "Minecraft Dungeons II"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft Dungeons II Deluxe Edition",
+            "image": "data/us/art/minecraft-dungeons-ii-deluxe-edition.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "The Witcher 3: Wild Hunt — Remastered",
+            "image": "data/us/art/the-witcher-3-wild-hunt-remastered.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Middle-earth: Shadow Bundle",
+            "image": "data/us/art/middle-earth-shadow-bundle.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Diablo IV: Age of Hatred Collection",
+            "image": "data/us/art/diablo-iv-age-of-hatred-collection.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "FINAL FANTASY VII REBIRTH",
+            "image": "data/us/art/final-fantasy-vii-rebirth.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "LEGO Batman: Legacy of the Dark Knight",
+            "image": "data/us/art/lego-batman-legacy-of-the-dark-knight.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Minecraft Dungeons II Deluxe Edition",
+            "image": "data/us/art/minecraft-dungeons-ii-deluxe-edition.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Mario + Rabbids Sparks of Hope Gold Edition",
+            "image": "data/us/art/mario-rabbids-sparks-of-hope-gold-edition.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "EA SPORTS FC 27",
+            "image": "data/us/art/ea-sports-fc-27.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -252,7 +366,11 @@
     "Mario Kart 8 Deluxe": "data/us/art/mario-kart-8-deluxe.jpg",
     "Metroid Dread": "data/us/art/metroid-dread.jpg",
     "Super Mario Bros. Wonder": "data/us/art/super-mario-bros-wonder.jpg",
-    "Nintendo Switch Sports": "data/us/art/nintendo-switch-sports.jpg"
+    "Nintendo Switch Sports": "data/us/art/nintendo-switch-sports.jpg",
+    "The Witcher 3: Wild Hunt — Remastered": "data/us/art/the-witcher-3-wild-hunt-remastered.jpg",
+    "FINAL FANTASY VII REBIRTH": "data/us/art/final-fantasy-vii-rebirth.jpg",
+    "Mario + Rabbids Sparks of Hope Gold Edition": "data/us/art/mario-rabbids-sparks-of-hope-gold-edition.jpg",
+    "(English) Pokémon FireRed Version": "data/us/art/english-pokemon-firered-version.jpg"
   },
-  "updatedAt": "2026-09-29T16:17:46Z"
+  "updatedAt": "2026-10-01T15:39:29Z"
 }
