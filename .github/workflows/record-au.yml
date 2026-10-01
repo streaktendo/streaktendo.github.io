@@ -37,12 +37,18 @@ jobs:
         continue-on-error: true
         run: node scripts/find-us-links.mjs
 
+      - name: Fill in any missed days
+        continue-on-error: true
+        run: |
+          python3 scripts/build_estimates.py us
+          python3 scripts/build_estimates.py au
+
       - name: Save to the repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/au
-          for f in data/us/links.json data/us/web-art.json data/us/web-art; do
+          for f in data/us/links.json data/us/web-art.json data/us/web-art data/us/estimated.json; do
             if [ -e "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then
