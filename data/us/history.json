@@ -232,7 +232,7 @@
       }
     },
     "2026-10-01": {
-      "capturedAt": "2026-10-01T15:39:29Z",
+      "capturedAt": "2026-10-01T16:22:15Z",
       "method": "app",
       "no1": {
         "switch2": "Fire Emblem: Fortune’s Weave",
@@ -372,5 +372,5 @@
     "Mario + Rabbids Sparks of Hope Gold Edition": "data/us/art/mario-rabbids-sparks-of-hope-gold-edition.jpg",
     "(English) Pokémon FireRed Version": "data/us/art/english-pokemon-firered-version.jpg"
   },
-  "updatedAt": "2026-10-01T15:39:29Z"
+  "updatedAt": "2026-10-01T16:22:15Z"
 }
