@@ -29,7 +29,8 @@ DRY = '--dry-run' in sys.argv
 LIST_TOP, LIST_BOTTOM = 300, 2190
 ART_X, ART_W, ART_TOP_PAD, ART_BOTTOM_PAD = 53, 477, 21, 22
 TABS = [('switch2', 'Nintendo Switch 2'), ('switch1', 'Nintendo Switch')]
-DISMISS = ["Don't allow", "Don’t allow", 'Not now', 'No thanks', 'Skip', 'Later', 'Close', 'Cancel', 'OK']
+# "Wait" answers Android's "isn't responding" pop-up without closing anything.
+DISMISS = ['Wait', "Don't allow", "Don’t allow", 'Not now', 'No thanks', 'Skip', 'Later', 'Close', 'Cancel', 'OK']
 
 os.makedirs(LOGS, exist_ok=True)
 TODAY = datetime.datetime.now().strftime('%Y-%m-%d')   # the Mac's own time zone (Pacific)
@@ -71,10 +72,21 @@ def device_ready():
         return False
 
 
+def wait_until_off(limit=90):
+    for _ in range(limit // 3):
+        if subprocess.run([ADB, 'get-state'], capture_output=True).returncode != 0:
+            return
+        time.sleep(3)
+
+
 def start_emulator():
-    if device_ready():
-        log('Phone already running.')
-        return False
+    # Always start from a fresh boot. A phone left running for days gets sluggish and
+    # starts showing "isn't responding" pop-ups, which is what broke the morning run.
+    if device_ready() or subprocess.run([ADB, 'get-state'], capture_output=True).returncode == 0:
+        log('Phone was already running. Restarting it for a clean run...')
+        stop_emulator()
+        wait_until_off()
+        time.sleep(5)
     avds = [a for a in run([EMU, '-list-avds']).split() if a]
     if not avds:
         raise RuntimeError('No virtual phone found in Android Studio.')
@@ -82,7 +94,7 @@ def start_emulator():
     log('Starting phone "%s" in the background...' % name)
     extra = os.environ.get('STREAKTENDO_EMU_ARGS', '-no-window -gpu swiftshader_indirect').split()
     out = open(os.path.join(LOGS, 'emulator.log'), 'a')
-    subprocess.Popen([EMU, '-avd', name, '-no-audio', '-no-boot-anim'] + extra,
+    subprocess.Popen([EMU, '-avd', name, '-no-audio', '-no-boot-anim', '-no-snapshot-load', '-no-snapshot-save'] + extra,
                      stdout=out, stderr=out, start_new_session=True)
     adb('wait-for-device', timeout=600)
     for _ in range(180):
@@ -92,7 +104,10 @@ def start_emulator():
     else:
         raise RuntimeError('The phone did not finish starting within 15 minutes.')
     log('Phone started. Letting it settle...')
-    time.sleep(30)
+    time.sleep(45)
+    # Turn off animations: less work for the phone, fewer "isn't responding" pop-ups.
+    for key in ('window_animation_scale', 'transition_animation_scale', 'animator_duration_scale'):
+        adb('shell', 'settings', 'put', 'global', key, '0', check=False)
     return True
 
 
@@ -137,6 +152,13 @@ def swipe(y_from, y_to, wait=2.5):
     time.sleep(wait)
 
 
+def home_swipe():
+    # Scroll along the right-hand margin (x=1060), outside the game tiles,
+    # so a laggy swipe is less likely to count as a tap on something.
+    adb('shell', 'input', 'swipe', '1060', '1800', '1060', '900', '700')
+    time.sleep(3)
+
+
 def center(b):
     return (b[0] + b[2]) // 2, (b[1] + b[3]) // 2
 
@@ -173,11 +195,19 @@ def open_best_sellers():
     adb('shell', 'am', 'force-stop', PKG)
     adb('shell', 'monkey', '-p', PKG, '-c', 'android.intent.category.LAUNCHER', '1')
     time.sleep(12)
-    for step in range(20):
+    for step in range(30):
         nodes = dump()
         if on_best_sellers(nodes):
             return
         if dismiss_popups(nodes):
+            continue
+        # A slow phone can turn a scroll into a tap and open some other page
+        # (it once landed on "Nintendo Direct 9.9.2026"). If there's a back
+        # button and we're not on Best Sellers, go back to the home screen.
+        if any(n['desc'] == 'back button' for n in nodes):
+            log('Ended up on another page by accident. Going back to the home screen.')
+            adb('shell', 'input', 'keyevent', 'KEYCODE_BACK')
+            time.sleep(4)
             continue
         link = [n for n in nodes if n['text'].lower().startswith('best sellers')
                 and LIST_TOP <= n['b'][1] and n['b'][3] <= LIST_BOTTOM]
@@ -185,7 +215,7 @@ def open_best_sellers():
             log('Found Best Sellers on the home screen. Opening it.')
             tap(*center(link[0]['b']), wait=5)
             continue
-        swipe(1800, 800)
+        home_swipe()
     save_debug('no-best-sellers')
     raise RuntimeError('Could not find Best Sellers in the app.')
 
@@ -334,14 +364,16 @@ def slug(title):
     return s[:80] or 'game'
 
 
-def save_art(game, art_dir):
-    name = slug(game['title']) + '.jpg'
+def save_art(game, art_dir, chart_id):
+    # Switch 1 and Switch 2 versions of a game can have different box art (e.g. Minecraft
+    # Dungeons II), so Switch 1 pictures get their own file.
+    name = slug(game['title']) + ('-switch1' if chart_id == 'switch1' else '') + '.jpg'
     path = os.path.join(art_dir, name)
     rel = 'data/us/art/' + name
     if os.path.exists(path) or not game['shot']:
         return rel if os.path.exists(path) else None
     png, b = game['shot']
-    tmp = os.path.join(WORK, slug(game['title']) + '.png')
+    tmp = os.path.join(WORK, chart_id + '-' + slug(game['title']) + '.png')
     crop_png(png, tmp, ART_X, b[1] + ART_TOP_PAD, ART_W, (b[3] - b[1]) - ART_TOP_PAD - ART_BOTTOM_PAD)
     run(['sips', '-s', 'format', 'jpeg', '-s', 'formatOptions', '88', tmp, '--out', path])
     return rel
@@ -370,9 +402,9 @@ def save_day(charts):
     for chart_id, top in charts.items():
         items = []
         for g in top:
-            rel = save_art(g, art_dir)
+            rel = save_art(g, art_dir, chart_id)
             if rel:
-                hist['images'][g['title']] = rel
+                hist['images'][chart_id + '|' + g['title']] = rel
             items.append({'rank': g['rank'], 'title': g['title'], 'image': rel})
         record['charts'][chart_id] = items
         record['no1'][chart_id] = items[0]['title'] if items and items[0]['rank'] == 1 else None
@@ -402,12 +434,20 @@ def main():
     for tool in (ADB, EMU):
         if not os.path.exists(tool):
             raise RuntimeError('Missing %s. Is Android Studio installed?' % tool)
-    started = start_emulator()
+    charts = None
     try:
-        open_best_sellers()
-        charts = {}
-        for chart_id, label in TABS:
-            charts[chart_id] = read_chart(chart_id, label)
+        for attempt in (1, 2):
+            try:
+                start_emulator()
+                open_best_sellers()
+                charts = {}
+                for chart_id, label in TABS:
+                    charts[chart_id] = read_chart(chart_id, label)
+                break
+            except Exception as e:
+                if attempt == 2:
+                    raise
+                log('Attempt 1 failed (%s). Restarting the phone and trying once more...' % e)
         log('#1 Switch 2: %s | #1 Switch 1: %s' % (charts['switch2'][0]['title'], charts['switch1'][0]['title']))
         if DRY:
             preview = os.path.join(LOGS, 'preview-' + TODAY)
@@ -423,8 +463,7 @@ def main():
         save_day(charts)
     finally:
         adb('shell', 'am', 'force-stop', PKG, check=False)
-        if started:
-            stop_emulator()
+        stop_emulator()   # shut the phone down after every run, so tomorrow starts fresh
         shutil.rmtree(WORK, ignore_errors=True)
 
 

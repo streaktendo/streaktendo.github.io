@@ -128,16 +128,18 @@ async function savePictures() {
   try { webArt = JSON.parse(await fs.readFile(ART_INDEX, 'utf8')); } catch { /* first run */ }
   // A picture taken from a page we've just rejected (e.g. a French version) gets replaced too.
   let artChanged = false;
-  for (const t of droppedTitles) if (webArt[t]) { delete webArt[t]; artChanged = true; }
+  for (const t of droppedTitles) for (const k of [t, 'switch1|' + t, 'switch2|' + t]) if (webArt[k]) { delete webArt[k]; artChanged = true; }
+  // Pictures are tracked per platform ("switch1|Title"), since the two versions of a game
+  // can have different art. Older entries keyed by title alone still count for both.
   const haveArt = new Set([...Object.keys(history.images || {}), ...Object.keys(webArt)]);
   for (const day of Object.values(history.days || {})) {
-    for (const list of Object.values(day.charts || {})) for (const g of list || []) if (g.image) haveArt.add(g.title);
+    for (const [chart, list] of Object.entries(day.charts || {})) for (const g of list || []) if (g.image) haveArt.add(chart + '|' + g.title);
   }
-  // Games with a store link but no picture anywhere yet.
+  // Games with a store link but no picture for that platform yet.
   const need = new Map();
   for (const [key, url] of Object.entries(links)) {
     const title = key.slice(key.indexOf('|') + 1);
-    if (!haveArt.has(title) && !need.has(title)) need.set(title, url);
+    if (!haveArt.has(key) && !haveArt.has(title) && !need.has(key)) need.set(key, url);
   }
   if (!need.size) {
     if (artChanged && !dryRun) await fs.writeFile(ART_INDEX, JSON.stringify(Object.fromEntries(Object.entries(webArt).sort()), null, 2) + '\n');
@@ -151,7 +153,8 @@ async function savePictures() {
   const page2 = await browser2.newPage({ locale: 'en-US', userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36' });
   let saved = 0;
   try {
-    for (const [title, url] of need) {
+    for (const [key, url] of need) {
+      const title = key.slice(key.indexOf('|') + 1), chart = key.slice(0, key.indexOf('|'));
       try {
         await page2.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
         await page2.waitForTimeout(2000);
@@ -166,9 +169,9 @@ async function savePictures() {
         const type = res.headers()['content-type'] || '';
         if (!res.ok() || !type.startsWith('image/')) { console.log(`  download failed     ${title}`); continue; }
         const ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('avif') ? 'avif' : 'jpg';
-        const path = `${ART_DIR}/${slug(title)}.${ext}`;
+        const path = `${ART_DIR}/${slug(title)}${chart === 'switch1' ? '-switch1' : ''}.${ext}`;
         if (!dryRun) await fs.writeFile(path, await res.body());
-        webArt[title] = path;
+        webArt[key] = path;
         saved++;
         console.log(`  picture saved       ${title} -> ${path}`);
       } catch (e) {
