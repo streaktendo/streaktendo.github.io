@@ -2,223 +2,3430 @@
   "region": "US",
   "about": "Estimated from weekly charts; see backfill.json",
   "days": {
-    "2026-08-16": {
+    "2026-01-03": {
       "no1": {
-        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+        "switch1": "Super Mario Party Jamboree"
       },
       "basis": {
+        "switch1": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-3-2026/"
+      }
+    },
+    "2026-01-04": {
+      "no1": {
+        "switch1": "Super Mario Party Jamboree",
+        "switch2": "Donkey Kong Bananza"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
         "switch2": "Weekly chart snapshot"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-3-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-4-2026/"
+      }
+    },
+    "2026-01-05": {
+      "no1": {
+        "switch1": "Super Mario Party Jamboree",
+        "switch2": "Donkey Kong Bananza"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-3-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-4-2026/"
+      }
+    },
+    "2026-01-06": {
+      "no1": {
+        "switch1": "Super Mario Party Jamboree",
+        "switch2": "Donkey Kong Bananza"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-3-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-4-2026/"
+      }
+    },
+    "2026-01-07": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Donkey Kong Bananza"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-4-2026/"
+      }
+    },
+    "2026-01-08": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-09": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-10": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-11": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-12": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-13": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-14": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-15": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-16": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-17": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+      }
+    },
+    "2026-01-18": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-18-2026/"
+      }
+    },
+    "2026-01-19": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-18-2026/"
+      }
+    },
+    "2026-01-20": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-18-2026/"
+      }
+    },
+    "2026-01-21": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-18-2026/"
+      }
+    },
+    "2026-01-22": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-23": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-24": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-25": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-26": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-27": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-28": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-29": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-30": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-01-31": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+      }
+    },
+    "2026-02-01": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-1-2026/"
+      }
+    },
+    "2026-02-02": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-1-2026/"
+      }
+    },
+    "2026-02-03": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-1-2026/"
+      }
+    },
+    "2026-02-04": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "FINAL FANTASY VII REMAKE INTERGRADE"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-1-2026/"
+      }
+    },
+    "2026-02-05": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/aaaea/index.html"
+      }
+    },
+    "2026-02-06": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/aaaea/index.html"
+      }
+    },
+    "2026-02-07": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released February 12; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-7-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/aaaea/index.html"
+      }
+    },
+    "2026-02-08": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-09": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-10": {
+      "no1": {
+        "switch1": "Animal Crossing: New Horizons",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-11": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-12": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-13": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-14": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+      }
+    },
+    "2026-02-15": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-16": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-17": {
+      "no1": {
+        "switch1": "Pokémon Legends: Z-A",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-18": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-19": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-20": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-21": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+      }
+    },
+    "2026-02-22": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Re-released February 27 for Pokémon Day)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+      }
+    },
+    "2026-02-23": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Re-released February 27 for Pokémon Day)",
+        "switch2": "Still #1 before the changeover (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+      }
+    },
+    "2026-02-24": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Re-released February 27 for Pokémon Day)",
+        "switch2": "Still #1 before the changeover (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+      }
+    },
+    "2026-02-25": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Re-released February 27 for Pokémon Day)",
+        "switch2": "Still #1 before the changeover (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+      }
+    },
+    "2026-02-26": {
+      "no1": {
+        "switch1": "Super Smash Bros. Ultimate",
+        "switch2": "Mario Tennis Fever"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Re-released February 27 for Pokémon Day)",
+        "switch2": "Still #1 before the changeover (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+      }
+    },
+    "2026-02-27": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Re-released February 27 for Pokémon Day)",
+        "switch2": "Took #1 (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://www.nintendolife.com/news/2026/02/psa-pokemon-pokopia-switch-2-preloads-are-now-officially-live",
+        "switch2": "https://www.nintendolife.com/news/2026/02/psa-pokemon-pokopia-switch-2-preloads-are-now-officially-live"
+      }
+    },
+    "2026-02-28": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Pre-loads opened February 27, a week before its March 5 launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://www.nintendolife.com/news/2026/02/psa-pokemon-pokopia-switch-2-preloads-are-now-officially-live"
+      }
+    },
+    "2026-03-01": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-02": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-03": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-04": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-05": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-06": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-07": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+      }
+    },
+    "2026-03-08": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-09": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-10": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-11": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-12": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-13": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-14": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+      }
+    },
+    "2026-03-15": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-16": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-17": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-18": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-19": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-20": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-21": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+      }
+    },
+    "2026-03-22": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-23": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-24": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-25": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-26": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-27": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-28": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+      }
+    },
+    "2026-03-29": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-03-30": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-03-31": {
+      "no1": {
+        "switch1": "Pokémon FireRed Version",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-28-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-04-01": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-04-02": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-04-03": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-04-04": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+      }
+    },
+    "2026-04-05": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-06": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-07": {
+      "no1": {
+        "switch1": "Super Mario Galaxy + Super Mario Galaxy 2",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+      }
+    },
+    "2026-04-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-16": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-17": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-18": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+      }
+    },
+    "2026-04-19": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-20": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-21": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-22": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-23": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-24": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-25": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+      }
+    },
+    "2026-04-26": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-04-27": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-04-28": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-04-29": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-04-30": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-05-01": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-05-02": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+      }
+    },
+    "2026-05-03": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-04": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-05": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-06": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-07": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+      }
+    },
+    "2026-05-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-10-2026/"
+      }
+    },
+    "2026-05-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-10-2026/"
+      }
+    },
+    "2026-05-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-10-2026/"
+      }
+    },
+    "2026-05-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-10-2026/"
+      }
+    },
+    "2026-05-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Yoshi_and_the_Mysterious_Book"
+      }
+    },
+    "2026-05-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Yoshi_and_the_Mysterious_Book"
+      }
+    },
+    "2026-05-16": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released May 21; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Yoshi_and_the_Mysterious_Book"
+      }
+    },
+    "2026-05-17": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-18": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-19": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-20": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-21": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-22": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-23": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+      }
+    },
+    "2026-05-24": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-24-2026/"
+      }
+    },
+    "2026-05-25": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-24-2026/"
+      }
+    },
+    "2026-05-26": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-24-2026/"
+      }
+    },
+    "2026-05-27": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-24-2026/"
+      }
+    },
+    "2026-05-28": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-05-29": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-05-30": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-05-31": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-06-01": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-06-02": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-06-03": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Mina the Hollower – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+      }
+    },
+    "2026-06-04": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-05": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-06": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-07": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Yoshi and the Mysterious Book"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+      }
+    },
+    "2026-06-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-16": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-17": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Pokémon Pokopia"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+      }
+    },
+    "2026-06-18": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/abgwa/index.html"
+      }
+    },
+    "2026-06-19": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/abgwa/index.html"
+      }
+    },
+    "2026-06-20": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released June 25; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://www.nintendo.com/ph/games/switch2/abgwa/index.html"
+      }
+    },
+    "2026-06-21": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-22": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-23": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-24": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-25": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-26": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-27": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-27-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+      }
+    },
+    "2026-06-28": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-27-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-06-29": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-27-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-06-30": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-27-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-07-01": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-07-02": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-07-03": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-07-04": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+      }
+    },
+    "2026-07-05": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-5-2026/"
+      }
+    },
+    "2026-07-06": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-5-2026/"
+      }
+    },
+    "2026-07-07": {
+      "no1": {
+        "switch1": "Rhythm Heaven Groove",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-5-2026/"
+      }
+    },
+    "2026-07-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Star Fox"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-5-2026/"
+      }
+    },
+    "2026-07-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Moonlight Peaks – Nintendo Switch 2 Edition"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+      }
+    },
+    "2026-07-16": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Splatoon_Raiders"
+      }
+    },
+    "2026-07-17": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Splatoon_Raiders"
+      }
+    },
+    "2026-07-18": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released July 23; pre-loads typically open about a week before launch)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://en.wikipedia.org/wiki/Splatoon_Raiders"
+      }
+    },
+    "2026-07-19": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-20": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-21": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-22": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-23": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-24": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-25": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+      }
+    },
+    "2026-07-26": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-07-27": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-07-28": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-07-29": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-07-30": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-07-31": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-08-01": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+      }
+    },
+    "2026-08-02": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-03": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-04": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-05": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-06": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-07": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-08": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Between two weekly charts with the same #1"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+      }
+    },
+    "2026-08-09": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-9-2026/"
+      }
+    },
+    "2026-08-10": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-9-2026/"
+      }
+    },
+    "2026-08-11": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-9-2026/"
+      }
+    },
+    "2026-08-12": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "Splatoon Raiders"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-9-2026/"
+      }
+    },
+    "2026-08-13": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-14": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-15": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+      }
+    },
+    "2026-08-16": {
+      "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
+      },
+      "basis": {
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Weekly chart snapshot"
+      },
+      "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
       }
     },
     "2026-08-17": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "The Elder Scrolls IV: Oblivion Remastered"
       },
       "basis": {
-        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
       }
     },
     "2026-08-18": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "The Elder Scrolls IV: Oblivion Remastered"
       },
       "basis": {
-        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
       }
     },
     "2026-08-19": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "The Elder Scrolls IV: Oblivion Remastered"
       },
       "basis": {
-        "switch2": "Still #1 before the changeover (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
       }
     },
     "2026-08-20": {
       "no1": {
-        "switch2": "ELDEN RING Tarnished Edition"
+        "switch1": "Tomodachi Life: Living the Dream",
+        "switch2": "The Elder Scrolls IV: Oblivion Remastered"
       },
       "basis": {
-        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Still #1 before the changeover (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
-        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
+        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
       }
     },
     "2026-08-21": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
-        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Between two weekly charts with the same #1",
+        "switch2": "Took #1 (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
-        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/",
+        "switch2": "https://en.softonic.com/articles/elden-ring-is-now-official-for-nintendo-switch-2-tarnished-edition-arrives-august-28-2026"
       }
     },
     "2026-08-22": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
-        "switch2": "Took #1 (Changeover date unknown; split at the midpoint between weekly charts)"
+        "switch1": "Weekly chart snapshot",
+        "switch2": "Took #1 (Released August 28; pre-loads typically open about a week before launch)"
       },
       "source": {
-        "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
+        "switch2": "https://en.softonic.com/articles/elden-ring-is-now-official-for-nintendo-switch-2-tarnished-edition-arrives-august-28-2026"
       }
     },
     "2026-08-23": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Weekly chart snapshot"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-24": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-25": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-26": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-27": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-28": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-29": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Weekly chart snapshot",
         "switch2": "Between two weekly charts with the same #1"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
       }
     },
     "2026-08-30": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Weekly chart snapshot"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
       }
     },
     "2026-08-31": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Still #1 before the changeover (Released September 3, 2026)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
       }
     },
     "2026-09-01": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Still #1 before the changeover (Released September 3, 2026)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
       }
     },
     "2026-09-02": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "ELDEN RING Tarnished Edition"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Still #1 before the changeover (Released September 3, 2026)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
       }
     },
     "2026-09-03": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "Orbitals"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Took #1 (Released September 3, 2026)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
       }
     },
     "2026-09-04": {
       "no1": {
+        "switch1": "Tomodachi Life: Living the Dream",
         "switch2": "Orbitals"
       },
       "basis": {
+        "switch1": "Between two weekly charts with the same #1",
         "switch2": "Took #1 (Released September 3, 2026)"
       },
       "source": {
+        "switch1": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/",
         "switch2": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
       }
     },

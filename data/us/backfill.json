@@ -1,22 +1,532 @@
 {
-  "about": "Weekly US eShop chart snapshots used to estimate #1 games for days before daily tracking began. Edit this file, then run: python3 scripts/build_estimates.py us",
+  "about": "Weekly US eShop chart snapshots (Nintendo Everything, GoNintendo) used to fill in #1 games before daily tracking began. Edit this file, then run: python3 scripts/build_estimates.py us",
   "max_gap_days": 14,
   "observations": [
-    {"chart": "switch2", "date": "2026-08-16", "no1": "The Elder Scrolls IV: Oblivion Remastered", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"},
-    {"chart": "switch2", "date": "2026-08-23", "no1": "ELDEN RING Tarnished Edition", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"},
-    {"chart": "switch2", "date": "2026-08-30", "no1": "ELDEN RING Tarnished Edition", "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"},
-    {"chart": "switch2", "date": "2026-09-06", "no1": "Orbitals", "source": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"},
-    {"chart": "switch2", "date": "2026-09-13", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"},
-    {"chart": "switch2", "date": "2026-09-20", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"},
-    {"chart": "switch2", "date": "2026-09-27", "no1": "Fire Emblem: Fortune’s Weave", "source": "https://gonintendo.com/contents/65463-switch-2-eshop-charts-for-sept-27th-2026"},
-
-    {"chart": "switch1", "date": "2026-09-05", "no1": "Tomodachi Life: Living the Dream", "source": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026"},
-    {"chart": "switch1", "date": "2026-09-12", "no1": "Tomodachi Life: Living the Dream", "source": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026"},
-    {"chart": "switch1", "date": "2026-09-19", "no1": "The Legend of Zelda: Tears of the Kingdom", "source": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026"},
-    {"chart": "switch1", "date": "2026-09-26", "no1": "Super Mario Galaxy + Super Mario Galaxy 2", "source": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026"}
+    {
+      "chart": "switch1",
+      "date": "2026-01-03",
+      "no1": "Super Mario Party Jamboree",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-3-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-01-10",
+      "no1": "Pokémon Legends: Z-A",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-10-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-01-17",
+      "no1": "Animal Crossing: New Horizons",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-17-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-01-24",
+      "no1": "Animal Crossing: New Horizons",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-24-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-01-31",
+      "no1": "Animal Crossing: New Horizons",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-january-31-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-02-07",
+      "no1": "Animal Crossing: New Horizons",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-7-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-02-14",
+      "no1": "Pokémon Legends: Z-A",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-14-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-02-21",
+      "no1": "Super Smash Bros. Ultimate",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-21-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-02-28",
+      "no1": "Pokémon FireRed Version",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-february-28-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-03-07",
+      "no1": "Pokémon FireRed Version",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-7-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-03-14",
+      "no1": "Pokémon FireRed Version",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-14-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-03-21",
+      "no1": "Pokémon FireRed Version",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-21-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-03-28",
+      "no1": "Pokémon FireRed Version",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-march-28-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-04-04",
+      "no1": "Super Mario Galaxy + Super Mario Galaxy 2",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-5-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-04-11",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-11-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-04-18",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-18-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-04-25",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-april-25-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-05-02",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-2-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-05-09",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-9-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-05-16",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-16-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-05-23",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-23-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-05-30",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-may-30-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-06-06",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-6-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-06-13",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-13-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-06-20",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-20-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-06-27",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-june-27-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-07-04",
+      "no1": "Rhythm Heaven Groove",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-4-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-07-11",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-11-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-07-18",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-18-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-07-25",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-25-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-08-01",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-1-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-08-08",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-8-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-08-15",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-15-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-08-22",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-22-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-08-29",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://nintendoeverything.com/nintendo-switch-eshop-charts-august-29-2026/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-09-05",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://gonintendo.com/contents/64613-switch-eshop-charts-for-sept-5th-2026"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-09-12",
+      "no1": "Tomodachi Life: Living the Dream",
+      "source": "https://www.gonintendo.com/contents/64926-switch-eshop-charts-for-sept-12th-2026"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-09-19",
+      "no1": "The Legend of Zelda: Tears of the Kingdom",
+      "source": "https://gonintendo.com/contents/65214-switch-eshop-charts-for-sept-19th-2026"
+    },
+    {
+      "chart": "switch1",
+      "date": "2026-09-26",
+      "no1": "Super Mario Galaxy + Super Mario Galaxy 2",
+      "source": "https://gonintendo.com/contents/65448-switch-eshop-charts-for-sept-26th-2026"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-01-04",
+      "no1": "Donkey Kong Bananza",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-4-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-01-11",
+      "no1": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-11-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-01-18",
+      "no1": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-18-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-01-25",
+      "no1": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-january-25-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-02-01",
+      "no1": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-1-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-02-08",
+      "no1": "Mario Tennis Fever",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-8-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-02-15",
+      "no1": "Mario Tennis Fever",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-15-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-02-22",
+      "no1": "Mario Tennis Fever",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-february-22-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-03-01",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-1-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-03-08",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-8-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-03-15",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-15-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-03-22",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-22-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-03-29",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-march-29-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-04-05",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-5-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-04-12",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-12-2026-2/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-04-19",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-19-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-04-26",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-april-26-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-05-03",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-3-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-05-10",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-10-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-05-17",
+      "no1": "Yoshi and the Mysterious Book",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-17-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-05-24",
+      "no1": "Yoshi and the Mysterious Book",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-24-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-05-31",
+      "no1": "Mina the Hollower – Nintendo Switch 2 Edition",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-may-31-2026-mina-the-hollower-takes-down-yoshi/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-06-07",
+      "no1": "Yoshi and the Mysterious Book",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-7-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-06-14",
+      "no1": "Pokémon Pokopia",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-14-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-06-21",
+      "no1": "Star Fox",
+      "source": "https://nintendoeverything.com/nintendo-2-switch-eshop-charts-june-21-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-06-28",
+      "no1": "Star Fox",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-june-28-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-07-05",
+      "no1": "Star Fox",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-5-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-07-12",
+      "no1": "Moonlight Peaks – Nintendo Switch 2 Edition",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-12-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-07-19",
+      "no1": "Splatoon Raiders",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-19-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-07-26",
+      "no1": "Splatoon Raiders",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-july-26-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-08-02",
+      "no1": "Splatoon Raiders",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-2-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-08-09",
+      "no1": "Splatoon Raiders",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-9-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-08-16",
+      "no1": "The Elder Scrolls IV: Oblivion Remastered",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-16-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-08-23",
+      "no1": "ELDEN RING Tarnished Edition",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-23-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-08-30",
+      "no1": "ELDEN RING Tarnished Edition",
+      "source": "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-august-30-2026/"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-09-06",
+      "no1": "Orbitals",
+      "source": "https://gonintendo.com/contents/64629-switch-2-eshop-charts-for-sept-6th-2026"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-09-13",
+      "no1": "Fire Emblem: Fortune’s Weave",
+      "source": "https://gonintendo.com/contents/64940-switch-2-eshop-charts-for-sept-13th-2026"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-09-20",
+      "no1": "Fire Emblem: Fortune’s Weave",
+      "source": "https://gonintendo.com/contents/65236-switch-2-eshop-charts-for-sept-20th-2026"
+    },
+    {
+      "chart": "switch2",
+      "date": "2026-09-27",
+      "no1": "Fire Emblem: Fortune’s Weave",
+      "source": "https://gonintendo.com/contents/65463-switch-2-eshop-charts-for-sept-27th-2026"
+    }
   ],
   "changeovers": [
-    {"chart": "switch2", "game": "Orbitals", "first_day": "2026-09-03",
-     "reason": "Released September 3, 2026", "source": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"}
+    {
+      "chart": "switch2",
+      "game": "Orbitals",
+      "first_day": "2026-09-03",
+      "reason": "Released September 3, 2026",
+      "source": "https://en.wikipedia.org/wiki/Orbitals_(video_game)"
+    },
+    {
+      "chart": "switch2",
+      "game": "Pokémon Pokopia",
+      "first_day": "2026-02-27",
+      "reason": "Pre-loads opened February 27, a week before its March 5 launch",
+      "source": "https://www.nintendolife.com/news/2026/02/psa-pokemon-pokopia-switch-2-preloads-are-now-officially-live"
+    },
+    {
+      "chart": "switch1",
+      "game": "Pokémon FireRed Version",
+      "first_day": "2026-02-27",
+      "reason": "Re-released February 27 for Pokémon Day",
+      "source": "https://www.nintendolife.com/news/2026/02/psa-pokemon-pokopia-switch-2-preloads-are-now-officially-live"
+    },
+    {
+      "chart": "switch2",
+      "game": "Mario Tennis Fever",
+      "first_day": "2026-02-05",
+      "reason": "Released February 12; pre-loads typically open about a week before launch",
+      "source": "https://www.nintendo.com/ph/games/switch2/aaaea/index.html"
+    },
+    {
+      "chart": "switch2",
+      "game": "Yoshi and the Mysterious Book",
+      "first_day": "2026-05-14",
+      "reason": "Released May 21; pre-loads typically open about a week before launch",
+      "source": "https://en.wikipedia.org/wiki/Yoshi_and_the_Mysterious_Book"
+    },
+    {
+      "chart": "switch2",
+      "game": "Star Fox",
+      "first_day": "2026-06-18",
+      "reason": "Released June 25; pre-loads typically open about a week before launch",
+      "source": "https://www.nintendo.com/ph/games/switch2/abgwa/index.html"
+    },
+    {
+      "chart": "switch2",
+      "game": "Splatoon Raiders",
+      "first_day": "2026-07-16",
+      "reason": "Released July 23; pre-loads typically open about a week before launch",
+      "source": "https://en.wikipedia.org/wiki/Splatoon_Raiders"
+    },
+    {
+      "chart": "switch2",
+      "game": "ELDEN RING Tarnished Edition",
+      "first_day": "2026-08-21",
+      "reason": "Released August 28; pre-loads typically open about a week before launch",
+      "source": "https://en.softonic.com/articles/elden-ring-is-now-official-for-nintendo-switch-2-tarnished-edition-arrives-august-28-2026"
+    }
   ]
 }
