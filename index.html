@@ -34,6 +34,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grote
 .soon-flags{display:inline-flex;gap:6px;margin-left:6px;font-size:1.25rem;vertical-align:-3px}
 .nav-blog{color:var(--accent);font-weight:600;font-size:.95rem;text-decoration:none;white-space:nowrap}
 .nav-blog:hover{text-decoration:underline;text-underline-offset:3px}
+.nav-blog.soon-link{color:var(--muted);font-weight:600;cursor:default;text-decoration:none}
 /* Switch 1 / Switch 2 buttons follow you down the page */
 .switch-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:-36px;pointer-events:none}
 .switch-wrap .seg{pointer-events:auto;box-shadow:0 4px 16px rgba(31,29,26,.14)}
@@ -111,8 +112,11 @@ footer a{color:var(--accent);font-weight:600}
 .sk-panel{padding:14px 0 14px 14px}
 .sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
 .sk-inner{position:relative;padding-right:14px;box-sizing:content-box}
-.sk-months{position:relative;height:20px}
-.sk-month{position:absolute;top:0;font-size:.8rem;font-weight:600;white-space:nowrap;overflow:hidden;border-left:1px solid var(--line);padding-left:4px}
+.sk-months{display:flex;height:20px}
+.sk-month{flex:none;font-size:.8rem;font-weight:600;white-space:nowrap;border-left:1px solid var(--line);box-sizing:border-box}
+.sk-month:first-child{border-left:0}
+.sk-mlabel{position:sticky;left:0;display:inline-block;padding:0 4px;background:var(--surface)}
+.sk-range{display:block;width:calc(100% - 14px);margin:0 0 12px;accent-color:var(--accent);cursor:pointer}
 .sk-days{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col);border-bottom:1px solid var(--line);padding-bottom:5px}
 .sk-day{text-align:center;font-size:.66rem;color:var(--muted)}
 .sk-day.now{color:var(--accent);font-weight:800}
@@ -163,7 +167,8 @@ function cleanList(list){var prev=0;return (list||[]).map(function(g){var t=Stri
 function chartLabel(){return (CHARTS.filter(function(c){return c[0]===chart;})[0]||['',''])[1];}
 
 function art(game,eager){
-  var src=images[game];
+  // Prefer the picture for this platform (Switch 1 and Switch 2 versions can differ).
+  var src=images[chart+'|'+game]||images[game];
   if(src)return '<img src="'+esc(src)+'" alt="'+esc(game)+'"'+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async">';
   return '<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
 }
@@ -190,11 +195,12 @@ function indexImages(){
   images={};links={};var days=history.days||{};
   Object.keys(extraLinks||{}).forEach(function(k){links[k]=extraLinks[k];});
   // Pictures saved from store pages, used only for games with no picture from the charts.
-  Object.keys(webArt||{}).forEach(function(t){if(!images[t])images[t]=webArt[t];});
+  Object.keys(webArt||{}).forEach(function(k){if(!images[k])images[k]=webArt[k];var t=k.slice(k.indexOf('|')+1);if(k.indexOf('|')>=0&&!images[t])images[t]=webArt[k];});
   var pri=function(src){return /\/art\//.test(src)?2:1;};
   var better=function(t,src){if(!src||/^https?:/.test(src))return;if(!images[t]||pri(src)>pri(images[t]))images[t]=src;};
   Object.keys(history.images||{}).forEach(function(t){better(cleanList([{title:t}])[0].title,history.images[t]);better(t,history.images[t]);});
   Object.keys(days).sort().forEach(function(d){var ch=days[d].charts||{};Object.keys(ch).forEach(function(k){cleanList(ch[k]).forEach(function(g){better(g.title,g.image);
+    if(g.image&&!/^https?:/.test(g.image))images[k+'|'+g.title]=g.image;   // newest day wins for each platform
     if(/^https?:\/\//.test(g.url||'')){links[k+'|'+g.title]=g.url;links[g.title]=g.url;}});});});
 }
 // Real daily records always win; estimated days (from weekly charts) only fill dates with no record.
@@ -218,7 +224,7 @@ function streaks(){
 function topBar(){
   var days=history.days||{}, avail=CHARTS.filter(function(c){return Object.keys(days).some(function(d){return days[d].no1&&days[d].no1[c[0]];});});
   var seg=avail.length>1?'<div class="seg" role="group" aria-label="Which chart">'+avail.map(function(c){return '<button type="button" data-chart="'+c[0]+'" aria-pressed="'+(chart===c[0])+'">'+c[1]+'</button>';}).join('')+'</div>':'';
-  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><a class="nav-blog" href="/blog/">Blog</a></div>'+(seg?'<div class="switch-wrap">'+seg+'</div>':'');
+  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><span class="nav-blog soon-link" aria-disabled="true">Blog &amp; Revisions (Coming Soon)</span></div>'+(seg?'<div class="switch-wrap">'+seg+'</div>':'');
 }
 
 // Region picker at the bottom of the page, with a teaser for future regions.
@@ -298,6 +304,19 @@ function detail(){
 // laid out on a day-by-day timeline that scrolls sideways. It opens on today and ends
 // on the left where the oldest of those 10 streaks began.
 var SK_GAMES=10, SK_COL=18;
+// Keeps the slider above the Streaks timeline in step with its sideways scroll.
+function linkScrubber(){
+  var sk=document.getElementById('skscroll'), r=document.getElementById('skrange');
+  if(!sk||!r)return;
+  var room=function(){return sk.scrollWidth-sk.clientWidth;};
+  r.hidden=room()<=2;
+  var sync=function(){r.value=room()>0?Math.round(sk.scrollLeft/room()*1000):1000;};
+  r.addEventListener('input',function(){sk.scrollLeft=r.value/1000*room();});
+  sk.addEventListener('scroll',sync,{passive:true});
+  sync();
+}
+window.addEventListener('resize',function(){var r=document.getElementById('skrange'),sk=document.getElementById('skscroll');if(r&&sk)r.hidden=sk.scrollWidth-sk.clientWidth<=2;});
+
 function streakChart(st){
   if(!st.length)return '';
   var t=toNum(todayStr()), latest=Math.max(st[st.length-1].end,t), games=[];
@@ -311,7 +330,9 @@ function streakChart(st){
   for(var n=start;n<=latest+1;n++){
     if(n>latest||(n>start&&new Date(n*DAY).getUTCDate()===1)){
       var span=n-runStart;
-      months+='<div class="sk-month" style="left:'+((runStart-start)*SK_COL)+'px;width:'+(span*SK_COL)+'px">'+(span>=3?MONTHS_L[new Date(runStart*DAY).getUTCMonth()]+(span>=8&&new Date(runStart*DAY).getUTCFullYear()!==new Date(t*DAY).getUTCFullYear()?' '+new Date(runStart*DAY).getUTCFullYear():''):'')+'</div>';
+      var md=new Date(runStart*DAY), mname=span>=6?MONTHS_L[md.getUTCMonth()]:MONTHS[md.getUTCMonth()];
+      if(span>=8&&md.getUTCFullYear()!==new Date(t*DAY).getUTCFullYear())mname+=' '+md.getUTCFullYear();
+      months+='<div class="sk-month" style="width:'+(span*SK_COL)+'px"><span class="sk-mlabel">'+mname+'</span></div>';
       runStart=n;
     }
   }
@@ -324,7 +345,8 @@ function streakChart(st){
       '<div class="sk-track">'+bars+'</div></div>';
   }).join('');
   return '<section><h2>Streaks</h2><p class="sub">The last '+games.length+' games to hold #1. Each bar is a run at the top; the number is how many days it lasted. Scroll sideways to go back in time.</p>'+
-    '<div class="panel sk-panel"><div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+
+    '<div class="panel sk-panel"><input type="range" class="sk-range" id="skrange" min="0" max="1000" value="1000" aria-label="Scroll the streaks timeline back in time">'+
+    '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+
     '<div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div>'+rows+'</div></div></div></section>';
 }
 
@@ -334,8 +356,9 @@ function render(){
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
   var skOld=document.getElementById('skscroll'), skAtEnd=!skOld||skOld.scrollLeft+skOld.clientWidth>=skOld.scrollWidth-4, skLeft=skOld?skOld.scrollLeft:0;
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
-    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. <a href="/blog/">Blog</a></footer>';
+    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. Blog &amp; Revisions coming soon.</footer>';
   var sk=document.getElementById('skscroll');if(sk)sk.scrollLeft=skAtEnd?sk.scrollWidth:skLeft;
+  linkScrubber();
 }
 
 document.getElementById('root').addEventListener('click',function(e){
