@@ -346,7 +346,7 @@
       }
     },
     "2026-10-02": {
-      "capturedAt": "2026-10-02T16:06:10Z",
+      "capturedAt": "2026-10-02T16:19:20Z",
       "method": "app",
       "no1": {
         "switch2": "KINGDOM HEARTS Collection [I～III]",
@@ -506,5 +506,5 @@
     "switch1|Mario + Rabbids Sparks of Hope Gold Edition": "data/us/art/mario-rabbids-sparks-of-hope-gold-edition-switch1.jpg",
     "switch1|EA SPORTS FC 27": "data/us/art/ea-sports-fc-27-switch1.jpg"
   },
-  "updatedAt": "2026-10-02T16:06:10Z"
+  "updatedAt": "2026-10-02T16:19:20Z"
 }
