@@ -105,7 +105,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.85rem;line-height:1.7}
 footer a{color:var(--accent);font-weight:600}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 /* Streak chart: 14 day columns, one row per game */
-.gt{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:2px}
+.gt{display:grid;grid-template-columns:repeat(21,minmax(0,1fr));gap:2px}
 .gt-day{text-align:center;font-size:.78rem;color:var(--muted);line-height:1.2;padding-bottom:6px;border-bottom:1px solid var(--line)}
 .gt-months{margin-bottom:4px}
 .gt-month{font-size:.8rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;border-left:1px solid var(--line);padding-left:4px}
@@ -120,7 +120,21 @@ footer a{color:var(--accent);font-weight:600}
 .gt-bar.cut-l{border-top-left-radius:0;border-bottom-left-radius:0}
 .gt-bar.cut-r{border-top-right-radius:0;border-bottom-right-radius:0}
 .icon-btn:disabled{opacity:.35;cursor:default}
-@media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}.gt{gap:1px}.gt-bar{font-size:.62rem}}
+@media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}.gt{gap:1px}.gt-bar{font-size:.58rem;border-radius:5px}.gt-day{font-size:.62rem}.gt-month{font-size:.72rem}}
+/* Previous #1s: sideways-scrolling strip */
+.ps-title{font-size:1.1rem;font-weight:800;margin:28px 0 4px}
+.ps-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.ps-track{display:flex;gap:14px;align-items:flex-start;width:max-content}
+.ps-item{flex:none;min-width:0}
+.ps-barrow{display:flex;align-items:center;gap:8px;margin-top:8px}
+.ps-bar{height:14px;border-radius:7px;flex:none}
+.ps-thumb{display:block;width:64px;height:64px;border-radius:9px;overflow:hidden;background:var(--bg)}
+.ps-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ps-thumb .ph{font-size:.45rem}
+.ps-days{font-weight:800;font-size:.95rem;white-space:nowrap}
+.ps-days small{font-weight:600;font-size:.75rem;color:var(--muted)}
+.ps-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.85rem;font-weight:600;line-height:1.25;margin-top:6px}
+.ps-dates{font-size:.78rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -147,7 +161,7 @@ function pickRegion(){
   return ids.indexOf(saved)>=0?saved:ids[0];
 }
 var links={}, extraLinks={}, estimated={}, webArt={};
-var history=null, chart='switch2', winEnd=null, WIN=14, calEnd=null, selDate=null, entries=[], images={};
+var history=null, chart='switch2', winEnd=null, WIN=21, calEnd=null, selDate=null, entries=[], images={};
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function toNum(d){var p=d.split('-').map(Number);return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY);}
@@ -229,16 +243,6 @@ function regionBlock(){
   return '<section class="region-block"><h2>Region</h2>'+reg+soon+'</section>';
 }
 
-// The games that held #1 before the current one, newest first.
-function pastStreaks(st){
-  var past=st.slice(Math.max(0,st.length-8),st.length-1).reverse();
-  if(!past.length)return '';
-  return '<section><h2>Previous #1s</h2><p class="sub">The last '+past.length+' games to hold the top spot before the current one.</p><div class="panel"><ul class="list">'+
-    past.map(function(s){
-      return '<li>'+buyLink(s.game,art(s.game),'thumb')+'<span class="grow">'+buyLink(s.game,esc(s.game),'name-link')+
-        '<div class="dates">'+nice(s.start)+(s.len>1?' – '+nice(s.end):'')+'</div></span><span class="len">'+s.len+'<small> '+(s.len===1?'day':'days')+'</small></span></li>';
-    }).join('')+'</ul></div></section>';
-}
 
 function hero(st){
   if(!entries.length)return '<div class="hero"><div class="hero-game">Waiting for the first daily check</div><p class="hero-meta">The first entry appears after the scheduled job runs.</p></div>';
@@ -303,6 +307,25 @@ function detail(){
   return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' top 10, '+nice(toNum(selDate))+'</strong>'+body+'</div>';
 }
 
+// The last 10 games to hold #1 before the current one, oldest on the left. Bar width
+// follows how long each held the spot; the strip scrolls sideways to go back in time.
+function pastTimeline(st){
+  var past=st.slice(Math.max(0,st.length-11),st.length-1);
+  if(!past.length)return '';
+  var PX=9;   // pixels per day, so bar lengths can be compared directly
+  var items=past.map(function(s){
+    var bar=s.len*PX, w=Math.max(120,bar);
+    return '<div class="ps-item" style="width:'+w+'px">'+
+      buyLink(s.game,art(s.game),'ps-thumb')+
+      buyLink(s.game,esc(s.game),'ps-name name-link')+
+      '<div class="ps-dates">'+nice(s.start)+(s.len>1?' – '+nice(s.end):'')+'</div>'+
+      '<div class="ps-barrow"><div class="ps-bar" style="width:'+bar+'px;background:hsl('+hue(s.game)+' 55% 42%)" title="'+esc(s.game)+': '+s.len+' day'+(s.len>1?'s':'')+'"></div>'+
+      '<span class="ps-days">'+s.len+'<small> '+(s.len===1?'day':'days')+'</small></span></div></div>';
+  }).join('');
+  return '<h3 class="ps-title">Previous #1s</h3><p class="sub">The last '+past.length+' games to hold the top spot. Longer bars held it longer. Scroll sideways to go back in time.</p>'+
+    '<div class="panel"><div class="ps-scroll" id="pscroll"><div class="ps-track">'+items+'</div></div></div>';
+}
+
 function streakChart(st){
   if(!entries.length)return '';
   var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));
@@ -328,18 +351,20 @@ function streakChart(st){
       return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
     var live=g===current&&st[st.length-1].end>=t-1;
     return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
-  }).join(''):'<p class="empty">No days recorded in these two weeks.</p>';
+  }).join(''):'<p class="empty">No days recorded in these three weeks.</p>';
   var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
-  var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous two weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next two weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
-  return '<section><h2>Streaks</h2><p class="sub">Each bar is a run at the top. The number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div></section>';
+  var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous three weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next three weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
+  return '<section><h2>Streaks</h2><p class="sub">The last three weeks. Each bar is a run at the top; the number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div>'+pastTimeline(st)+'</section>';
 }
 
 function render(){
   build();
   var st=streaks();
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
-  document.getElementById('root').innerHTML=topBar()+hero(st)+pastStreaks(st)+calendar()+streakChart(st)+regionBlock()+
+  var psOld=document.getElementById('pscroll'), psAtEnd=!psOld||psOld.scrollLeft+psOld.clientWidth>=psOld.scrollWidth-4, psLeft=psOld?psOld.scrollLeft:0;
+  document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
     '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. <a href="/blog/">Blog</a></footer>';
+  var ps=document.getElementById('pscroll');if(ps)ps.scrollLeft=psAtEnd?ps.scrollWidth:psLeft;
 }
 
 document.getElementById('root').addEventListener('click',function(e){
