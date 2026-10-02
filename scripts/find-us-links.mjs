@@ -29,6 +29,10 @@ function score(title, chart, href) {
   const suffix = chart === 'switch2' ? /-switch-2$/ : /-switch$/;
   if (!suffix.test(slug)) return 0;
   if (/amiibo/.test(slug) && !/amiibo/i.test(title)) return 0;
+  // Some games are sold in separate language versions (e.g. french-pokemon-firered-version-switch).
+  // Never pick a non-English one unless the title asks for it.
+  const lang = slug.match(/^(french|spanish|german|italian|japanese|korean|chinese|dutch|portuguese|russian)-/);
+  if (lang && !new RegExp(lang[1], 'i').test(title)) return 0;
   const base = slug.replace(suffix, '').replace(/-/g, ' ');
   const want = norm(title);
   if (!want) return 0;
@@ -45,9 +49,10 @@ try { links = JSON.parse(await fs.readFile(OUT, 'utf8')); } catch { /* first run
 
 // Drop saved links that don't pass the current checks, so they get looked up again.
 let dropped = 0;
+const droppedTitles = new Set();
 for (const [key, href] of Object.entries(links)) {
   const i = key.indexOf('|');
-  if (score(key.slice(i + 1), key.slice(0, i), href) <= 0) { delete links[key]; dropped++; }
+  if (score(key.slice(i + 1), key.slice(0, i), href) <= 0) { delete links[key]; dropped++; droppedTitles.add(key.slice(i + 1)); }
 }
 if (dropped) console.log(`Re-checking ${dropped} saved link(s) that looked wrong.`);
 
@@ -121,6 +126,9 @@ async function savePictures() {
   const ART_INDEX = 'data/us/web-art.json';
   let webArt = {};
   try { webArt = JSON.parse(await fs.readFile(ART_INDEX, 'utf8')); } catch { /* first run */ }
+  // A picture taken from a page we've just rejected (e.g. a French version) gets replaced too.
+  let artChanged = false;
+  for (const t of droppedTitles) if (webArt[t]) { delete webArt[t]; artChanged = true; }
   const haveArt = new Set([...Object.keys(history.images || {}), ...Object.keys(webArt)]);
   for (const day of Object.values(history.days || {})) {
     for (const list of Object.values(day.charts || {})) for (const g of list || []) if (g.image) haveArt.add(g.title);
@@ -131,7 +139,11 @@ async function savePictures() {
     const title = key.slice(key.indexOf('|') + 1);
     if (!haveArt.has(title) && !need.has(title)) need.set(title, url);
   }
-  if (!need.size) { console.log('Every US game already has a picture.'); return; }
+  if (!need.size) {
+    if (artChanged && !dryRun) await fs.writeFile(ART_INDEX, JSON.stringify(Object.fromEntries(Object.entries(webArt).sort()), null, 2) + '\n');
+    console.log('Every US game already has a picture.');
+    return;
+  }
   console.log(`Fetching pictures for ${need.size} game(s) without one...`);
   await fs.mkdir(ART_DIR, { recursive: true });
   const slug = (t) => norm(t).replace(/ /g, '-').slice(0, 80) || 'game';
@@ -166,7 +178,7 @@ async function savePictures() {
   } finally {
     await browser2.close();
   }
-  if (!dryRun && saved) {
+  if (!dryRun && (saved || artChanged)) {
     await fs.writeFile(ART_INDEX, JSON.stringify(Object.fromEntries(Object.entries(webArt).sort()), null, 2) + '\n');
     console.log(`Saved ${ART_INDEX}`);
   }
