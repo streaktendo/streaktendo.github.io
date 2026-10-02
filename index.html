@@ -34,7 +34,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grote
 .soon-flags{display:inline-flex;gap:6px;margin-left:6px;font-size:1.25rem;vertical-align:-3px}
 .nav-blog{color:var(--accent);font-weight:600;font-size:.95rem;text-decoration:none;white-space:nowrap}
 .nav-blog:hover{text-decoration:underline;text-underline-offset:3px}
-.nav-blog.soon-link{color:var(--muted);font-weight:600;cursor:default;text-decoration:none}
+.soon-heading{color:var(--ink)}
 /* Switch 1 / Switch 2 buttons follow you down the page */
 .switch-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:-36px;pointer-events:none}
 .switch-wrap .seg{pointer-events:auto;box-shadow:0 4px 16px rgba(31,29,26,.14)}
@@ -110,7 +110,10 @@ footer a{color:var(--accent);font-weight:600}
 @media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}}
 /* Streaks: sideways-scrolling day timeline */
 .sk-panel{padding:14px 0 14px 14px}
-.sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+.sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.sk-scroll::-webkit-scrollbar{display:none}
+.sk-head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);z-index:5;overflow:hidden;background:var(--surface);padding-top:6px}
+.sk-range-bottom{margin:14px 0 0}
 .sk-inner{position:relative;padding-right:14px;box-sizing:content-box}
 .sk-months{display:flex;height:20px}
 .sk-month{flex:none;font-size:.8rem;font-weight:600;white-space:nowrap;border-left:1px solid var(--line);box-sizing:border-box}
@@ -224,7 +227,7 @@ function streaks(){
 function topBar(){
   var days=history.days||{}, avail=CHARTS.filter(function(c){return Object.keys(days).some(function(d){return days[d].no1&&days[d].no1[c[0]];});});
   var seg=avail.length>1?'<div class="seg" role="group" aria-label="Which chart">'+avail.map(function(c){return '<button type="button" data-chart="'+c[0]+'" aria-pressed="'+(chart===c[0])+'">'+c[1]+'</button>';}).join('')+'</div>':'';
-  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><span class="nav-blog soon-link" aria-disabled="true">Blog &amp; Revisions (Coming Soon)</span></div>'+(seg?'<div class="switch-wrap">'+seg+'</div>':'');
+  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1></div>'+(seg?'<div class="switch-wrap">'+seg+'</div>':'');
 }
 
 // Region picker at the bottom of the page, with a teaser for future regions.
@@ -233,7 +236,8 @@ function regionBlock(){
   var reg='<div class="seg region-seg" role="group" aria-label="Which region">'+REGIONS.map(function(r){
     return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'"><span class="flag" aria-hidden="true">'+r.flag+'</span> '+r.label+'</button>';}).join('')+'</div>';
   var soon='<p class="soon">More regions coming soon! <span class="soon-flags">'+SOON.map(function(f){return '<span title="'+f[1]+'" aria-label="'+f[1]+'">'+f[0]+'</span>';}).join('')+'</span></p>';
-  return '<section class="region-block"><h2>Region</h2>'+reg+soon+'</section>';
+  return '<section class="region-block"><h2>Region</h2>'+reg+soon+'</section>'+
+    '<section class="region-block"><h2 class="soon-heading">Blog &amp; Revisions (Coming Soon)</h2></section>';
 }
 
 
@@ -306,16 +310,20 @@ function detail(){
 var SK_GAMES=10, SK_COL=18;
 // Keeps the slider above the Streaks timeline in step with its sideways scroll.
 function linkScrubber(){
-  var sk=document.getElementById('skscroll'), r=document.getElementById('skrange');
-  if(!sk||!r)return;
+  var sk=document.getElementById('skscroll'), head=document.getElementById('skhead');
+  var ranges=[document.getElementById('skrange'),document.getElementById('skrange2')].filter(Boolean);
+  if(!sk)return;
   var room=function(){return sk.scrollWidth-sk.clientWidth;};
-  r.hidden=room()<=2;
-  var sync=function(){r.value=room()>0?Math.round(sk.scrollLeft/room()*1000):1000;};
-  r.addEventListener('input',function(){sk.scrollLeft=r.value/1000*room();});
+  var sync=function(){
+    if(head)head.scrollLeft=sk.scrollLeft;
+    ranges.forEach(function(r){r.value=room()>0?Math.round(sk.scrollLeft/room()*1000):1000;});
+  };
+  ranges.forEach(function(r){r.hidden=room()<=2;r.addEventListener('input',function(){sk.scrollLeft=r.value/1000*room();});});
   sk.addEventListener('scroll',sync,{passive:true});
   sync();
 }
-window.addEventListener('resize',function(){var r=document.getElementById('skrange'),sk=document.getElementById('skscroll');if(r&&sk)r.hidden=sk.scrollWidth-sk.clientWidth<=2;});
+window.addEventListener('resize',function(){var sk=document.getElementById('skscroll');if(!sk)return;
+  ['skrange','skrange2'].forEach(function(id){var r=document.getElementById(id);if(r)r.hidden=sk.scrollWidth-sk.clientWidth<=2;});});
 
 function streakChart(st){
   if(!st.length)return '';
@@ -346,8 +354,10 @@ function streakChart(st){
   }).join('');
   return '<section><h2>Streaks</h2><p class="sub">The last '+games.length+' games to hold #1. Each bar is a run at the top; the number is how many days it lasted. Scroll sideways to go back in time.</p>'+
     '<div class="panel sk-panel"><input type="range" class="sk-range" id="skrange" min="0" max="1000" value="1000" aria-label="Scroll the streaks timeline back in time">'+
-    '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+
-    '<div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div>'+rows+'</div></div></div></section>';
+    // The month/day header sits apart from the rows so it can stay in view while you scroll down the page.
+    '<div class="sk-head" id="skhead"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px"><div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div></div></div>'+
+    '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+rows+'</div></div>'+
+    '<input type="range" class="sk-range sk-range-bottom" id="skrange2" min="0" max="1000" value="1000" aria-label="Scroll the streaks timeline back in time"></div></section>';
 }
 
 function render(){
@@ -356,7 +366,7 @@ function render(){
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
   var skOld=document.getElementById('skscroll'), skAtEnd=!skOld||skOld.scrollLeft+skOld.clientWidth>=skOld.scrollWidth-4, skLeft=skOld?skOld.scrollLeft:0;
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
-    '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. Blog &amp; Revisions coming soon.</footer>';
+    '';
   var sk=document.getElementById('skscroll');if(sk)sk.scrollLeft=skAtEnd?sk.scrollWidth:skLeft;
   linkScrubber();
 }
