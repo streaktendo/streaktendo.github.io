@@ -1078,7 +1078,7 @@
       }
     },
     "2026-10-02": {
-      "capturedAt": "2026-10-02T14:15:50.286Z",
+      "capturedAt": "2026-10-02T14:53:07.818Z",
       "no1": {
         "switch1": "Mario + Rabbids Sparks of Hope Gold Edition",
         "switch2": "Minecraft Dungeons II"
@@ -1136,17 +1136,17 @@
           },
           {
             "rank": 8,
-            "title": "Mario + Rabbids Kingdom Battle - Gold Edition",
-            "url": "https://ec.nintendo.com/AU/en/bundles/70070000000401",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/f/ef0acec40680ebf47edb0eb8afa90daf133e878abc16c72bd3e5be4e68f8cfe9_1786330978.jpg",
-            "image": "data/au/art/mario-rabbids-kingdom-battle-gold-edition.jpg"
-          },
-          {
-            "rank": 9,
             "title": "Untitled Goose Game",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000014140",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f_1785764748.jpg",
             "image": "data/au/art/untitled-goose-game.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Mario + Rabbids Kingdom Battle - Gold Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000000401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/f/ef0acec40680ebf47edb0eb8afa90daf133e878abc16c72bd3e5be4e68f8cfe9_1786330978.jpg",
+            "image": "data/au/art/mario-rabbids-kingdom-battle-gold-edition.jpg"
           },
           {
             "rank": 10,
@@ -1175,7 +1175,7 @@
             "rank": 3,
             "title": "Minecraft Dungeons II Deluxe Edition",
             "url": "https://ec.nintendo.com/AU/en/bundles/70070000034458",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/6/f60ee78fc7b29d2557302b888dcc2f9e28aa9c0a6f573acf025488103a5c5ba6_1790668884.jpg",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/6/f60ee78fc7b29d2557302b888dcc2f9e28aa9c0a6f573acf025488103a5c5ba6_1790952085.jpg",
             "image": "data/au/art/minecraft-dungeons-ii-deluxe-edition.jpg"
           },
           {
@@ -1186,7 +1186,7 @@
             "image": "data/au/art/fire-emblem-fortune-s-weave.jpg"
           },
           {
-            "rank": 8,
+            "rank": 7,
             "title": "Pokémon Pokopia Expansion Pass",
             "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
@@ -1194,13 +1194,6 @@
           },
           {
             "rank": 9,
-            "title": "FINAL FANTASY VII REMAKE INTERGRADE",
-            "url": "https://ec.nintendo.com/AU/en/titles/70010000101699",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/e/4e51758a913dd23ce9acec4124ae49ce7a4099ecaf4aae536d8ae5fd6843c3ba_1786098288.jpg",
-            "image": "data/au/art/final-fantasy-vii-remake-intergrade.jpg"
-          },
-          {
-            "rank": 10,
             "title": "Mario Kart World",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
@@ -1212,6 +1205,13 @@
             "url": "https://ec.nintendo.com/AU/en/titles/70010000135521",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/3/f3c3a1be1cf1c4a1364293da2040abb264ee4713fd546fb8b3c7f9755a57e1c6_1788968009.jpg",
             "image": "data/au/art/meccha-chameleon.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000101699",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/e/4e51758a913dd23ce9acec4124ae49ce7a4099ecaf4aae536d8ae5fd6843c3ba_1786098288.jpg",
+            "image": "data/au/art/final-fantasy-vii-remake-intergrade.jpg"
           },
           {
             "rank": 13,
@@ -1231,7 +1231,7 @@
       }
     }
   },
-  "updatedAt": "2026-10-02T14:15:50.286Z",
+  "updatedAt": "2026-10-02T14:53:07.818Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
