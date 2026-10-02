@@ -26,7 +26,12 @@
 html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
 #root{max-width:960px;margin:0 auto;padding:18px 16px 48px}
-.top-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-height:36px;padding-right:440px}
+.top-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-height:36px;padding-right:220px}
+.region-block{text-align:center}
+.region-seg button{padding:8px 18px;font-size:1rem}
+.flag{font-size:1.15em;line-height:1;vertical-align:-1px}
+.soon{color:var(--muted);margin:14px 0 0;font-size:.95rem}
+.soon-flags{display:inline-flex;gap:6px;margin-left:6px;font-size:1.25rem;vertical-align:-3px}
 .nav-blog{color:var(--accent);font-weight:600;font-size:.95rem;text-decoration:none;white-space:nowrap}
 .nav-blog:hover{text-decoration:underline;text-underline-offset:3px}
 /* Switch 1 / Switch 2 buttons follow you down the page */
@@ -128,9 +133,9 @@ var MONTHS_L=['January','February','March','April','May','June','July','August',
 var CHARTS=[['switch2','Switch 2'],['switch1','Switch 1']];
 // To add a region: add a line here and a data/<id>/history.json file.
 var REGIONS=[
-  {id:'us',label:'US',name:'the US',source:'Checked once a day from the US Best Sellers lists in the Nintendo Store app.',
+  {id:'us',label:'US',flag:'🇺🇸',name:'the US',source:'Checked once a day from the US Best Sellers lists in the Nintendo Store app.',
    search:function(q){return 'https://www.nintendo.com/us/search/#q='+encodeURIComponent(q)+'&p=1&cat=gme&sort=df';}},
-  {id:'au',label:'Australia',name:'Australia',source:'Checked once a day from the Nintendo Australia store\'s digital-download charts.',
+  {id:'au',label:'Australia',flag:'🇦🇺',name:'Australia',source:'Checked once a day from the Nintendo Australia store\'s digital-download charts.',
    search:function(q){return 'https://store.nintendo.com.au/au/catalogsearch/result/?q='+encodeURIComponent(q);}}
 ];
 var region=pickRegion();
@@ -212,8 +217,27 @@ function streaks(){
 function topBar(){
   var days=history.days||{}, avail=CHARTS.filter(function(c){return Object.keys(days).some(function(d){return days[d].no1&&days[d].no1[c[0]];});});
   var seg=avail.length>1?'<div class="seg" role="group" aria-label="Which chart">'+avail.map(function(c){return '<button type="button" data-chart="'+c[0]+'" aria-pressed="'+(chart===c[0])+'">'+c[1]+'</button>';}).join('')+'</div>':'';
-  var reg='<div class="seg" role="group" aria-label="Which region">'+REGIONS.map(function(r){return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'">'+r.label+'</button>';}).join('')+'</div>';
-  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><a class="nav-blog" href="/blog/">Blog</a></div><div class="switch-wrap">'+reg+seg+'</div>';
+  return '<div class="top-bar"><h1>STREAK-TENDO - eShop #1 Top Game by Day</h1><a class="nav-blog" href="/blog/">Blog</a></div>'+(seg?'<div class="switch-wrap">'+seg+'</div>':'');
+}
+
+// Region picker at the bottom of the page, with a teaser for future regions.
+var SOON=[['🇯🇵','Japan'],['🇬🇧','United Kingdom'],['🇪🇺','Europe'],['🇨🇦','Canada'],['🇰🇷','South Korea'],['🇭🇰','Hong Kong']];
+function regionBlock(){
+  var reg='<div class="seg region-seg" role="group" aria-label="Which region">'+REGIONS.map(function(r){
+    return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'"><span class="flag" aria-hidden="true">'+r.flag+'</span> '+r.label+'</button>';}).join('')+'</div>';
+  var soon='<p class="soon">More regions coming soon! <span class="soon-flags">'+SOON.map(function(f){return '<span title="'+f[1]+'" aria-label="'+f[1]+'">'+f[0]+'</span>';}).join('')+'</span></p>';
+  return '<section class="region-block"><h2>Region</h2>'+reg+soon+'</section>';
+}
+
+// The games that held #1 before the current one, newest first.
+function pastStreaks(st){
+  var past=st.slice(Math.max(0,st.length-8),st.length-1).reverse();
+  if(!past.length)return '';
+  return '<section><h2>Previous #1s</h2><p class="sub">The last '+past.length+' games to hold the top spot before the current one.</p><div class="panel"><ul class="list">'+
+    past.map(function(s){
+      return '<li>'+buyLink(s.game,art(s.game),'thumb')+'<span class="grow">'+buyLink(s.game,esc(s.game),'name-link')+
+        '<div class="dates">'+nice(s.start)+(s.len>1?' – '+nice(s.end):'')+'</div></span><span class="len">'+s.len+'<small> '+(s.len===1?'day':'days')+'</small></span></li>';
+    }).join('')+'</ul></div></section>';
 }
 
 function hero(st){
@@ -314,13 +338,13 @@ function render(){
   build();
   var st=streaks();
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
-  document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+
+  document.getElementById('root').innerHTML=topBar()+hero(st)+pastStreaks(st)+calendar()+streakChart(st)+regionBlock()+
     '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. <a href="/blog/">Blog</a></footer>';
 }
 
 document.getElementById('root').addEventListener('click',function(e){
   var el=e.target.closest('[data-win],[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
-  if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();}}
+  if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();window.scrollTo({top:0,behavior:'smooth'});}}
   else if(el.dataset.chart){chart=el.dataset.chart;render();}
   else if(el.dataset.win){var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));winEnd=Math.min((winEnd===null?latest:winEnd)+Number(el.dataset.win)*WIN,latest);if(winEnd===latest)winEnd=null;render();}
   else if(el.dataset.cal){
