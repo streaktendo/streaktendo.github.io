@@ -34,7 +34,6 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grote
 .soon-flags{display:inline-flex;gap:6px;margin-left:6px;font-size:1.25rem;vertical-align:-3px}
 .nav-blog{color:var(--accent);font-weight:600;font-size:.95rem;text-decoration:none;white-space:nowrap}
 .nav-blog:hover{text-decoration:underline;text-underline-offset:3px}
-.soon-heading{color:var(--ink)}
 /* Switch 1 / Switch 2 buttons follow you down the page */
 .switch-wrap{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:-36px;pointer-events:none}
 .switch-wrap .seg{pointer-events:auto;box-shadow:0 4px 16px rgba(31,29,26,.14)}
@@ -155,7 +154,7 @@ function pickRegion(){
   return ids.indexOf(saved)>=0?saved:ids[0];
 }
 var links={}, extraLinks={}, estimated={}, webArt={};
-var history=null, chart='switch2', winEnd=null, WIN=21, calEnd=null, selDate=null, entries=[], images={};
+var history=null, chart='switch2', winEnd=null, WIN=21, selDate=null, entries=[], images={};
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function toNum(d){var p=d.split('-').map(Number);return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY);}
@@ -237,7 +236,8 @@ function regionBlock(){
     return '<button type="button" data-region="'+r.id+'" aria-pressed="'+(region===r.id)+'"><span class="flag" aria-hidden="true">'+r.flag+'</span> '+r.label+'</button>';}).join('')+'</div>';
   var soon='<p class="soon">More regions coming soon! <span class="soon-flags">'+SOON.map(function(f){return '<span title="'+f[1]+'" aria-label="'+f[1]+'">'+f[0]+'</span>';}).join('')+'</span></p>';
   return '<section class="region-block"><h2>Region</h2>'+reg+soon+'</section>'+
-    '<section class="region-block"><h2 class="soon-heading">Blog &amp; Revisions (Coming Soon)</h2></section>';
+    '<section class="region-block"><h2>Blog &amp; Revisions</h2><p class="soon">Coming Soon</p></section>'+
+    '<section class="region-block"><h2>Feedback</h2><p class="soon">Coming Soon</p></section>';
 }
 
 
@@ -252,27 +252,25 @@ function hero(st){
     '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
-// Rolling calendar: the last 5 weeks, ending with the current week. Each month gets its
-// own heading, and a new month starts on a fresh row under that heading.
-var CAL_WEEKS=5, calShownStart=null;
+// Calendar: two whole months per page (the previous month above the current one), so the
+// page is full of pictures early in a month and months are never split. The arrows move
+// back and forward two months at a time.
+var calPage=0;
 function calendar(){
   var map=byDate(), t=todayStr(), tn=toNum(t);
-  var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn);
-  var endWeek=latest+(6-new Date(latest*DAY).getUTCDay());   // Saturday of the latest week
-  var end=calEnd===null?endWeek:calEnd, start=end-CAL_WEEKS*7+1;
-  // Never show more than two months: start no earlier than the 1st of the previous month.
-  var ed=new Date(end*DAY), minStart=Math.round(Date.UTC(ed.getUTCFullYear(),ed.getUTCMonth()-1,1)/DAY);
-  if(start<minStart)start=minStart;
-  calShownStart=start;
+  var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), ld=new Date(latest*DAY);
+  var lastIdx=ld.getUTCFullYear()*12+ld.getUTCMonth()-2*calPage, firstIdx=lastIdx-1;
+  var start=Math.round(Date.UTC(Math.floor(firstIdx/12),firstIdx%12,1)/DAY);
+  var end=Math.round(Date.UTC(Math.floor(lastIdx/12),lastIdx%12+1,1)/DAY)-1;
   var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
-  var curMonth=-1;
+  var curMonth=-1, thisYear=new Date(tn*DAY).getUTCFullYear();
   for(var n=start;n<=end;n++){
     var dt=new Date(n*DAY), m=dt.getUTCMonth(), dow=dt.getUTCDay(), ds=toStr(n);
     if(m!==curMonth){
       var firstHead=curMonth===-1;
       curMonth=m;
-      var y=dt.getUTCFullYear(), showYear=y!==new Date(tn*DAY).getUTCFullYear();
-      h+='<div class="cal-month'+(firstHead?' first':'')+'">'+MONTHS_L[m]+(showYear?' '+y:'')+'</div>';
+      var y=dt.getUTCFullYear();
+      h+='<div class="cal-month'+(firstHead?' first':'')+'">'+MONTHS_L[m]+(y!==thisYear?' '+y:'')+'</div>';
       for(var i=0;i<dow;i++)h+='<div class="day blank"></div>';
     }
     var en=map[ds], g=en&&en.game, future=n>tn;
@@ -282,11 +280,12 @@ function calendar(){
         :'<div class="'+cls+'" aria-hidden="true">'+dt.getUTCDate()+'</div>';
   }
   h+='</div>';
-  var label=nice(start)+' – '+nice(end);
-  var canBack=entries.length&&start>toNum(entries[0].date), canFwd=end<endWeek;
+  var sy=new Date(start*DAY).getUTCFullYear(), ey=new Date(end*DAY).getUTCFullYear();
+  var label=MONTHS_L[new Date(start*DAY).getUTCMonth()]+(sy!==ey?' '+sy:'')+' – '+MONTHS_L[new Date(end*DAY).getUTCMonth()]+' '+ey;
+  var canBack=entries.length&&start>toNum(entries[0].date), canFwd=calPage>0;
   return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head">'+
-    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Earlier weeks"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
-    '<button type="button" class="icon-btn" data-cal="1" aria-label="Later weeks"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
+    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Earlier months"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
+    '<button type="button" class="icon-btn" data-cal="1" aria-label="Later months"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
 }
 
 function detail(){
@@ -375,12 +374,7 @@ document.getElementById('root').addEventListener('click',function(e){
   var el=e.target.closest('[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
   if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();window.scrollTo({top:0,behavior:'smooth'});}}
   else if(el.dataset.chart){chart=el.dataset.chart;var k=document.getElementById('skscroll');if(k)k.scrollLeft=k.scrollWidth;render();}
-  else if(el.dataset.cal){
-    var tn=toNum(todayStr()), latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), endWeek=latest+(6-new Date(latest*DAY).getUTCDay());
-    var cur=calEnd===null?endWeek:calEnd;
-    calEnd=Number(el.dataset.cal)<0?calShownStart-1:Math.min(cur+CAL_WEEKS*7,endWeek);
-    if(calEnd===endWeek)calEnd=null;
-    render();}
+  else if(el.dataset.cal){calPage=Math.max(0,calPage-Number(el.dataset.cal));render();}
   else if(el.dataset.day){selDate=selDate===el.dataset.day?null:el.dataset.day;render();var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
 });
 
@@ -397,10 +391,10 @@ function load(){
   history=h;indexImages();
   var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];
   var keys=Object.keys(h.days||{}).sort(), anchor=keys.length?keys[keys.length-1]:todayStr();
-  calEnd=null;render();
+  calPage=0;render();
   }).catch(function(err){
     history={days:{}};
-    calEnd=null;render();
+    calPage=0;render();
     document.querySelector('.hero').innerHTML='<p class="empty">Couldn\'t load the '+esc(regionInfo().label)+' data ('+esc(err.message)+').</p>';
   });
 }
