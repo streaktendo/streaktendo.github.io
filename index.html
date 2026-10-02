@@ -105,36 +105,23 @@ footer{margin-top:40px;color:var(--muted);font-size:.85rem;line-height:1.7}
 footer a{color:var(--accent);font-weight:600}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 /* Streak chart: 14 day columns, one row per game */
-.gt{display:grid;grid-template-columns:repeat(21,minmax(0,1fr));gap:2px}
-.gt-day{text-align:center;font-size:.78rem;color:var(--muted);line-height:1.2;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.gt-months{margin-bottom:4px}
-.gt-month{font-size:.8rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;border-left:1px solid var(--line);padding-left:4px}
-.gt-month:first-child{border-left:0;padding-left:0}
-.gt-day.now{color:var(--accent);font-weight:800}
-.gt-row{margin-top:12px}
-.gt-name{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;margin-bottom:5px;min-width:0}
-.gt-name .thumb{width:28px;height:28px;border-radius:6px}
-.gt-name .grow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.gt-cell{grid-row:1;height:26px;background:var(--bg);border-radius:4px}
-.gt-bar{grid-row:1;z-index:1;height:26px;border-radius:7px;color:#fff;font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;min-width:0}
-.gt-bar.cut-l{border-top-left-radius:0;border-bottom-left-radius:0}
-.gt-bar.cut-r{border-top-right-radius:0;border-bottom-right-radius:0}
 .icon-btn:disabled{opacity:.35;cursor:default}
-@media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}.gt{gap:1px}.gt-bar{font-size:.58rem;border-radius:5px}.gt-day{font-size:.62rem}.gt-month{font-size:.72rem}}
-/* Previous #1s: sideways-scrolling strip */
-.ps-title{font-size:1.1rem;font-weight:800;margin:28px 0 4px}
-.ps-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
-.ps-track{display:flex;gap:14px;align-items:flex-start;width:max-content}
-.ps-item{flex:none;min-width:0}
-.ps-barrow{display:flex;align-items:center;gap:8px;margin-top:8px}
-.ps-bar{height:14px;border-radius:7px;flex:none}
-.ps-thumb{display:block;width:64px;height:64px;border-radius:9px;overflow:hidden;background:var(--bg)}
-.ps-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.ps-thumb .ph{font-size:.45rem}
-.ps-days{font-weight:800;font-size:.95rem;white-space:nowrap}
-.ps-days small{font-weight:600;font-size:.75rem;color:var(--muted)}
-.ps-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.85rem;font-weight:600;line-height:1.25;margin-top:6px}
-.ps-dates{font-size:.78rem;color:var(--muted)}
+@media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}}
+/* Streaks: sideways-scrolling day timeline */
+.sk-panel{padding:14px 0 14px 14px}
+.sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+.sk-inner{position:relative;padding-right:14px;box-sizing:content-box}
+.sk-months{position:relative;height:20px}
+.sk-month{position:absolute;top:0;font-size:.8rem;font-weight:600;white-space:nowrap;overflow:hidden;border-left:1px solid var(--line);padding-left:4px}
+.sk-days{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col);border-bottom:1px solid var(--line);padding-bottom:5px}
+.sk-day{text-align:center;font-size:.66rem;color:var(--muted)}
+.sk-day.now{color:var(--accent);font-weight:800}
+.sk-row{margin-top:12px}
+.sk-label{position:sticky;left:0;display:inline-flex;align-items:center;gap:8px;max-width:min(100%,82vw);font-size:.9rem;font-weight:600;margin-bottom:5px;background:var(--surface);padding-right:8px}
+.sk-label .thumb{width:28px;height:28px;border-radius:6px}
+.sk-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.sk-track{position:relative;height:26px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--bg) 0 calc(var(--col) - 2px),transparent calc(var(--col) - 2px) var(--col))}
+.sk-bar{position:absolute;top:0;height:26px;border-radius:7px;color:#fff;font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden}
 </style>
 </head>
 <body>
@@ -307,71 +294,54 @@ function detail(){
   return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' top 10, '+nice(toNum(selDate))+'</strong>'+body+'</div>';
 }
 
-// The last 10 games to hold #1 before the current one, oldest on the left. Bar width
-// follows how long each held the spot; the strip scrolls sideways to go back in time.
-function pastTimeline(st){
-  var past=st.slice(Math.max(0,st.length-11),st.length-1);
-  if(!past.length)return '';
-  var PX=9;   // pixels per day, so bar lengths can be compared directly
-  var items=past.map(function(s){
-    var bar=s.len*PX, w=Math.max(120,bar);
-    return '<div class="ps-item" style="width:'+w+'px">'+
-      buyLink(s.game,art(s.game),'ps-thumb')+
-      buyLink(s.game,esc(s.game),'ps-name name-link')+
-      '<div class="ps-dates">'+nice(s.start)+(s.len>1?' – '+nice(s.end):'')+'</div>'+
-      '<div class="ps-barrow"><div class="ps-bar" style="width:'+bar+'px;background:hsl('+hue(s.game)+' 55% 42%)" title="'+esc(s.game)+': '+s.len+' day'+(s.len>1?'s':'')+'"></div>'+
-      '<span class="ps-days">'+s.len+'<small> '+(s.len===1?'day':'days')+'</small></span></div></div>';
-  }).join('');
-  return '<h3 class="ps-title">Previous #1s</h3><p class="sub">The last '+past.length+' games to hold the top spot. Longer bars held it longer. Scroll sideways to go back in time.</p>'+
-    '<div class="panel"><div class="ps-scroll" id="pscroll"><div class="ps-track">'+items+'</div></div></div>';
-}
-
+// Streaks: one row per game for the last 10 games to hold #1 (current game on top),
+// laid out on a day-by-day timeline that scrolls sideways. It opens on today and ends
+// on the left where the oldest of those 10 streaks began.
+var SK_GAMES=10, SK_COL=18;
 function streakChart(st){
-  if(!entries.length)return '';
-  var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));
-  var end=winEnd===null?latest:Math.min(winEnd,latest), start=end-WIN+1, t=toNum(todayStr());
-  var vis=st.filter(function(s){return s.end>=start&&s.start<=end;});
-  var current=st[st.length-1].game, rows=[];
-  vis.slice().sort(function(a,b){return b.end-a.end;}).forEach(function(s){if(rows.indexOf(s.game)<0)rows.push(s.game);});
-  rows.sort(function(a,b){return (b===current)-(a===current);});
-  var head='<div class="gt gt-months">', runStart=start;
-  for(var n=start;n<=end+1;n++){
-    if(n>end||(n>start&&new Date(n*DAY).getUTCDate()===1)){
-      head+='<div class="gt-month" style="grid-column:'+(runStart-start+1)+' / '+(n-start+1)+'">'+(n-runStart>=2?MONTHS_L[new Date(runStart*DAY).getUTCMonth()]:'')+'</div>';
+  if(!st.length)return '';
+  var t=toNum(todayStr()), latest=Math.max(st[st.length-1].end,t), games=[];
+  for(var i=st.length-1;i>=0&&games.length<SK_GAMES;i--)if(games.indexOf(st[i].game)<0)games.push(st[i].game);
+  var included=st.filter(function(s){return games.indexOf(s.game)>=0;});
+  var start=latest;games.forEach(function(g){   // earliest start among each game's most recent run
+    for(var i=st.length-1;i>=0;i--)if(st[i].game===g){start=Math.min(start,st[i].start);break;}});
+  var vis=included.filter(function(s){return s.end>=start;}), days=latest-start+1, W=days*SK_COL;
+  var current=st[st.length-1];
+  var months='', runStart=start;
+  for(var n=start;n<=latest+1;n++){
+    if(n>latest||(n>start&&new Date(n*DAY).getUTCDate()===1)){
+      var span=n-runStart;
+      months+='<div class="sk-month" style="left:'+((runStart-start)*SK_COL)+'px;width:'+(span*SK_COL)+'px">'+(span>=3?MONTHS_L[new Date(runStart*DAY).getUTCMonth()]+(span>=8&&new Date(runStart*DAY).getUTCFullYear()!==new Date(t*DAY).getUTCFullYear()?' '+new Date(runStart*DAY).getUTCFullYear():''):'')+'</div>';
       runStart=n;
     }
   }
-  head+='</div><div class="gt">';
-  for(var m=start;m<=end;m++){head+='<div class="gt-day'+(m===t?' now':'')+'">'+new Date(m*DAY).getUTCDate()+'</div>';}
-  head+='</div>';
-  var cells='';for(var i=0;i<WIN;i++)cells+='<div class="gt-cell" style="grid-column:'+(i+1)+'"></div>';
-  var body=rows.length?rows.map(function(g){
+  var nums='';for(var m=start;m<=latest;m++)nums+='<div class="sk-day'+(m===t?' now':'')+'">'+new Date(m*DAY).getUTCDate()+'</div>';
+  var rows=games.map(function(g){
     var bars=vis.filter(function(s){return s.game===g;}).map(function(s){
-      var a=Math.max(s.start,start),b=Math.min(s.end,end),cls='gt-bar'+(s.start<start?' cut-l':'')+(s.end>end?' cut-r':'');
-      return '<div class="'+cls+'" style="grid-column:'+(a-start+1)+' / '+(b-start+2)+';background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
-    var live=g===current&&st[st.length-1].end>=t-1;
-    return '<div class="gt-row"><div class="gt-name">'+buyLink(g,art(g),'thumb')+'<span class="grow">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div><div class="gt">'+cells+bars+'</div></div>';
-  }).join(''):'<p class="empty">No days recorded in these three weeks.</p>';
-  var label=nice(start)+' – '+nice(end)+', '+new Date(end*DAY).getUTCFullYear();
-  var nav='<div class="cal-head"><button type="button" class="icon-btn" data-win="-1" aria-label="Previous three weeks"'+(start<=toNum(entries[0].date)?' disabled':'')+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-win="1" aria-label="Next three weeks"'+(end>=latest?' disabled':'')+'>›</button></div>';
-  return '<section><h2>Streaks</h2><p class="sub">The last three weeks. Each bar is a run at the top; the number is the full length of that run.</p><div class="panel">'+nav+head+body+'</div>'+pastTimeline(st)+'</section>';
+      return '<div class="sk-bar" style="left:'+((s.start-start)*SK_COL+1)+'px;width:'+(s.len*SK_COL-2)+'px;background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
+    var live=g===current.game&&current.end>=t-1;
+    return '<div class="sk-row"><div class="sk-label">'+buyLink(g,art(g),'thumb')+'<span class="sk-name">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div>'+
+      '<div class="sk-track">'+bars+'</div></div>';
+  }).join('');
+  return '<section><h2>Streaks</h2><p class="sub">The last '+games.length+' games to hold #1. Each bar is a run at the top; the number is how many days it lasted. Scroll sideways to go back in time.</p>'+
+    '<div class="panel sk-panel"><div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+
+    '<div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div>'+rows+'</div></div></div></section>';
 }
 
 function render(){
   build();
   var st=streaks();
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
-  var psOld=document.getElementById('pscroll'), psAtEnd=!psOld||psOld.scrollLeft+psOld.clientWidth>=psOld.scrollWidth-4, psLeft=psOld?psOld.scrollLeft:0;
+  var skOld=document.getElementById('skscroll'), skAtEnd=!skOld||skOld.scrollLeft+skOld.clientWidth>=skOld.scrollWidth-4, skLeft=skOld?skOld.scrollLeft:0;
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
     '<footer>'+esc(regionInfo().source)+' Last updated '+esc(updated)+'. Not affiliated with Nintendo. <a href="/blog/">Blog</a></footer>';
-  var ps=document.getElementById('pscroll');if(ps)ps.scrollLeft=psAtEnd?ps.scrollWidth:psLeft;
+  var sk=document.getElementById('skscroll');if(sk)sk.scrollLeft=skAtEnd?sk.scrollWidth:skLeft;
 }
 
 document.getElementById('root').addEventListener('click',function(e){
-  var el=e.target.closest('[data-win],[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
+  var el=e.target.closest('[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
   if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();window.scrollTo({top:0,behavior:'smooth'});}}
-  else if(el.dataset.chart){chart=el.dataset.chart;render();}
-  else if(el.dataset.win){var latest=Math.max(toNum(entries[entries.length-1].date),toNum(todayStr()));winEnd=Math.min((winEnd===null?latest:winEnd)+Number(el.dataset.win)*WIN,latest);if(winEnd===latest)winEnd=null;render();}
+  else if(el.dataset.chart){chart=el.dataset.chart;var k=document.getElementById('skscroll');if(k)k.scrollLeft=k.scrollWidth;render();}
   else if(el.dataset.cal){
     var tn=toNum(todayStr()), latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), endWeek=latest+(6-new Date(latest*DAY).getUTCDay());
     var cur=calEnd===null?endWeek:calEnd;
