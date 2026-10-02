@@ -1,0 +1,55 @@
+name: "US links and pictures"
+
+# Runs as soon as your Mac saves a new US day, so a brand-new #1 gets its
+# eShop link and picture within minutes instead of the next morning.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/us/history.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: us-links
+  cancel-in-progress: false
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Find store links and pictures for US games
+        run: node scripts/find-us-links.mjs
+
+      - name: Fill in any missed days
+        continue-on-error: true
+        run: python3 scripts/build_estimates.py us
+
+      - name: Save to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in data/us/links.json data/us/web-art.json data/us/web-art data/us/estimated.json; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No change to save."
+          else
+            git commit -m "US links and pictures for $(TZ=America/Los_Angeles date +%F)"
+            git pull --rebase
+            git push
+          fi
