@@ -1229,9 +1229,162 @@
           }
         ]
       }
+    },
+    "2026-10-03": {
+      "capturedAt": "2026-10-03T18:21:14.842Z",
+      "no1": {
+        "switch1": "Mario + Rabbids Sparks of Hope Gold Edition",
+        "switch2": "Minecraft Dungeons II"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Mario + Rabbids Sparks of Hope Gold Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000014382",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/f/5fba48700f29be012c0448ee94caf2569663906214cf7f32a9239073cad4a40f_1786339107.jpg",
+            "image": "data/au/art/mario-rabbids-sparks-of-hope-gold-edition.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Street Fighter 30th Anniversary Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003621",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9a1158fcc33e69e933b43343097d6d56f022c76e1fe8b404fbe88c2f5326ba33_1785748040.jpg",
+            "image": "data/au/art/street-fighter-30th-anniversary-collection.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Hogwarts Legacy: Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000019472",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/d/8d6950111fb9a0ece31708dcd6ac893f93c012bc585a6a09dfd986d56ab483d1_1786354448.jpg",
+            "image": "data/au/art/hogwarts-legacy-digital-deluxe-edition.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000963",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1785738518.jpg",
+            "image": "data/au/art/minecraft.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Minecraft Dungeons II",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000067527",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/4/943ac82193671174ecae54dabc8c85897b561153d830d86ac288476d3a9d02e4_1790949808.jpg",
+            "image": "data/au/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "LEGO Marvel Super Heroes 2",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000731",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/c/9c5ac391a9b7b817d833afbca60e9ae50a2de9d4150644f21abcba5c7ca6cde8_1785738599.jpg",
+            "image": "data/au/art/lego-marvel-super-heroes-2.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "LEGO Star Wars:The Skywalker Saga Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000013577",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/1/1106107417908021b735454ab43cb0d034910b3c60f8b1afa58d42e2980fa39e_1786338379.jpg",
+            "image": "data/au/art/lego-star-wars-the-skywalker-saga-deluxe-edition.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Mario + Rabbids Kingdom Battle - Gold Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000000401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/f/ef0acec40680ebf47edb0eb8afa90daf133e878abc16c72bd3e5be4e68f8cfe9_1786330978.jpg",
+            "image": "data/au/art/mario-rabbids-kingdom-battle-gold-edition.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Untitled Goose Game",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000014140",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f_1785764748.jpg",
+            "image": "data/au/art/untitled-goose-game.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Minecraft Dungeons II",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000110906",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/4/943ac82193671174ecae54dabc8c85897b561153d830d86ac288476d3a9d02e4_1790949796.jpg",
+            "image": "data/au/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "KINGDOM HEARTS Collection [I～III]",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036431",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/c/2/c2d3ec51b82dccb275e9031c449e7fc1819fd380769159ace26e02431169b689_1786404057.jpg",
+            "image": "data/au/art/kingdom-hearts-collection-i-iii.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Pokémon Pokopia Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
+            "image": "data/au/art/pokemon-pokopia-expansion-pass.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Fire Emblem: Fortune's Weave",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000126930",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/5/159bdf6c9f126feb35ae1123c370cf357bcf069fd5dda84d8d0c4f64ae097e40_1789653683.jpg",
+            "image": "data/au/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Minecraft Dungeons II Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000034458",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/6/f60ee78fc7b29d2557302b888dcc2f9e28aa9c0a6f573acf025488103a5c5ba6_1790952085.jpg",
+            "image": "data/au/art/minecraft-dungeons-ii-deluxe-edition.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Meccha Chameleon",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000135521",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/3/f3c3a1be1cf1c4a1364293da2040abb264ee4713fd546fb8b3c7f9755a57e1c6_1788968009.jpg",
+            "image": "data/au/art/meccha-chameleon.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1786170308.jpg",
+            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack.jpg"
+          },
+          {
+            "rank": 13,
+            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1786170279.jpg",
+            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack.jpg"
+          },
+          {
+            "rank": 15,
+            "title": "RuneScape: Dragonwilds",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000111578",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/8/783247637f11956b97ef7fb07206bd7e3ab62286289256bab0330994c24985de_1790003602.jpg",
+            "image": "data/au/art/runescape-dragonwilds.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-10-02T14:53:07.818Z",
+  "updatedAt": "2026-10-03T18:21:14.842Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -1288,6 +1441,7 @@
     "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack.jpg",
     "FINAL FANTASY VII REBIRTH": "data/au/art/final-fantasy-vii-rebirth.jpg",
     "KINGDOM HEARTS Collection [I～III]": "data/au/art/kingdom-hearts-collection-i-iii.jpg",
-    "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack.jpg"
+    "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack.jpg",
+    "Street Fighter 30th Anniversary Collection": "data/au/art/street-fighter-30th-anniversary-collection.jpg"
   }
 }
