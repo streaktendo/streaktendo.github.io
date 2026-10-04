@@ -48,7 +48,12 @@ section{margin-top:44px}
 .hero-label{color:var(--muted);font-size:.95rem;margin:0 0 14px}
 .hero-art{display:block;width:min(100%,540px);margin:0 auto;border-radius:22px;box-shadow:0 18px 50px rgba(31,29,26,.18),0 2px 6px rgba(31,29,26,.08);background:var(--surface);overflow:hidden}
 .hero-art img{display:block;width:100%;height:auto}
-a.hero-art{transition:transform .2s ease,box-shadow .2s ease}
+/* Red "Switch 2" band for Switch 2 pictures that don't already have one */
+.s2wrap{display:flex;flex-direction:column;width:100%;height:100%;container-type:inline-size}
+.s2band{order:-1;flex:none;height:max(3px,6.5cqw);background:#E60012;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:4cqw;line-height:1;letter-spacing:.03em;text-decoration:none;pointer-events:none}
+.s2wrap>img,.s2wrap>.ph{flex:1 1 auto;min-height:0;width:100%;object-fit:cover}
+@container (max-width:90px){.s2band span{display:none}}
+a.hero-art{text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
 a.hero-art:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(31,29,26,.22),0 2px 6px rgba(31,29,26,.08)}
 a.thumb{display:block}
 .name-link{color:inherit;text-decoration:none}
@@ -175,8 +180,13 @@ function chartLabel(){return (CHARTS.filter(function(c){return c[0]===chart;})[0
 function art(game,eager){
   // Prefer the picture for this platform (Switch 1 and Switch 2 versions can differ).
   var src=images[chart+'|'+game]||images[game];
-  if(src)return '<img src="'+esc(src)+'" alt="'+esc(game)+'"'+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async">';
-  return '<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
+  var pic=src?'<img src="'+esc(src)+'" alt="'+esc(game)+'"'+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async">'
+             :'<div class="ph" style="background:'+col(game)+'" role="img" aria-label="'+esc(game)+'">'+esc(game)+'</div>';
+  // Switch 2 games get a red "Switch 2" band across the top, like the US Nintendo Store app shows.
+  // Pictures cut from that app (data/us/art/) already include it, so they're left as they are.
+  if(chart==='switch2'&&!(src&&src.indexOf('data/us/art/')===0))
+    return '<span class="s2wrap">'+pic+'<span class="s2band" aria-hidden="true"><span>Switch 2</span></span></span>';
+  return pic;
 }
 
 // Sends a pageview or event to GoatCounter once its script has loaded.
