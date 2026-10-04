@@ -108,7 +108,7 @@ footer a{color:var(--accent);font-weight:600}
 .icon-btn:disabled{opacity:.35;cursor:default}
 @media (max-width:520px){.grid{gap:3px}.day{border-radius:6px}}
 /* Streaks: sideways-scrolling day timeline */
-.sk-panel{padding:14px 0 14px 14px}
+.sk-panel{padding:14px 0 14px 14px;--col:18px}
 .sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .sk-scroll::-webkit-scrollbar{display:none}
 .sk-head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);z-index:5;overflow:hidden;background:var(--surface);padding-top:6px}
@@ -315,6 +315,14 @@ function scrubber(pos){
   return '<div class="sk-scrub sk-scrub-'+pos+'" role="scrollbar" aria-controls="skscroll" aria-orientation="horizontal" aria-label="Scroll the streaks timeline">'+
     '<div class="sk-thumb"></div></div>';
 }
+// When there are only a few days to show (e.g. a new region), widen the day columns so the
+// timeline fills the panel instead of sitting in a corner. Never narrower than SK_COL.
+function fitStreakColumns(){
+  var panel=document.querySelector('.sk-panel'), sk=document.getElementById('skscroll');
+  if(!panel||!sk)return;
+  var days=Number(panel.getAttribute('data-days'))||1, avail=sk.clientWidth-14;
+  panel.style.setProperty('--col',Math.max(SK_COL,Math.floor(avail/days*100)/100)+'px');
+}
 function linkScrubber(){
   var sk=document.getElementById('skscroll'), head=document.getElementById('skhead');
   if(!sk)return;
@@ -351,7 +359,7 @@ function linkScrubber(){
   });
   sk.addEventListener('scroll',layout,{passive:true});
   layout();
-  window.onresize=layout;
+  window.onresize=function(){fitStreakColumns();layout();};
 }
 
 function streakChart(st){
@@ -361,7 +369,7 @@ function streakChart(st){
   var included=st.filter(function(s){return games.indexOf(s.game)>=0;});
   var start=latest;games.forEach(function(g){   // earliest start among each game's most recent run
     for(var i=st.length-1;i>=0;i--)if(st[i].game===g){start=Math.min(start,st[i].start);break;}});
-  var vis=included.filter(function(s){return s.end>=start;}), days=latest-start+1, W=days*SK_COL;
+  var vis=included.filter(function(s){return s.end>=start;}), days=latest-start+1;
   var current=st[st.length-1];
   var months='', runStart=start;
   for(var n=start;n<=latest+1;n++){
@@ -369,23 +377,23 @@ function streakChart(st){
       var span=n-runStart;
       var md=new Date(runStart*DAY), mname=span>=6?MONTHS_L[md.getUTCMonth()]:MONTHS[md.getUTCMonth()];
       if(span>=8&&md.getUTCFullYear()!==new Date(t*DAY).getUTCFullYear())mname+=' '+md.getUTCFullYear();
-      months+='<div class="sk-month" style="width:'+(span*SK_COL)+'px"><span class="sk-mlabel">'+mname+'</span></div>';
+      months+='<div class="sk-month" style="width:calc(var(--col) * '+span+')"><span class="sk-mlabel">'+mname+'</span></div>';
       runStart=n;
     }
   }
   var nums='';for(var m=start;m<=latest;m++)nums+='<div class="sk-day'+(m===t?' now':'')+'">'+new Date(m*DAY).getUTCDate()+'</div>';
   var rows=games.map(function(g){
     var bars=vis.filter(function(s){return s.game===g;}).map(function(s){
-      return '<div class="sk-bar" style="left:'+((s.start-start)*SK_COL+1)+'px;width:'+(s.len*SK_COL-2)+'px;background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
+      return '<div class="sk-bar" style="left:calc(var(--col) * '+(s.start-start)+' + 1px);width:calc(var(--col) * '+s.len+' - 2px);background:hsl('+hue(g)+' 55% 42%)" title="'+esc(g)+': '+s.len+' day'+(s.len>1?'s':'')+', '+nice(s.start)+(s.len>1?' to '+nice(s.end):'')+'">'+s.len+'d</div>';}).join('');
     var live=g===current.game&&current.end>=t-1;
     return '<div class="sk-row"><div class="sk-label">'+buyLink(g,art(g),'thumb')+'<span class="sk-name">'+buyLink(g,esc(g),'name-link')+(live?'<span class="tag">On top now</span>':'')+'</span></div>'+
       '<div class="sk-track">'+bars+'</div></div>';
   }).join('');
   return '<section><h2>Streaks</h2><p class="sub">The last '+games.length+' games to hold #1. Each bar is a run at the top; the number is how many days it lasted. Scroll sideways to go back in time.</p>'+
-    '<div class="panel sk-panel">'+scrubber('top')+
+    '<div class="panel sk-panel" data-days="'+days+'">'+scrubber('top')+
     // The month/day header sits apart from the rows so it can stay in view while you scroll down the page.
-    '<div class="sk-head" id="skhead"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px"><div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div></div></div>'+
-    '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+rows+'</div></div>'+
+    '<div class="sk-head" id="skhead"><div class="sk-inner" style="width:calc(var(--col) * '+days+')"><div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div></div></div>'+
+    '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:calc(var(--col) * '+days+')">'+rows+'</div></div>'+
     scrubber('bottom')+'</div></section>';
 }
 
@@ -396,6 +404,7 @@ function render(){
   var skOld=document.getElementById('skscroll'), skAtEnd=!skOld||skOld.scrollLeft+skOld.clientWidth>=skOld.scrollWidth-4, skLeft=skOld?skOld.scrollLeft:0;
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
     '';
+  fitStreakColumns();
   var sk=document.getElementById('skscroll');if(sk)sk.scrollLeft=skAtEnd?sk.scrollWidth:skLeft;
   linkScrubber();
 }
