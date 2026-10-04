@@ -48,9 +48,11 @@ function fullSize(url) {
 
 // Saves a game's image into data/images once, and reuses it after that.
 const IMAGE_DIR = path.resolve('data/au/art');
-async function saveImage(context, url, title) {
-  const slug = title.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'game';
+async function saveImage(context, url, title, chartId) {
+  // One picture per platform: the Switch 1 and Switch 2 versions of a game can have
+  // different box art (e.g. Minecraft Dungeons II), so each gets its own file.
+  const slug = (title.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'game') + '-' + chartId;
   await fs.mkdir(IMAGE_DIR, { recursive: true });
   const existing = (await fs.readdir(IMAGE_DIR)).find((f) => f.replace(/\.[^.]+$/, '') === slug);
   if (existing) return `data/au/art/${existing}`;
@@ -152,7 +154,7 @@ async function readChart(context, chart) {
       return null;
     }
     const top = games.slice(0, KEEP);
-    for (const g of top) g.image = await saveImage(context, g.imageUrl, g.title);
+    for (const g of top) g.image = await saveImage(context, g.imageUrl, g.title, chart.id);
     top.forEach((g) => console.log(`${String(g.rank).padStart(2)}. ${g.title}${g.image ? '' : '   (no image found)'}`));
     return top;
   } catch (err) {
@@ -194,8 +196,8 @@ async function main() {
   history.days = history.days || {};
   history.days[today] = record;
   history.images = history.images || {};
-  for (const list of Object.values(record.charts)) {
-    for (const g of list) if (g.image && !g.image.startsWith('http')) history.images[g.title] = g.image;
+  for (const [chartId, list] of Object.entries(record.charts)) {
+    for (const g of list) if (g.image && !g.image.startsWith('http')) history.images[chartId + '|' + g.title] = g.image;
   }
   history.days = Object.fromEntries(Object.entries(history.days).sort(([a], [b]) => a.localeCompare(b)));
   history.updatedAt = record.capturedAt;
