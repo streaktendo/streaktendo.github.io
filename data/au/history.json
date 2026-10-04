@@ -1384,7 +1384,7 @@
       }
     },
     "2026-10-04": {
-      "capturedAt": "2026-10-04T15:15:13.438Z",
+      "capturedAt": "2026-10-04T18:23:01.770Z",
       "no1": {
         "switch1": "Street Fighter 30th Anniversary Collection",
         "switch2": "Minecraft Dungeons II"
@@ -1479,17 +1479,17 @@
           },
           {
             "rank": 4,
-            "title": "Fire Emblem: Fortune's Weave",
-            "url": "https://ec.nintendo.com/AU/en/titles/70010000126930",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/5/159bdf6c9f126feb35ae1123c370cf357bcf069fd5dda84d8d0c4f64ae097e40_1789653683.jpg",
-            "image": "data/au/art/fire-emblem-fortune-s-weave.jpg"
-          },
-          {
-            "rank": 5,
             "title": "Mario Kart World",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
             "image": "data/au/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Fire Emblem: Fortune's Weave",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000126930",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/5/159bdf6c9f126feb35ae1123c370cf357bcf069fd5dda84d8d0c4f64ae097e40_1789653683.jpg",
+            "image": "data/au/art/fire-emblem-fortune-s-weave.jpg"
           },
           {
             "rank": 7,
@@ -1500,31 +1500,31 @@
           },
           {
             "rank": 10,
-            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
-            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1786170279.jpg",
-            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack.jpg"
-          },
-          {
-            "rank": 11,
             "title": "Meccha Chameleon",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000135521",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/3/f3c3a1be1cf1c4a1364293da2040abb264ee4713fd546fb8b3c7f9755a57e1c6_1788968009.jpg",
             "image": "data/au/art/meccha-chameleon.jpg"
           },
           {
-            "rank": 12,
-            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
-            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1786170308.jpg",
-            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack.jpg"
+            "rank": 11,
+            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1786170279.jpg",
+            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack.jpg"
           },
           {
-            "rank": 13,
+            "rank": 12,
             "title": "Orbitals",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000098974",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/c/4c02a7ceaaacde0b7f51cde1e58b3b575ff2ed94a7c7530e4631b40d0f26413d_1786093859.jpg",
             "image": "data/au/art/orbitals.jpg"
+          },
+          {
+            "rank": 13,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1786170308.jpg",
+            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack.jpg"
           },
           {
             "rank": 14,
@@ -1537,7 +1537,7 @@
       }
     }
   },
-  "updatedAt": "2026-10-04T15:15:13.438Z",
+  "updatedAt": "2026-10-04T18:23:01.770Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
