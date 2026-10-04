@@ -252,14 +252,12 @@ function hero(st){
     '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
-// Calendar: two whole months per page (the previous month above the current one), so the
-// page is full of pictures early in a month and months are never split. The arrows move
-// back and forward two months at a time.
+// Calendar: one whole month per page. The arrows move back and forward a month at a time.
 var calPage=0;
 function calendar(){
   var map=byDate(), t=todayStr(), tn=toNum(t);
   var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), ld=new Date(latest*DAY);
-  var lastIdx=ld.getUTCFullYear()*12+ld.getUTCMonth()-2*calPage, firstIdx=lastIdx-1;
+  var lastIdx=ld.getUTCFullYear()*12+ld.getUTCMonth()-calPage, firstIdx=lastIdx;
   var start=Math.round(Date.UTC(Math.floor(firstIdx/12),firstIdx%12,1)/DAY);
   var end=Math.round(Date.UTC(Math.floor(lastIdx/12),lastIdx%12+1,1)/DAY)-1;
   var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
@@ -270,7 +268,6 @@ function calendar(){
       var firstHead=curMonth===-1;
       curMonth=m;
       var y=dt.getUTCFullYear();
-      h+='<div class="cal-month'+(firstHead?' first':'')+'">'+MONTHS_L[m]+(y!==thisYear?' '+y:'')+'</div>';
       for(var i=0;i<dow;i++)h+='<div class="day blank"></div>';
     }
     var en=map[ds], g=en&&en.game, future=n>tn;
@@ -281,11 +278,11 @@ function calendar(){
   }
   h+='</div>';
   var sy=new Date(start*DAY).getUTCFullYear(), ey=new Date(end*DAY).getUTCFullYear();
-  var label=MONTHS_L[new Date(start*DAY).getUTCMonth()]+(sy!==ey?' '+sy:'')+' – '+MONTHS_L[new Date(end*DAY).getUTCMonth()]+' '+ey;
+  var label=MONTHS_L[new Date(start*DAY).getUTCMonth()]+' '+ey;
   var canBack=entries.length&&start>toNum(entries[0].date), canFwd=calPage>0;
   return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head">'+
-    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Earlier months"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
-    '<button type="button" class="icon-btn" data-cal="1" aria-label="Later months"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
+    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
+    '<button type="button" class="icon-btn" data-cal="1" aria-label="Next month"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
 }
 
 function detail(){
@@ -303,10 +300,10 @@ function detail(){
   return '<div class="panel" style="margin-top:12px" id="detail"><strong>'+esc(chartLabel())+' top 10, '+nice(toNum(selDate))+'</strong>'+body+'</div>';
 }
 
-// Streaks: one row per game for the last 10 games to hold #1 (current game on top),
+// Streaks: one row per game for the last 8 games to hold #1 (current game on top),
 // laid out on a day-by-day timeline that scrolls sideways. It opens on today and ends
-// on the left where the oldest of those 10 streaks began.
-var SK_GAMES=10, SK_COL=18;
+// on the left where the oldest of those 8 streaks began.
+var SK_GAMES=8, SK_COL=18;
 // Keeps the slider above the Streaks timeline in step with its sideways scroll.
 function linkScrubber(){
   var sk=document.getElementById('skscroll'), head=document.getElementById('skhead');
