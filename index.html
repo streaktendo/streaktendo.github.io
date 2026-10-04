@@ -112,13 +112,17 @@ footer a{color:var(--accent);font-weight:600}
 .sk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .sk-scroll::-webkit-scrollbar{display:none}
 .sk-head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);z-index:5;overflow:hidden;background:var(--surface);padding-top:6px}
-.sk-range-bottom{margin:14px 0 0}
 .sk-inner{position:relative;padding-right:14px;box-sizing:content-box}
 .sk-months{display:flex;height:20px}
 .sk-month{flex:none;font-size:.8rem;font-weight:600;white-space:nowrap;border-left:1px solid var(--line);box-sizing:border-box}
 .sk-month:first-child{border-left:0}
 .sk-mlabel{position:sticky;left:0;display:inline-block;padding:0 4px;background:var(--surface)}
-.sk-range{display:block;width:calc(100% - 14px);margin:0 0 12px;accent-color:var(--accent);cursor:pointer}
+.sk-scrub{position:relative;height:28px;margin-right:14px;cursor:pointer;touch-action:none;-webkit-user-select:none;user-select:none}
+.sk-scrub::before{content:"";position:absolute;left:0;right:0;top:50%;height:8px;margin-top:-4px;border-radius:4px;background:var(--line)}
+.sk-thumb{position:absolute;left:0;top:50%;height:12px;margin-top:-6px;border-radius:6px;background:var(--accent);box-shadow:0 1px 3px rgba(31,29,26,.25)}
+.sk-scrub.drag .sk-thumb,.sk-scrub:hover .sk-thumb{height:14px;margin-top:-7px}
+.sk-scrub-top{margin-bottom:6px}
+.sk-scrub-bottom{margin-top:8px}
 .sk-days{display:grid;grid-auto-flow:column;grid-auto-columns:var(--col);border-bottom:1px solid var(--line);padding-bottom:5px}
 .sk-day{text-align:center;font-size:.66rem;color:var(--muted)}
 .sk-day.now{color:var(--accent);font-weight:800}
@@ -304,22 +308,51 @@ function detail(){
 // laid out on a day-by-day timeline that scrolls sideways. It opens on today and ends
 // on the left where the oldest of those 8 streaks began.
 var SK_GAMES=8, SK_COL=18;
-// Keeps the slider above the Streaks timeline in step with its sideways scroll.
+// Two identical scrollbars (above and below the Streaks timeline). Both are drawn by the
+// page itself so they look the same in every browser, and both follow the timeline: drag
+// either thumb, or tap anywhere on a track, and the timeline and the other bar move too.
+function scrubber(pos){
+  return '<div class="sk-scrub sk-scrub-'+pos+'" role="scrollbar" aria-controls="skscroll" aria-orientation="horizontal" aria-label="Scroll the streaks timeline">'+
+    '<div class="sk-thumb"></div></div>';
+}
 function linkScrubber(){
   var sk=document.getElementById('skscroll'), head=document.getElementById('skhead');
-  var ranges=[document.getElementById('skrange'),document.getElementById('skrange2')].filter(Boolean);
   if(!sk)return;
-  var room=function(){return sk.scrollWidth-sk.clientWidth;};
-  var sync=function(){
+  var bars=[].slice.call(document.querySelectorAll('.sk-scrub'));
+  var room=function(){return Math.max(0,sk.scrollWidth-sk.clientWidth);};
+  var layout=function(){
+    var r=room();
+    bars.forEach(function(b){
+      b.hidden=r<=2;
+      var tw=b.clientWidth, th=Math.max(44,Math.round(tw*sk.clientWidth/Math.max(sk.scrollWidth,1)));
+      var x=r>0?Math.round((tw-th)*sk.scrollLeft/r):0;
+      var t=b.firstChild;t.style.width=th+'px';t.style.transform='translateX('+x+'px)';
+      b.setAttribute('aria-valuenow',r>0?Math.round(sk.scrollLeft/r*100):100);
+    });
     if(head)head.scrollLeft=sk.scrollLeft;
-    ranges.forEach(function(r){r.value=room()>0?Math.round(sk.scrollLeft/room()*1000):1000;});
   };
-  ranges.forEach(function(r){r.hidden=room()<=2;r.addEventListener('input',function(){sk.scrollLeft=r.value/1000*room();});});
-  sk.addEventListener('scroll',sync,{passive:true});
-  sync();
+  bars.forEach(function(b){
+    var dragging=false, grab=0;
+    var moveTo=function(clientX){
+      var rect=b.getBoundingClientRect(), th=b.firstChild.offsetWidth, span=rect.width-th;
+      var x=Math.min(Math.max(clientX-rect.left-grab,0),span);
+      sk.scrollLeft=span>0?x/span*room():0;
+    };
+    b.addEventListener('pointerdown',function(e){
+      var tr=b.firstChild.getBoundingClientRect();
+      grab=(e.clientX>=tr.left&&e.clientX<=tr.right)?e.clientX-tr.left:tr.width/2;   // tap on track centres the thumb there
+      dragging=true;b.classList.add('drag');
+      try{b.setPointerCapture(e.pointerId);}catch(err){}
+      moveTo(e.clientX);e.preventDefault();
+    });
+    b.addEventListener('pointermove',function(e){if(dragging)moveTo(e.clientX);});
+    var stop=function(){dragging=false;b.classList.remove('drag');};
+    b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);
+  });
+  sk.addEventListener('scroll',layout,{passive:true});
+  layout();
+  window.onresize=layout;
 }
-window.addEventListener('resize',function(){var sk=document.getElementById('skscroll');if(!sk)return;
-  ['skrange','skrange2'].forEach(function(id){var r=document.getElementById(id);if(r)r.hidden=sk.scrollWidth-sk.clientWidth<=2;});});
 
 function streakChart(st){
   if(!st.length)return '';
@@ -349,11 +382,11 @@ function streakChart(st){
       '<div class="sk-track">'+bars+'</div></div>';
   }).join('');
   return '<section><h2>Streaks</h2><p class="sub">The last '+games.length+' games to hold #1. Each bar is a run at the top; the number is how many days it lasted. Scroll sideways to go back in time.</p>'+
-    '<div class="panel sk-panel"><input type="range" class="sk-range" id="skrange" min="0" max="1000" value="1000" aria-label="Scroll the streaks timeline back in time">'+
+    '<div class="panel sk-panel">'+scrubber('top')+
     // The month/day header sits apart from the rows so it can stay in view while you scroll down the page.
     '<div class="sk-head" id="skhead"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px"><div class="sk-months">'+months+'</div><div class="sk-days">'+nums+'</div></div></div>'+
     '<div class="sk-scroll" id="skscroll"><div class="sk-inner" style="width:'+W+'px;--col:'+SK_COL+'px">'+rows+'</div></div>'+
-    '<input type="range" class="sk-range sk-range-bottom" id="skrange2" min="0" max="1000" value="1000" aria-label="Scroll the streaks timeline back in time"></div></section>';
+    scrubber('bottom')+'</div></section>';
 }
 
 function render(){
