@@ -1,7 +1,367 @@
 {
   "source": "Nintendo Everything weekly eShop charts (All Games)",
-  "collected": "2026-10-04T19:53:24",
+  "collected": "2026-10-04T19:58:20",
   "weeks": [
+    {
+      "chart": "switch1",
+      "date": "2017-04-13",
+      "no1": "Snipperclips",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-41317/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-04-20",
+      "no1": "Snipperclips",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-42017/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-04-27",
+      "no1": "Wonder Boy: The Dragon’s Trap",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-42717/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-05-04",
+      "no1": "Mario Kart 8 Deluxe",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-5417/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-05-11",
+      "no1": "Mario Kart 8 Deluxe",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-51117/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-05-18",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-51817/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-05-25",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-52517/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-05-31",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-53117/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-06-08",
+      "no1": "Ultra Street Fighter II",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-6817/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-06-16",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-61617/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-06-22",
+      "no1": "ARMS",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-62217/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-06-29",
+      "no1": "ARMS",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-62917/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-07-06",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-7617/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-07-13",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-71317/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-07-20",
+      "no1": "Minecraft: Nintendo Switch Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-72017/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-07-27",
+      "no1": "Splatoon 2",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-72717/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-08-03",
+      "no1": "Splatoon 2",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-8317/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-08-10",
+      "no1": "Overcooked Special Edition",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-81017/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-08-17",
+      "no1": "Sonic Mania",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-81717/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-08-24",
+      "no1": "Sonic Mania",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-82417/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-08-31",
+      "no1": "Sonic Mania",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-83117/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-09-07",
+      "no1": "Mario + Rabbids Kingdom Battle",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-9717/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-09-14",
+      "no1": "Mario + Rabbids Kingdom Battle",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-91417/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-09-21",
+      "no1": "NBA 2K18",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-92117/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-09-28",
+      "no1": "NBA 2K18",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-92817/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-10-05",
+      "no1": "Golf Story",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-10517/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-10-12",
+      "no1": "Stardew Valley",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-101217/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-10-19",
+      "no1": "Stardew Valley",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-101917/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-10-27",
+      "no1": "Super Mario Odyssey",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-102717/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-11-03",
+      "no1": "Super Mario Odyssey",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-11317/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-11-10",
+      "no1": "Super Mario Odyssey",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-111017/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-11-17",
+      "no1": "Super Mario Odyssey",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-11-17-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-11-24",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-11-24-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-12-01",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-12-1-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-12-08",
+      "no1": "Xenoblade Chronicles 2",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-12-8-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-12-15",
+      "no1": "Xenoblade Chronicles 2",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-12-15-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-12-22",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-12-22-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2017-12-29",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-12-29-17/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-01-06",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-1-6-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-01-12",
+      "no1": "Arcade Archives Vs. Super Mario Bros.",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-1-12-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-01-20",
+      "no1": "Arcade Archives Vs. Super Mario Bros.",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-1-20-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-01-27",
+      "no1": "Arcade Archives Vs. Super Mario Bros.",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-1-27-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-02-02",
+      "no1": "Celeste",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-2-2-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-02-10",
+      "no1": "Celeste",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-2-10-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-02-17",
+      "no1": "Celeste",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-2-17-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-02-24",
+      "no1": "Bayonetta",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-2-24-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-03-03",
+      "no1": "Bayonetta",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-3-3-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-03-10",
+      "no1": "Arcade Archives Vs. Super Mario Bros.",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-3-10-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-03-17",
+      "no1": "Kirby Star Allies",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-3-17-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-03-24",
+      "no1": "Kirby Star Allies",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-3-24-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-03-30",
+      "no1": "Kirby Star Allies",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-3-30-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-04-07",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-4-7-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-04-14",
+      "no1": "Rocket League",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-4-14-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-04-21",
+      "no1": "Shovel Knight: Treasure Trove",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-4-21-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-04-28",
+      "no1": "Stardew Valley",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-4-28-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-05-05",
+      "no1": "Donkey Kong Country: Tropical Freeze",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-5-5-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-05-12",
+      "no1": "Donkey Kong Country: Tropical Freeze",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-5-12-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-05-19",
+      "no1": "Donkey Kong Country: Tropical Freeze",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-5-19-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-05-26",
+      "no1": "Wizard of Legend",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-5-26-18/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2018-06-02",
+      "no1": "Wizard of Legend",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-6-2-18/"
+    },
     {
       "chart": "switch1",
       "date": "2018-06-09",
@@ -328,6 +688,12 @@
     },
     {
       "chart": "switch1",
+      "date": "2019-06-22",
+      "no1": "NBA 2K19",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-6-22-19/"
+    },
+    {
+      "chart": "switch1",
       "date": "2019-06-29",
       "no1": "NBA 2K19",
       "source": "https://nintendoeverything.com/switch-eshop-charts-6-29-19/"
@@ -481,6 +847,12 @@
       "date": "2019-12-21",
       "no1": "Robonauts",
       "source": "https://nintendoeverything.com/switch-eshop-charts-december-21-2019/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2019-12-28",
+      "no1": "Cuphead",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-december-28-2019/"
     },
     {
       "chart": "switch1",
@@ -688,6 +1060,12 @@
     },
     {
       "chart": "switch1",
+      "date": "2020-08-29",
+      "no1": "NBA 2K20",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-august-29-2020/"
+    },
+    {
+      "chart": "switch1",
       "date": "2020-09-05",
       "no1": "Final Fantasy Crystal Chronicles Remastered Edition",
       "source": "https://nintendoeverything.com/switch-eshop-charts-september-5-2020/"
@@ -763,6 +1141,12 @@
       "date": "2020-11-28",
       "no1": "Hyrule Warriors: Age of Calamity",
       "source": "https://nintendoeverything.com/switch-eshop-charts-november-28-2020/"
+    },
+    {
+      "chart": "switch1",
+      "date": "2020-12-05",
+      "no1": "Mario Kart 8 Deluxe",
+      "source": "https://nintendoeverything.com/switch-eshop-charts-december-5-2020/"
     },
     {
       "chart": "switch1",
@@ -2518,70 +2902,6 @@
     }
   ],
   "unreadable": [
-    "https://nintendoeverything.com/switch-eshop-charts-12-29-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-12-22-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-12-15-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-12-8-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-12-1-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-11-24-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-11-17-17/",
-    "https://nintendoeverything.com/switch-eshop-charts-111017/",
-    "https://nintendoeverything.com/switch-eshop-charts-11317/",
-    "https://nintendoeverything.com/switch-eshop-charts-102717/",
-    "https://nintendoeverything.com/switch-eshop-charts-101917/",
-    "https://nintendoeverything.com/switch-eshop-charts-101217/",
-    "https://nintendoeverything.com/switch-eshop-charts-10517/",
-    "https://nintendoeverything.com/switch-eshop-charts-92817/",
-    "https://nintendoeverything.com/switch-eshop-charts-92117/",
-    "https://nintendoeverything.com/switch-eshop-charts-91417/",
-    "https://nintendoeverything.com/switch-eshop-charts-9717/",
-    "https://nintendoeverything.com/switch-eshop-charts-83117/",
-    "https://nintendoeverything.com/switch-eshop-charts-82417/",
-    "https://nintendoeverything.com/switch-eshop-charts-81717/",
-    "https://nintendoeverything.com/switch-eshop-charts-81017/",
-    "https://nintendoeverything.com/switch-eshop-charts-8317/",
-    "https://nintendoeverything.com/switch-eshop-charts-72717/",
-    "https://nintendoeverything.com/switch-eshop-charts-72017/",
-    "https://nintendoeverything.com/switch-eshop-charts-71317/",
-    "https://nintendoeverything.com/switch-eshop-charts-7617/",
-    "https://nintendoeverything.com/switch-eshop-charts-62917/",
-    "https://nintendoeverything.com/switch-eshop-charts-62217/",
-    "https://nintendoeverything.com/switch-eshop-charts-61617/",
-    "https://nintendoeverything.com/switch-eshop-charts-6817/",
-    "https://nintendoeverything.com/switch-eshop-charts-53117/",
-    "https://nintendoeverything.com/switch-eshop-charts-52517/",
-    "https://nintendoeverything.com/switch-eshop-charts-51817/",
-    "https://nintendoeverything.com/switch-eshop-charts-51117/",
-    "https://nintendoeverything.com/switch-eshop-charts-5417/",
-    "https://nintendoeverything.com/switch-eshop-charts-42717/",
-    "https://nintendoeverything.com/switch-eshop-charts-42017/",
-    "https://nintendoeverything.com/switch-eshop-charts-41317/",
-    "https://nintendoeverything.com/switch-eshop-charts-6-2-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-5-26-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-5-19-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-5-12-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-5-5-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-4-28-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-4-21-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-4-14-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-4-7-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-3-30-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-3-24-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-3-17-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-3-10-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-3-3-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-2-24-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-2-17-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-2-10-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-2-2-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-1-27-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-1-20-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-1-12-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-1-6-18/",
-    "https://nintendoeverything.com/switch-eshop-charts-december-28-2019/",
-    "https://nintendoeverything.com/switch-eshop-charts-6-22-19/",
-    "https://nintendoeverything.com/switch-eshop-charts-december-5-2020/",
-    "https://nintendoeverything.com/switch-eshop-charts-august-29-2020/",
     "https://nintendoeverything.com/nintendo-switch-2-eshop-charts-november-16-2025/",
     "https://nintendoeverything.com/nintendo-switch-eshop-charts-july-20-2025/",
     "https://nintendoeverything.com/nintendo-has-changed-how-the-switch-eshop-charts-work/"
