@@ -71,8 +71,11 @@ for chart in charts:
             else:
                 put(day, chart, b, 'Took #1 (' + why + ')', why_src or src_b)
 
-out = {'region': region.upper(), 'about': 'Estimated from weekly charts; see backfill.json', 'days': dict(sorted(days.items()))}
+# The site only needs each day's #1, so the published file keeps just that (compact, so
+# years of history still load quickly). The reasons and sources stay in backfill.json.
+slim = {d: {'no1': r['no1']} for d, r in sorted(days.items())}
+out = {'region': region.upper(), 'about': 'Filled in from weekly charts; see backfill.json', 'days': slim}
 with open(os.path.join(base, 'estimated.json'), 'w', encoding='utf-8') as f:
-    json.dump(out, f, indent=2, ensure_ascii=False)
+    json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
     f.write('\n')
 print('Wrote %s/estimated.json with %d days' % (base, len(days)))

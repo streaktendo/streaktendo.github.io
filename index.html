@@ -432,7 +432,15 @@ document.getElementById('root').addEventListener('click',function(e){
   var el=e.target.closest('[data-day],[data-chart],[data-region]');if(!el)return;
   if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;['skscroll','calscroll'].forEach(function(id){var k=document.getElementById(id);if(k)k.scrollLeft=k.scrollWidth;});load();window.scrollTo({top:0,behavior:'smooth'});}}
   else if(el.dataset.chart){chart=el.dataset.chart;['skscroll','calscroll'].forEach(function(id){var k=document.getElementById(id);if(k)k.scrollLeft=k.scrollWidth;});render();}
-  else if(el.dataset.day){selDate=selDate===el.dataset.day?null:el.dataset.day;render();var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
+  else if(el.dataset.day){
+    // Update just the selection and the top-10 panel; redrawing every month of history on each tap would be slow.
+    selDate=selDate===el.dataset.day?null:el.dataset.day;
+    document.querySelectorAll('.day.sel').forEach(function(x){x.classList.remove('sel');});
+    if(selDate)el.classList.add('sel');
+    var old=document.getElementById('detail'), html=detail(), panel=document.querySelector('.cal-panel');
+    if(old)old.remove();
+    if(html&&panel)panel.insertAdjacentHTML('afterend',html);
+    var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
 });
 
 function load(){
