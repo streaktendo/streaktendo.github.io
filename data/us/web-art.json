@@ -41,6 +41,7 @@
   "switch1|Fire Emblem: Three Houses": "data/us/web-art/fire-emblem-three-houses-switch1.jpg",
   "switch1|Geki Yaba Runner Anniversary Edition": "data/us/web-art/geki-yaba-runner-anniversary-edition-switch1.jpg",
   "switch1|Golf Story": "data/us/web-art/golf-story-switch1.jpg",
+  "switch1|Hades II": "data/us/web-art/hades-ii-switch1.jpg",
   "switch1|Hades": "data/us/web-art/hades-switch1.jpg",
   "switch1|Hello Kitty Island Adventure": "data/us/web-art/hello-kitty-island-adventure-switch1.jpg",
   "switch1|Hogwarts Legacy": "data/us/web-art/hogwarts-legacy-switch1.jpg",
@@ -61,6 +62,7 @@
   "switch1|Mario Strikers: Battle League": "data/us/web-art/mario-strikers-battle-league-switch1.jpg",
   "switch1|Mario vs. Donkey Kong": "data/us/web-art/mario-vs-donkey-kong-switch1.jpg",
   "switch1|Mega Man X Legacy Collection 2": "data/us/web-art/mega-man-x-legacy-collection-2-switch1.jpg",
+  "switch1|Metroid Prime 4: Beyond": "data/us/web-art/metroid-prime-4-beyond-switch1.jpg",
   "switch1|Metroid Prime Remastered": "data/us/web-art/metroid-prime-remastered-switch1.jpg",
   "switch1|Miitopia": "data/us/web-art/miitopia-switch1.jpg",
   "switch1|Minecraft: Nintendo Switch Edition": "data/us/web-art/minecraft-nintendo-switch-edition-switch1.jpg",
@@ -89,6 +91,7 @@
   "switch1|Shovel Knight: Treasure Trove": "data/us/web-art/shovel-knight-treasure-trove-switch1.jpg",
   "switch1|Snipperclips": "data/us/web-art/snipperclips-switch1.jpg",
   "switch1|Sonic Mania": "data/us/web-art/sonic-mania-switch1.jpg",
+  "switch1|Sonic Racing: CrossWorlds Digital Deluxe Edition": "data/us/web-art/sonic-racing-crossworlds-digital-deluxe-edition-switch1.jpg",
   "switch1|Splatoon 2": "data/us/web-art/splatoon-2-switch1.jpg",
   "switch1|Splatoon 3": "data/us/web-art/splatoon-3-switch1.jpg",
   "switch1|Stardew Valley": "data/us/web-art/stardew-valley-switch1.jpg",
@@ -119,5 +122,12 @@
   "switch1|Xenoblade Chronicles 2": "data/us/web-art/xenoblade-chronicles-2-switch1.jpg",
   "switch1|Xenoblade Chronicles 3": "data/us/web-art/xenoblade-chronicles-3-switch1.jpg",
   "switch1|Xenoblade Chronicles X: Definitive Edition": "data/us/web-art/xenoblade-chronicles-x-definitive-edition-switch1.jpg",
-  "switch2|Kirby and the Forgotten Land – Nintendo Switch 2 Edition + Star-Crossed World": "data/us/web-art/kirby-and-the-forgotten-land-nintendo-switch-2-edition-plus-star-crossed-world.jpg"
+  "switch2|FINAL FANTASY TACTICS - The Ivalice Chronicles": "data/us/web-art/final-fantasy-tactics-the-ivalice-chronicles.jpg",
+  "switch2|Hades II": "data/us/web-art/hades-ii.jpg",
+  "switch2|Hollow Knight: Silksong": "data/us/web-art/hollow-knight-silksong.jpg",
+  "switch2|Hyrule Warriors: Age of Imprisonment": "data/us/web-art/hyrule-warriors-age-of-imprisonment.jpg",
+  "switch2|Kirby Air Riders": "data/us/web-art/kirby-air-riders.jpg",
+  "switch2|Kirby and the Forgotten Land – Nintendo Switch 2 Edition + Star-Crossed World": "data/us/web-art/kirby-and-the-forgotten-land-nintendo-switch-2-edition-plus-star-crossed-world.jpg",
+  "switch2|Metroid Prime 4: Beyond – Nintendo Switch 2 Edition": "data/us/web-art/metroid-prime-4-beyond-nintendo-switch-2-edition.jpg",
+  "switch2|Pokémon Legends: Z-A – Nintendo Switch 2 Edition": "data/us/web-art/pokemon-legends-z-a-nintendo-switch-2-edition.jpg"
 }

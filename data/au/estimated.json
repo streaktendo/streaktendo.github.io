@@ -1,5 +1,1 @@
-{
-  "region": "AU",
-  "about": "Estimated from weekly charts; see backfill.json",
-  "days": {}
-}
+{"region":"AU","about":"Filled in from weekly charts; see backfill.json","days":{}}
