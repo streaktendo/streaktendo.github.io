@@ -78,6 +78,13 @@ a.thumb{display:block}
 
 /* Calendar: one picture per day */
 .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none}
+.cal-scroll::-webkit-scrollbar{display:none}
+.cal-scroll.dragging{scroll-snap-type:none}
+.cal-track{display:flex}
+.cal-page{flex:0 0 100%;scroll-snap-align:start;box-sizing:border-box;padding:0 1px}
+.cal-title{text-align:center;font-weight:800;font-size:1.1rem;margin:2px 0 10px}
+.cal-panel .sk-scrub{margin-right:0}
 .cal-head strong{font-size:1.1rem}
 .icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;width:40px;height:40px;font:inherit;font-size:1.1rem;cursor:pointer}
 .grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
@@ -266,37 +273,33 @@ function hero(st){
     '<p class="hero-meta">'+(last.len===1?'First day on top':last.len+' days in a row, since '+nice(last.start))+'</p>'+(last.len>1?'<div class="pips" aria-hidden="true">'+pips+'</div>':'')+'</div>';
 }
 
-// Calendar: one whole month per page. The arrows move back and forward a month at a time.
-var calPage=0;
-function calendar(){
-  var map=byDate(), t=todayStr(), tn=toNum(t);
-  var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), ld=new Date(latest*DAY);
-  var lastIdx=ld.getUTCFullYear()*12+ld.getUTCMonth()-calPage, firstIdx=lastIdx;
-  var start=Math.round(Date.UTC(Math.floor(firstIdx/12),firstIdx%12,1)/DAY);
-  var end=Math.round(Date.UTC(Math.floor(lastIdx/12),lastIdx%12+1,1)/DAY)-1;
-  var h='<div class="grid">';['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
-  var curMonth=-1, thisYear=new Date(tn*DAY).getUTCFullYear();
+// Calendar: every month side by side, oldest on the left. It opens on the current month
+// and scrolls sideways (one month per swipe) to go back in time, with the same scrollbars
+// as the Streaks timeline.
+function monthGrid(idx,map,t,tn){
+  var y=Math.floor(idx/12), m=idx%12;
+  var start=Math.round(Date.UTC(y,m,1)/DAY), end=Math.round(Date.UTC(y,m+1,1)/DAY)-1;
+  var h='<div class="cal-page"><div class="cal-title">'+MONTHS_L[m]+' '+y+'</div><div class="grid">';
+  ['S','M','T','W','T','F','S'].forEach(function(d){h+='<div class="dow">'+d+'</div>';});
+  for(var i=0;i<new Date(start*DAY).getUTCDay();i++)h+='<div class="day blank"></div>';
   for(var n=start;n<=end;n++){
-    var dt=new Date(n*DAY), m=dt.getUTCMonth(), dow=dt.getUTCDay(), ds=toStr(n);
-    if(m!==curMonth){
-      var firstHead=curMonth===-1;
-      curMonth=m;
-      var y=dt.getUTCFullYear();
-      for(var i=0;i<dow;i++)h+='<div class="day blank"></div>';
-    }
-    var en=map[ds], g=en&&en.game, future=n>tn;
+    var ds=toStr(n), en=map[ds], g=en&&en.game, future=n>tn;
     var cls='day'+(g?'':' nodata')+(future?' future':'')+(ds===t?' today':'')+(ds===selDate?' sel':'');
     var tip=g?nice(n)+': '+g:'';
     h+=g?'<button type="button" class="'+cls+'" data-day="'+ds+'" aria-label="'+esc(tip)+'" title="'+esc(tip)+'">'+art(g)+'</button>'
-        :'<div class="'+cls+'" aria-hidden="true">'+dt.getUTCDate()+'</div>';
+        :'<div class="'+cls+'" aria-hidden="true">'+new Date(n*DAY).getUTCDate()+'</div>';
   }
-  h+='</div>';
-  var sy=new Date(start*DAY).getUTCFullYear(), ey=new Date(end*DAY).getUTCFullYear();
-  var label=MONTHS_L[new Date(start*DAY).getUTCMonth()]+' '+ey;
-  var canBack=entries.length&&start>toNum(entries[0].date), canFwd=calPage>0;
-  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10.</p><div class="panel"><div class="cal-head">'+
-    '<button type="button" class="icon-btn" data-cal="-1" aria-label="Previous month"'+(canBack?'':' disabled')+'>‹</button><strong>'+label+'</strong>'+
-    '<button type="button" class="icon-btn" data-cal="1" aria-label="Next month"'+(canFwd?'':' disabled')+'>›</button></div>'+h+'</div>'+detail()+'</section>';
+  return h+'</div></div>';
+}
+function calendar(){
+  var map=byDate(), t=todayStr(), tn=toNum(t);
+  var latest=Math.max(tn, entries.length?toNum(entries[entries.length-1].date):tn), ld=new Date(latest*DAY);
+  var first=entries.length?new Date(toNum(entries[0].date)*DAY):ld;
+  var lastIdx=ld.getUTCFullYear()*12+ld.getUTCMonth(), firstIdx=first.getUTCFullYear()*12+first.getUTCMonth();
+  var pages='';for(var idx=firstIdx;idx<=lastIdx;idx++)pages+=monthGrid(idx,map,t,tn);
+  return '<section><h2>Calendar</h2><p class="sub">Tap a day to see its top 10. Scroll sideways to go back in time.</p><div class="panel cal-panel">'+
+    scrubber('top','calscroll')+'<div class="cal-scroll" id="calscroll"><div class="cal-track">'+pages+'</div></div>'+scrubber('bottom','calscroll')+
+    '</div>'+detail()+'</section>';
 }
 
 function detail(){
@@ -321,22 +324,16 @@ var SK_GAMES=8, SK_COL=18;
 // Two identical scrollbars (above and below the Streaks timeline). Both are drawn by the
 // page itself so they look the same in every browser, and both follow the timeline: drag
 // either thumb, or tap anywhere on a track, and the timeline and the other bar move too.
-function scrubber(pos){
-  return '<div class="sk-scrub sk-scrub-'+pos+'" role="scrollbar" aria-controls="skscroll" aria-orientation="horizontal" aria-label="Scroll the streaks timeline">'+
+function scrubber(pos,target){
+  target=target||'skscroll';
+  return '<div class="sk-scrub sk-scrub-'+pos+'" data-target="'+target+'" role="scrollbar" aria-controls="'+target+'" aria-orientation="horizontal" aria-label="Scroll sideways to go back in time">'+
     '<div class="sk-thumb"></div></div>';
 }
-// When there are only a few days to show (e.g. a new region), widen the day columns so the
-// timeline fills the panel instead of sitting in a corner. Never narrower than SK_COL.
-function fitStreakColumns(){
-  var panel=document.querySelector('.sk-panel'), sk=document.getElementById('skscroll');
-  if(!panel||!sk)return;
-  var days=Number(panel.getAttribute('data-days'))||1, avail=sk.clientWidth-14;
-  panel.style.setProperty('--col',Math.max(SK_COL,Math.floor(avail/days*100)/100)+'px');
-}
-function linkScrubber(){
-  var sk=document.getElementById('skscroll'), head=document.getElementById('skhead');
-  if(!sk)return;
-  var bars=[].slice.call(document.querySelectorAll('.sk-scrub'));
+// Wires the scrollbars for one sideways-scrolling area (and an optional header that follows it).
+function linkBars(scrollId,headId){
+  var sk=document.getElementById(scrollId), head=headId&&document.getElementById(headId);
+  if(!sk)return function(){};
+  var bars=[].slice.call(document.querySelectorAll('.sk-scrub[data-target="'+scrollId+'"]'));
   var room=function(){return Math.max(0,sk.scrollWidth-sk.clientWidth);};
   var layout=function(){
     var r=room();
@@ -358,18 +355,30 @@ function linkScrubber(){
     };
     b.addEventListener('pointerdown',function(e){
       var tr=b.firstChild.getBoundingClientRect();
-      grab=(e.clientX>=tr.left&&e.clientX<=tr.right)?e.clientX-tr.left:tr.width/2;   // tap on track centres the thumb there
-      dragging=true;b.classList.add('drag');
+      grab=(e.clientX>=tr.left&&e.clientX<=tr.right)?e.clientX-tr.left:tr.width/2;
+      dragging=true;b.classList.add('drag');sk.classList.add('dragging');
       try{b.setPointerCapture(e.pointerId);}catch(err){}
       moveTo(e.clientX);e.preventDefault();
     });
     b.addEventListener('pointermove',function(e){if(dragging)moveTo(e.clientX);});
-    var stop=function(){dragging=false;b.classList.remove('drag');};
+    var stop=function(){dragging=false;b.classList.remove('drag');sk.classList.remove('dragging');};
     b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);
   });
   sk.addEventListener('scroll',layout,{passive:true});
   layout();
-  window.onresize=function(){fitStreakColumns();layout();};
+  return layout;
+}
+// When there are only a few days to show (e.g. a new region), widen the day columns so the
+// timeline fills the panel instead of sitting in a corner. Never narrower than SK_COL.
+function fitStreakColumns(){
+  var panel=document.querySelector('.sk-panel'), sk=document.getElementById('skscroll');
+  if(!panel||!sk)return;
+  var days=Number(panel.getAttribute('data-days'))||1, avail=sk.clientWidth-14;
+  panel.style.setProperty('--col',Math.max(SK_COL,Math.floor(avail/days*100)/100)+'px');
+}
+function linkScrubber(){
+  var a=linkBars('skscroll','skhead'), b=linkBars('calscroll');
+  window.onresize=function(){fitStreakColumns();a();b();};
 }
 
 function streakChart(st){
@@ -411,19 +420,18 @@ function render(){
   build();
   var st=streaks();
   var updated=history.updatedAt?new Date(history.updatedAt).toLocaleString([], {timeZone:'America/Los_Angeles',dateStyle:'medium',timeStyle:'short'})+' Pacific':'not yet';
-  var skOld=document.getElementById('skscroll'), skAtEnd=!skOld||skOld.scrollLeft+skOld.clientWidth>=skOld.scrollWidth-4, skLeft=skOld?skOld.scrollLeft:0;
+  var keep={};['skscroll','calscroll'].forEach(function(id){var o=document.getElementById(id);keep[id]={end:!o||o.scrollLeft+o.clientWidth>=o.scrollWidth-4,left:o?o.scrollLeft:0};});
   document.getElementById('root').innerHTML=topBar()+hero(st)+calendar()+streakChart(st)+regionBlock()+
     '';
   fitStreakColumns();
-  var sk=document.getElementById('skscroll');if(sk)sk.scrollLeft=skAtEnd?sk.scrollWidth:skLeft;
+  ['skscroll','calscroll'].forEach(function(id){var o=document.getElementById(id);if(o)o.scrollLeft=keep[id].end?o.scrollWidth:keep[id].left;});
   linkScrubber();
 }
 
 document.getElementById('root').addEventListener('click',function(e){
-  var el=e.target.closest('[data-cal],[data-day],[data-chart],[data-region]');if(!el)return;
-  if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;load();window.scrollTo({top:0,behavior:'smooth'});}}
-  else if(el.dataset.chart){chart=el.dataset.chart;var k=document.getElementById('skscroll');if(k)k.scrollLeft=k.scrollWidth;render();}
-  else if(el.dataset.cal){calPage=Math.max(0,calPage-Number(el.dataset.cal));render();}
+  var el=e.target.closest('[data-day],[data-chart],[data-region]');if(!el)return;
+  if(el.dataset.region){if(el.dataset.region!==region){region=el.dataset.region;['skscroll','calscroll'].forEach(function(id){var k=document.getElementById(id);if(k)k.scrollLeft=k.scrollWidth;});load();window.scrollTo({top:0,behavior:'smooth'});}}
+  else if(el.dataset.chart){chart=el.dataset.chart;['skscroll','calscroll'].forEach(function(id){var k=document.getElementById(id);if(k)k.scrollLeft=k.scrollWidth;});render();}
   else if(el.dataset.day){selDate=selDate===el.dataset.day?null:el.dataset.day;render();var dt=document.getElementById('detail');if(dt)dt.scrollIntoView({behavior:'smooth',block:'nearest'});}
 });
 
@@ -440,10 +448,10 @@ function load(){
   history=h;indexImages();
   var avail=CHARTS.filter(function(c){return Object.keys(h.days||{}).some(function(d){return h.days[d].no1&&h.days[d].no1[c[0]];});});if(avail.length)chart=avail[0][0];
   var keys=Object.keys(h.days||{}).sort(), anchor=keys.length?keys[keys.length-1]:todayStr();
-  calPage=0;render();
+  render();
   }).catch(function(err){
     history={days:{}};
-    calPage=0;render();
+    render();
     document.querySelector('.hero').innerHTML='<p class="empty">Couldn\'t load the '+esc(regionInfo().label)+' data ('+esc(err.message)+').</p>';
   });
 }
