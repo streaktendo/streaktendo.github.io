@@ -914,6 +914,120 @@
           }
         ]
       }
+    },
+    "2026-10-07": {
+      "capturedAt": "2026-10-07T16:19:32Z",
+      "method": "app",
+      "no1": {
+        "switch2": "Fire Emblem: Fortune’s Weave",
+        "switch1": "Minecraft"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "KINGDOM HEARTS Collection [I～III]",
+            "image": "data/us/art/kingdom-hearts-collection-i-iii.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Diablo IV: Age of Hatred Collection",
+            "image": "data/us/art/diablo-iv-age-of-hatred-collection.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Middle-earth: Shadow Bundle",
+            "image": "data/us/art/middle-earth-shadow-bundle.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Minecraft Dungeons II Deluxe Edition",
+            "image": "data/us/art/minecraft-dungeons-ii-deluxe-edition.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "The Witcher 3: Wild Hunt — Remastered",
+            "image": "data/us/art/the-witcher-3-wild-hunt-remastered.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "ELDEN RING Tarnished Edition",
+            "image": "data/us/art/elden-ring-tarnished-edition.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Mario + Rabbids Sparks of Hope Gold Edition",
+            "image": "data/us/art/mario-rabbids-sparks-of-hope-gold-edition-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Nintendo Switch Sports",
+            "image": "data/us/art/nintendo-switch-sports-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Assassin's Creed Anniversary Edition Mega Bundle",
+            "image": "data/us/art/assassin-s-creed-anniversary-edition-mega-bundle-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -964,7 +1078,9 @@
     "switch2|LEGO Batman: Legacy of the Dark Knight": "data/us/art/lego-batman-legacy-of-the-dark-knight.jpg",
     "switch1|Nintendo Switch Sports": "data/us/art/nintendo-switch-sports-switch1.jpg",
     "switch2|Dragon's Dogma 2: Dark Arisen": "data/us/art/dragon-s-dogma-2-dark-arisen.jpg",
-    "switch2|Orbitals": "data/us/art/orbitals.jpg"
+    "switch2|Orbitals": "data/us/art/orbitals.jpg",
+    "switch2|ELDEN RING Tarnished Edition": "data/us/art/elden-ring-tarnished-edition.jpg",
+    "switch1|Assassin's Creed Anniversary Edition Mega Bundle": "data/us/art/assassin-s-creed-anniversary-edition-mega-bundle-switch1.jpg"
   },
-  "updatedAt": "2026-10-06T16:19:22Z"
+  "updatedAt": "2026-10-07T16:19:32Z"
 }
