@@ -210,6 +210,36 @@
         "Hello Kitty Island Adventure"
       ],
       "readUtc": "2026-10-12T05:44:36Z"
+    },
+    {
+      "utc": "2026-10-12T06:00:04Z",
+      "pacific": "2026-10-11 23:00",
+      "eastern": "2026-10-12 02:00",
+      "switch2": [
+        "KINGDOM HEARTS Collection [I～III]",
+        "Call of Duty: Modern Warfare 4 - Standard Edition",
+        "Resident Evil 4 Gold Edition",
+        "Fire Emblem: Fortune’s Weave",
+        "Dragon's Dogma 2: Dark Arisen",
+        "Resident Evil 2 Deluxe Edition",
+        "Call of Duty: Modern Warfare 4 - Vault Edition",
+        "Mario Kart World",
+        "Minecraft Dungeons II",
+        "Pokémon Pokopia"
+      ],
+      "switch1": [
+        "Minecraft",
+        "Super Smash Bros. Ultimate",
+        "Tomodachi Life: Living the Dream",
+        "Super Mario Party Jamboree",
+        "Mario Kart 8 Deluxe",
+        "Nintendo Switch Sports",
+        "Minecraft Dungeons II",
+        "(English) Pokémon FireRed Version",
+        "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+        "Hello Kitty Island Adventure"
+      ],
+      "readUtc": "2026-10-12T06:04:45Z"
     }
   ]
 }
