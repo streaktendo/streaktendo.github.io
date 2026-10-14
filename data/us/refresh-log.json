@@ -540,6 +540,37 @@
         "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
       ],
       "readUtc": "2026-10-13T07:35:09Z"
+    },
+    {
+      "utc": "2026-10-14T15:40:01Z",
+      "pacific": "2026-10-14 08:40",
+      "eastern": "2026-10-14 11:40",
+      "kind": "hourly",
+      "switch2": [
+        "KINGDOM HEARTS Collection [I～III]",
+        "Fire Emblem: Fortune’s Weave",
+        "Dragon's Dogma 2: Dark Arisen",
+        "Mario Kart World",
+        "Call of Duty: Modern Warfare 4 - Standard Edition",
+        "Pokémon Pokopia",
+        "Minecraft Dungeons II",
+        "Resident Evil 4 Gold Edition",
+        "Resident Evil 2 Deluxe Edition",
+        "Diablo IV: Age of Hatred Collection"
+      ],
+      "switch1": [
+        "Minecraft",
+        "Tomodachi Life: Living the Dream",
+        "Super Smash Bros. Ultimate",
+        "Super Mario Party Jamboree",
+        "Mario Kart 8 Deluxe",
+        "Hello Kitty Island Adventure",
+        "(English) Pokémon FireRed Version",
+        "Nintendo Switch Sports",
+        "Castlevania: Belmont's Curse",
+        "Just Dance: Decades of Hits"
+      ],
+      "readUtc": "2026-10-14T15:45:18Z"
     }
   ]
 }
