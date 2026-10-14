@@ -726,6 +726,37 @@
         "Just Dance: Decades of Hits"
       ],
       "readUtc": "2026-10-14T20:45:12Z"
+    },
+    {
+      "utc": "2026-10-14T21:40:02Z",
+      "pacific": "2026-10-14 14:40",
+      "eastern": "2026-10-14 17:40",
+      "kind": "hourly",
+      "switch2": [
+        "KINGDOM HEARTS Collection [I～III]",
+        "Fire Emblem: Fortune’s Weave",
+        "Dragon's Dogma 2: Dark Arisen",
+        "Call of Duty: Modern Warfare 4 - Standard Edition",
+        "Mario Kart World",
+        "Pokémon Pokopia",
+        "Resident Evil 4 Gold Edition",
+        "Minecraft Dungeons II",
+        "Resident Evil 2 Deluxe Edition",
+        "Diablo IV: Age of Hatred Collection"
+      ],
+      "switch1": [
+        "Minecraft",
+        "Tomodachi Life: Living the Dream",
+        "Super Smash Bros. Ultimate",
+        "Mario Kart 8 Deluxe",
+        "Super Mario Party Jamboree",
+        "Castlevania: Belmont's Curse",
+        "Hello Kitty Island Adventure",
+        "(English) Pokémon FireRed Version",
+        "Nintendo Switch Sports",
+        "Just Dance: Decades of Hits"
+      ],
+      "readUtc": "2026-10-14T21:44:44Z"
     }
   ]
 }
