@@ -943,6 +943,37 @@
         "(English) Pokémon FireRed Version"
       ],
       "readUtc": "2026-10-15T03:45:10Z"
+    },
+    {
+      "utc": "2026-10-15T04:40:03Z",
+      "pacific": "2026-10-14 21:40",
+      "eastern": "2026-10-15 00:40",
+      "kind": "hourly",
+      "switch2": [
+        "KINGDOM HEARTS Collection [I～III]",
+        "Fire Emblem: Fortune’s Weave",
+        "Call of Duty: Modern Warfare 4 - Standard Edition",
+        "Dragon's Dogma 2: Dark Arisen",
+        "Resident Evil 4 Gold Edition",
+        "Mario Kart World",
+        "Pokémon Pokopia",
+        "Minecraft Dungeons II",
+        "Resident Evil 2 Deluxe Edition",
+        "Call of Duty: Modern Warfare 4 - Vault Edition"
+      ],
+      "switch1": [
+        "Minecraft",
+        "Tomodachi Life: Living the Dream",
+        "Super Smash Bros. Ultimate",
+        "Castlevania: Belmont's Curse",
+        "Just Dance: Decades of Hits",
+        "Castlevania: Belmont’s Curse Midnight Edition",
+        "Mario Kart 8 Deluxe",
+        "Super Mario Party Jamboree",
+        "Hello Kitty Island Adventure",
+        "(English) Pokémon FireRed Version"
+      ],
+      "readUtc": "2026-10-15T04:45:08Z"
     }
   ]
 }
