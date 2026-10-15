@@ -1826,6 +1826,120 @@
           }
         ]
       }
+    },
+    "2026-10-15": {
+      "capturedAt": "2026-10-15T16:20:18Z",
+      "method": "app",
+      "no1": {
+        "switch2": "KINGDOM HEARTS Collection [I～III]",
+        "switch1": "Castlevania: Belmont's Curse"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "KINGDOM HEARTS Collection [I～III]",
+            "image": "data/us/art/kingdom-hearts-collection-i-iii.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Resident Evil 4 Gold Edition",
+            "image": "data/us/art/resident-evil-4-gold-edition.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Dragon's Dogma 2: Dark Arisen",
+            "image": "data/us/art/dragon-s-dogma-2-dark-arisen.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Resident Evil 2 Deluxe Edition",
+            "image": "data/us/art/resident-evil-2-deluxe-edition.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Minecraft Dungeons II",
+            "image": "data/us/art/minecraft-dungeons-ii.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Call of Duty: Modern Warfare 4 - Vault Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-vault-edition.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Castlevania: Belmont's Curse",
+            "image": "data/us/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Castlevania: Belmont’s Curse Midnight Edition",
+            "image": "data/us/art/castlevania-belmont-s-curse-midnight-edition-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Just Dance: Decades of Hits",
+            "image": "data/us/art/just-dance-decades-of-hits-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Hello Kitty Island Adventure",
+            "image": "data/us/art/hello-kitty-island-adventure-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -1893,5 +2007,5 @@
     "switch2|Donkey Kong Bananza": "data/us/art/donkey-kong-bananza.jpg",
     "switch1|Just Dance: Decades of Hits": "data/us/art/just-dance-decades-of-hits-switch1.jpg"
   },
-  "updatedAt": "2026-10-14T16:20:15Z"
+  "updatedAt": "2026-10-15T16:20:18Z"
 }
