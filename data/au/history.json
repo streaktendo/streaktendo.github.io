@@ -3371,9 +3371,162 @@
           }
         ]
       }
+    },
+    "2026-10-17": {
+      "capturedAt": "2026-10-17T13:35:51.696Z",
+      "no1": {
+        "switch1": "Castlevania: Belmont's Curse",
+        "switch2": "Fire Emblem: Fortune's Weave - Expansion Pass"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Castlevania: Belmont's Curse",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000116852",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/5/a5c6c13b70a37c36a079750ad7a6ef98f47ea91ef1f444d70bc0d03203b33dc9_1790809317.jpg",
+            "image": "data/au/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Street Fighter 30th Anniversary Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003621",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9a1158fcc33e69e933b43343097d6d56f022c76e1fe8b404fbe88c2f5326ba33_1785748040.jpg",
+            "image": "data/au/art/street-fighter-30th-anniversary-collection-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000963",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1791443480.jpg",
+            "image": "data/au/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Just Dance: Decades of Hits",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000037244",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9aa9660d0bd0f68a3f24413b5dbdfb0211ff4a28d700c3233ca40e840ac565d6_1791882095.jpg",
+            "image": "data/au/art/just-dance-decades-of-hits-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "WRC 9 FIA World Rally Championship",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000029049",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/2/b2ff89f1246ca0af7fa1ad926d35af7c7f020ee889cc4e43380833988f464879_1785814157.jpg",
+            "image": "data/au/art/wrc-9-fia-world-rally-championship-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Gang Beasts",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000033943",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/4/04e13ca17a27aad6c8fe171aca4bcd9731cf04121542958fa4d09d2b49c4c154_1790855115.jpg",
+            "image": "data/au/art/gang-beasts-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Overcooked! All You Can Eat",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000029236",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/6/16af19f777a4f7f935fa0d18ed49f5c32b3571b8a94e8c3af0987e9211526e7e_1785814350.jpg",
+            "image": "data/au/art/overcooked-all-you-can-eat-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Untitled Goose Game",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000014140",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f_1785764748.jpg",
+            "image": "data/au/art/untitled-goose-game-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Nintendo Switch Sports",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000049932",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/3/83488f4ce9ab2ea076406d1b765767bbb81d57a1550d5379f1e1fb341718403a_1785925446.jpg",
+            "image": "data/au/art/nintendo-switch-sports-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Fire Emblem: Fortune's Weave - Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000040950",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/d/7d9bbdf84d24c52ff6e2ab7beed03281cb3ecba50551d389bedf2f8f6827b623_1792068755.jpg",
+            "image": "data/au/art/fire-emblem-fortune-s-weave-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1788779715.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "The Witch's Bakery",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117766",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/4/44492df10ca14492df82040117a4917062b7f9493f7a17cd024a5ca63ca2b76b_1791278841.jpg",
+            "image": "data/au/art/the-witch-s-bakery-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000035974",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/4/04e6690fd02b01cdd0f95ff4b558404433e62f60847bcce3f8138cfa48424575_1786403107.jpg",
+            "image": "data/au/art/final-fantasy-resonance-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Pokémon Pokopia Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
+            "image": "data/au/art/pokemon-pokopia-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Disney/Pixar Toy Story: Retro Roundup! + Toy Story 3 Complete Edition Double Pack",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000039125",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/9/995a8e45beb7558b50d5bfd4405b45a83e600a9653b2a1f7827f733175d7e054_1786624448.jpg",
+            "image": "data/au/art/disney-pixar-toy-story-retro-roundup-toy-story-3-complete-edition-double-pack-switch2.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Minecraft Dungeons II",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000110906",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/4/943ac82193671174ecae54dabc8c85897b561153d830d86ac288476d3a9d02e4_1790949796.jpg",
+            "image": "data/au/art/minecraft-dungeons-ii-switch2.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "FINAL FANTASY RESONANCE",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117101",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/d/5d3e632a341d6481a7ccec6403a17c3c3fe634615d3fcb106768411b854b5871_1788447690.jpg",
+            "image": "data/au/art/final-fantasy-resonance-switch2.jpg"
+          },
+          {
+            "rank": 14,
+            "title": "KINGDOM HEARTS Collection [I～III]",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036431",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/c/2/c2d3ec51b82dccb275e9031c449e7fc1819fd380769159ace26e02431169b689_1786404057.jpg",
+            "image": "data/au/art/kingdom-hearts-collection-i-iii-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-10-16T13:46:38.398Z",
+  "updatedAt": "2026-10-17T13:35:51.696Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -3473,6 +3626,7 @@
     "switch2|FINAL FANTASY RESONANCE": "data/au/art/final-fantasy-resonance-switch2.jpg",
     "switch1|Gang Beasts": "data/au/art/gang-beasts-switch1.jpg",
     "switch2|The Witch's Bakery": "data/au/art/the-witch-s-bakery-switch2.jpg",
-    "switch2|Disney/Pixar Toy Story: Retro Roundup! + Toy Story 3 Complete Edition Double Pack": "data/au/art/disney-pixar-toy-story-retro-roundup-toy-story-3-complete-edition-double-pack-switch2.jpg"
+    "switch2|Disney/Pixar Toy Story: Retro Roundup! + Toy Story 3 Complete Edition Double Pack": "data/au/art/disney-pixar-toy-story-retro-roundup-toy-story-3-complete-edition-double-pack-switch2.jpg",
+    "switch1|Overcooked! All You Can Eat": "data/au/art/overcooked-all-you-can-eat-switch1.jpg"
   }
 }
