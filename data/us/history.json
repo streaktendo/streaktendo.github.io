@@ -2168,6 +2168,120 @@
           }
         ]
       }
+    },
+    "2026-10-18": {
+      "capturedAt": "2026-10-18T15:40:11Z",
+      "method": "app",
+      "no1": {
+        "switch2": "Nintendo Switch Sports Resort",
+        "switch1": "Castlevania: Belmont's Curse"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Nintendo Switch Sports Resort",
+            "image": "data/us/art/nintendo-switch-sports-resort.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "image": "data/us/art/final-fantasy-resonance-digital-deluxe-edition.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Resident Evil 4 Gold Edition",
+            "image": "data/us/art/resident-evil-4-gold-edition.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "KINGDOM HEARTS Collection [I～III]",
+            "image": "data/us/art/kingdom-hearts-collection-i-iii.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Resident Evil 2 Deluxe Edition",
+            "image": "data/us/art/resident-evil-2-deluxe-edition.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Call of Duty: Modern Warfare 4 - Vault Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-vault-edition.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Castlevania: Belmont's Curse",
+            "image": "data/us/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Castlevania: Belmont’s Curse Midnight Edition",
+            "image": "data/us/art/castlevania-belmont-s-curse-midnight-edition-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Hello Kitty Island Adventure",
+            "image": "data/us/art/hello-kitty-island-adventure-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Nintendo Switch Sports",
+            "image": "data/us/art/nintendo-switch-sports-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -2239,5 +2353,5 @@
     "switch2|FINAL FANTASY RESONANCE": "data/us/art/final-fantasy-resonance.jpg",
     "switch2|Harvest Moon: Echoes of Teradea - Nintendo Switch 2 Edition": "data/us/art/harvest-moon-echoes-of-teradea-nintendo-switch-2-edition.jpg"
   },
-  "updatedAt": "2026-10-17T16:19:51Z"
+  "updatedAt": "2026-10-18T15:40:11Z"
 }
