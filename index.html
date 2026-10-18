@@ -175,7 +175,10 @@ var history=null, chart='switch2', winEnd=null, WIN=21, selDate=null, entries=[]
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function toNum(d){var p=d.split('-').map(Number);return Math.round(Date.UTC(p[0],p[1]-1,p[2])/DAY);}
 function toStr(n){return new Date(n*DAY).toISOString().slice(0,10);}
-function todayStr(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+// The US chart is read at 10:40 PM and saved as the next day, so once tomorrow's entry
+// exists, treat it as "today".
+function todayStr(){var s=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  if(entries.length){var l=entries[entries.length-1].date;if(toNum(l)===toNum(s)+1)return l;}return s;}
 function nice(n){var d=new Date(n*DAY);return MONTHS[d.getUTCMonth()]+' '+d.getUTCDate();}
 function hue(name){var h=0,s=name.toLowerCase();for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return (h*137)%360;}
 function col(name){return 'hsl('+hue(name)+' 55% var(--bar-l))';}

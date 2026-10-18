@@ -33,7 +33,11 @@ TABS = [('switch2', 'Nintendo Switch 2'), ('switch1', 'Nintendo Switch')]
 DISMISS = ['Wait', "Don't allow", "Don’t allow", 'Not now', 'No thanks', 'Skip', 'Later', 'Close', 'Cancel', 'OK']
 
 os.makedirs(LOGS, exist_ok=True)
-TODAY = datetime.datetime.now().strftime('%Y-%m-%d')   # the Mac's own time zone (Pacific)
+# The daily run is at 10:40 PM Pacific, right after the eShop's last chart update of the
+# night, and records that chart as the NEXT day. Runs from 6 PM on count as the next day;
+# a manual run earlier in the day still counts as today. (Mac's own time zone = Pacific.)
+_NOW = datetime.datetime.now()
+TODAY = (_NOW.date() + datetime.timedelta(days=1 if _NOW.hour >= 18 else 0)).strftime('%Y-%m-%d')
 WORK = os.path.join(LOGS, 'work-' + TODAY)
 if os.path.isdir(WORK):
     shutil.rmtree(WORK)

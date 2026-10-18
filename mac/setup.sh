@@ -34,7 +34,7 @@ cat > "$PLIST" <<PL
   <key>ProgramArguments</key>
   <array><string>/usr/bin/python3</string><string>$BASE/streaktendo.py</string></array>
   <key>StartCalendarInterval</key>
-  <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+  <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>40</integer></dict>
   <key>StandardOutPath</key><string>$BASE/logs/launchd.log</string>
   <key>StandardErrorPath</key><string>$BASE/logs/launchd.log</string>
 </dict>
@@ -44,5 +44,5 @@ launchctl unload "$PLIST" 2>/dev/null
 launchctl load "$PLIST"
 
 echo
-echo "Set up. The reader will run every day at 9:15 AM."
+echo "Set up. The reader will run every night at 10:40 PM and record the next day."
 echo "Next, test it with:   python3 ~/streaktendo/streaktendo.py --dry-run"
