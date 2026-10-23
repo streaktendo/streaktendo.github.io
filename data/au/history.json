@@ -4136,9 +4136,162 @@
           }
         ]
       }
+    },
+    "2026-10-23": {
+      "capturedAt": "2026-10-23T13:47:22.898Z",
+      "no1": {
+        "switch1": "(English) Pokémon FireRed Version",
+        "switch2": "Nintendo Switch Sports Resort"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Street Fighter 30th Anniversary Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003621",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9a1158fcc33e69e933b43343097d6d56f022c76e1fe8b404fbe88c2f5326ba33_1785748040.jpg",
+            "image": "data/au/art/street-fighter-30th-anniversary-collection-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000963",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1792395797.jpg",
+            "image": "data/au/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Stardew Valley",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000001802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/a/7aa9c6cf5e7d4cecf481f18b1d7a9d79e7aab85045b22203effb2dda409bc5b7_1785740560.jpg",
+            "image": "data/au/art/stardew-valley-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Gang Beasts",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000033943",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/4/04e13ca17a27aad6c8fe171aca4bcd9731cf04121542958fa4d09d2b49c4c154_1790855115.jpg",
+            "image": "data/au/art/gang-beasts-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Just Dance: Decades of Hits",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000037244",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9aa9660d0bd0f68a3f24413b5dbdfb0211ff4a28d700c3233ca40e840ac565d6_1791882095.jpg",
+            "image": "data/au/art/just-dance-decades-of-hits-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Descenders",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000026434",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/6/4/64ac3ca0c4df3238e30cbf51013cf548dcc0f2cf33ddddd7413ebc2191756439_1785802351.jpg",
+            "image": "data/au/art/descenders-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Castlevania: Belmont's Curse",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000116852",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/5/a5c6c13b70a37c36a079750ad7a6ef98f47ea91ef1f444d70bc0d03203b33dc9_1790809317.jpg",
+            "image": "data/au/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Mario Kart 8 Deluxe – Booster Course Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000013750",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/2/42e2b859c33f28f038f655f44adfea836b6e4bbc941ebf23e310523c26585259_1786338347.jpg",
+            "image": "data/au/art/mario-kart-8-deluxe-booster-course-pass-switch1.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Untitled Goose Game",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000014140",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f_1785764748.jpg",
+            "image": "data/au/art/untitled-goose-game-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1792677271.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "FINAL FANTASY RESONANCE",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117101",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/d/5d3e632a341d6481a7ccec6403a17c3c3fe634615d3fcb106768411b854b5871_1788447690.jpg",
+            "image": "data/au/art/final-fantasy-resonance-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "PEAK",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118560",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/3/b31250be9c1c12cd9d2d7a1800ba11635858346f085ffe0ee90ffe3cb9905a9b_1792674433.jpg",
+            "image": "data/au/art/peak-switch2.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "ONE PIECE: Grand Gourmet",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000110984",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/d/5/d50747ac6db1b6efeb4c1c46710aadef0fc665f932aa7b61d1162e70e2d4aab6_1791808515.jpg",
+            "image": "data/au/art/one-piece-grand-gourmet-switch2.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000035974",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/4/04e6690fd02b01cdd0f95ff4b558404433e62f60847bcce3f8138cfa48424575_1786403107.jpg",
+            "image": "data/au/art/final-fantasy-resonance-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Fire Emblem: Fortune's Weave - Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000040950",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/d/7d9bbdf84d24c52ff6e2ab7beed03281cb3ecba50551d389bedf2f8f6827b623_1792667058.jpg",
+            "image": "data/au/art/fire-emblem-fortune-s-weave-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Pokémon Pokopia Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
+            "image": "data/au/art/pokemon-pokopia-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000119401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1792739982.jpg",
+            "image": "data/au/art/minecraft-switch2.jpg"
+          },
+          {
+            "rank": 13,
+            "title": "The Witch's Bakery",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117766",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/4/44492df10ca14492df82040117a4917062b7f9493f7a17cd024a5ca63ca2b76b_1791278841.jpg",
+            "image": "data/au/art/the-witch-s-bakery-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-10-22T13:50:09.338Z",
+  "updatedAt": "2026-10-23T13:47:22.898Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -4247,6 +4400,9 @@
     "switch1|Descenders": "data/au/art/descenders-switch1.jpg",
     "switch1|Stardew Valley": "data/au/art/stardew-valley-switch1.jpg",
     "switch2|Stardew Valley – Nintendo Switch 2 Edition": "data/au/art/stardew-valley-nintendo-switch-2-edition-switch2.jpg",
-    "switch1|Monster Hunter Rise": "data/au/art/monster-hunter-rise-switch1.jpg"
+    "switch1|Monster Hunter Rise": "data/au/art/monster-hunter-rise-switch1.jpg",
+    "switch2|PEAK": "data/au/art/peak-switch2.jpg",
+    "switch2|ONE PIECE: Grand Gourmet": "data/au/art/one-piece-grand-gourmet-switch2.jpg",
+    "switch2|Minecraft": "data/au/art/minecraft-switch2.jpg"
   }
 }
