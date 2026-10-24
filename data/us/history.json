@@ -2852,6 +2852,95 @@
           }
         ]
       }
+    },
+    "2026-10-24": {
+      "capturedAt": "2026-10-24T05:46:18Z",
+      "method": "app",
+      "no1": {
+        "switch2": "Nintendo Switch Sports Resort",
+        "switch1": "Super Smash Bros. Ultimate"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Nintendo Switch Sports Resort",
+            "image": "data/us/art/nintendo-switch-sports-resort.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "image": "data/us/art/final-fantasy-resonance-digital-deluxe-edition.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Cyberpunk 2077: Ultimate Edition",
+            "image": "data/us/art/cyberpunk-2077-ultimate-edition.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Warrior Cats: Clans of the Forest - Feral Edition",
+            "image": "data/us/art/warrior-cats-clans-of-the-forest-feral-edition-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Castlevania: Belmont's Curse",
+            "image": "data/us/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Warrior Cats: Clans of the Forest",
+            "image": "data/us/art/warrior-cats-clans-of-the-forest-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "image": "data/us/art/final-fantasy-resonance-digital-deluxe-edition-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -2925,7 +3014,9 @@
     "switch2|Cyberpunk 2077: Ultimate Edition": "data/us/art/cyberpunk-2077-ultimate-edition.jpg",
     "switch1|Grand Theft Auto: The Trilogy – The Definitive Edition": "data/us/art/grand-theft-auto-the-trilogy-the-definitive-edition-switch1.jpg",
     "switch1|FINAL FANTASY RESONANCE": "data/us/art/final-fantasy-resonance-switch1.jpg",
-    "switch1|FINAL FANTASY RESONANCE Digital Deluxe Edition": "data/us/art/final-fantasy-resonance-digital-deluxe-edition-switch1.jpg"
+    "switch1|FINAL FANTASY RESONANCE Digital Deluxe Edition": "data/us/art/final-fantasy-resonance-digital-deluxe-edition-switch1.jpg",
+    "switch1|Warrior Cats: Clans of the Forest - Feral Edition": "data/us/art/warrior-cats-clans-of-the-forest-feral-edition-switch1.jpg",
+    "switch1|Warrior Cats: Clans of the Forest": "data/us/art/warrior-cats-clans-of-the-forest-switch1.jpg"
   },
-  "updatedAt": "2026-10-23T05:46:15Z"
+  "updatedAt": "2026-10-24T05:46:18Z"
 }
