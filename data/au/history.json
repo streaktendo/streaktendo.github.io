@@ -4442,9 +4442,162 @@
           }
         ]
       }
+    },
+    "2026-10-25": {
+      "capturedAt": "2026-10-25T13:37:20.416Z",
+      "no1": {
+        "switch1": "Hogwarts Legacy",
+        "switch2": "Nintendo Switch Sports Resort"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Hogwarts Legacy",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000062277",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/2/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2_1785990148.jpg",
+            "image": "data/au/art/hogwarts-legacy-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "LEGO Marvel Super Heroes",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000025460",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/a/8a87b6c21c03139337dccc2b7b89c15278c52997e65bdd088e52ba7006d0e3de_1785801774.jpg",
+            "image": "data/au/art/lego-marvel-super-heroes-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Street Fighter 30th Anniversary Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003621",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9a1158fcc33e69e933b43343097d6d56f022c76e1fe8b404fbe88c2f5326ba33_1785748040.jpg",
+            "image": "data/au/art/street-fighter-30th-anniversary-collection-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Cult of the Lamb",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000047974",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/4/f4bf3b2748a6571b0f0c62369b733a8386347abdb158fb985f9ffdf36a5567a6_1785914021.jpg",
+            "image": "data/au/art/cult-of-the-lamb-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Spiritfarer",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000020665",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/3/4/34bacca9ca746602ef64c27b7b7e981e667e872d99e40bfa17086dccf57b81e2_1785788304.jpg",
+            "image": "data/au/art/spiritfarer-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Inscryption",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000051035",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/f/5f1d65045ab88c401b8dbfda3f447eb2c2064bf1815ca966a4265c31dfcd9b68_1785931736.jpg",
+            "image": "data/au/art/inscryption-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Mario Kart 8 Deluxe – Booster Course Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000013750",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/2/42e2b859c33f28f038f655f44adfea836b6e4bbc941ebf23e310523c26585259_1786338347.jpg",
+            "image": "data/au/art/mario-kart-8-deluxe-booster-course-pass-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Untitled Goose Game",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000014140",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f_1785764748.jpg",
+            "image": "data/au/art/untitled-goose-game-switch1.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000963",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1792395797.jpg",
+            "image": "data/au/art/minecraft-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1792677271.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "PEAK",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118560",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/3/b31250be9c1c12cd9d2d7a1800ba11635858346f085ffe0ee90ffe3cb9905a9b_1792674433.jpg",
+            "image": "data/au/art/peak-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "ONE PIECE: Grand Gourmet",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000110984",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/d/5/d50747ac6db1b6efeb4c1c46710aadef0fc665f932aa7b61d1162e70e2d4aab6_1791808515.jpg",
+            "image": "data/au/art/one-piece-grand-gourmet-switch2.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "FINAL FANTASY RESONANCE",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117101",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/d/5d3e632a341d6481a7ccec6403a17c3c3fe634615d3fcb106768411b854b5871_1788447690.jpg",
+            "image": "data/au/art/final-fantasy-resonance-switch2.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Fire Emblem: Fortune's Weave - Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000040950",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/d/7d9bbdf84d24c52ff6e2ab7beed03281cb3ecba50551d389bedf2f8f6827b623_1792667058.jpg",
+            "image": "data/au/art/fire-emblem-fortune-s-weave-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Pokémon Pokopia Expansion Pass",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000036751",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/8/98f6f05914a2cb7026a8a2815511e060d55133148ec70ed0c1b77cf828a15dee_1787803459.jpg",
+            "image": "data/au/art/pokemon-pokopia-expansion-pass-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Subnautica - Nintendo Switch 2 Edition",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000117829",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/2/1/21b53d7db20b98293ddb992264df1e60e61a67a99a4f08345114c986ecfef85a_1786130923.jpg",
+            "image": "data/au/art/subnautica-nintendo-switch-2-edition-switch2.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "FINAL FANTASY RESONANCE Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000035974",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/4/04e6690fd02b01cdd0f95ff4b558404433e62f60847bcce3f8138cfa48424575_1786403107.jpg",
+            "image": "data/au/art/final-fantasy-resonance-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "Warrior Cats: Clans of the Forest - Feral Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000040090",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/5/b5b0c57a31c294997fcf2032d35dd0dba84c29d25f36c2782cf7a7d7be4212b7_1791187640.jpg",
+            "image": "data/au/art/warrior-cats-clans-of-the-forest-feral-edition-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-10-24T13:36:59.985Z",
+  "updatedAt": "2026-10-25T13:37:20.416Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -4561,6 +4714,8 @@
     "switch1|Inscryption": "data/au/art/inscryption-switch1.jpg",
     "switch1|Hogwarts Legacy": "data/au/art/hogwarts-legacy-switch1.jpg",
     "switch1|Spiritfarer": "data/au/art/spiritfarer-switch1.jpg",
-    "switch2|Subnautica - Nintendo Switch 2 Edition": "data/au/art/subnautica-nintendo-switch-2-edition-switch2.jpg"
+    "switch2|Subnautica - Nintendo Switch 2 Edition": "data/au/art/subnautica-nintendo-switch-2-edition-switch2.jpg",
+    "switch1|LEGO Marvel Super Heroes": "data/au/art/lego-marvel-super-heroes-switch1.jpg",
+    "switch2|Warrior Cats: Clans of the Forest - Feral Edition": "data/au/art/warrior-cats-clans-of-the-forest-feral-edition-switch2.jpg"
   }
 }
