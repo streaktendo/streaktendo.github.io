@@ -4750,7 +4750,7 @@
       }
     },
     "2026-10-27": {
-      "capturedAt": "2026-10-27T18:40:53.728Z",
+      "capturedAt": "2026-10-28T00:47:40.516Z",
       "no1": {
         "switch1": "Hogwarts Legacy",
         "switch2": "Nintendo Switch Sports Resort"
@@ -4800,7 +4800,7 @@
             "image": "data/au/art/street-fighter-30th-anniversary-collection-switch1.jpg"
           },
           {
-            "rank": 8,
+            "rank": 7,
             "title": "Crash Bandicoot N. Sane Trilogy",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000002089",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/c/ecfc64f339579b17ed8d12d5bdb4acd0cad2811cb2ff7dd0a02ce7e512c2d26a_1785740409.jpg",
@@ -4808,17 +4808,17 @@
           },
           {
             "rank": 9,
-            "title": "Inscryption",
-            "url": "https://ec.nintendo.com/AU/en/titles/70010000051035",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/f/5f1d65045ab88c401b8dbfda3f447eb2c2064bf1815ca966a4265c31dfcd9b68_1785931736.jpg",
-            "image": "data/au/art/inscryption-switch1.jpg"
-          },
-          {
-            "rank": 10,
             "title": "Subnautica",
             "url": "https://ec.nintendo.com/AU/en/titles/70010000030090",
             "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/5/0500a5492e479ace4bdbfcf93048cb4b1464d3c5836a566e9f16f03d4d8b15ba_1785815439.jpg",
             "image": "data/au/art/subnautica-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Inscryption",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000051035",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/f/5f1d65045ab88c401b8dbfda3f447eb2c2064bf1815ca966a4265c31dfcd9b68_1785931736.jpg",
+            "image": "data/au/art/inscryption-switch1.jpg"
           },
           {
             "rank": 11,
@@ -4894,16 +4894,16 @@
           },
           {
             "rank": 12,
-            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
-            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
-            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1786170279.jpg",
-            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000119401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1793080003.jpg",
+            "image": "data/au/art/minecraft-switch2.jpg"
           }
         ]
       }
     }
   },
-  "updatedAt": "2026-10-27T18:40:53.728Z",
+  "updatedAt": "2026-10-28T00:47:40.516Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
