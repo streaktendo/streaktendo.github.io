@@ -3511,6 +3511,120 @@
           }
         ]
       }
+    },
+    "2026-10-30": {
+      "capturedAt": "2026-10-30T05:53:30Z",
+      "method": "app",
+      "no1": {
+        "switch2": "The Legend of Zelda: Ocarina of Time",
+        "switch1": "Super Smash Bros. Ultimate"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "image": "data/us/art/the-legend-of-zelda-ocarina-of-time.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Nintendo Switch Sports Resort",
+            "image": "data/us/art/nintendo-switch-sports-resort.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Cyberpunk 2077: Ultimate Edition",
+            "image": "data/us/art/cyberpunk-2077-ultimate-edition.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Village in the Shade",
+            "image": "data/us/art/village-in-the-shade.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Castlevania: Belmont's Curse",
+            "image": "data/us/art/castlevania-belmont-s-curse-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Tape to Tape",
+            "image": "data/us/art/tape-to-tape-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+            "image": "data/us/art/grand-theft-auto-the-trilogy-the-definitive-edition-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -3592,7 +3706,8 @@
     "switch2|ONE PIECE: Grand Gourmet": "data/us/art/one-piece-grand-gourmet.jpg",
     "switch2|Minecraft": "data/us/art/minecraft.jpg",
     "switch1|Tape to Tape": "data/us/art/tape-to-tape-switch1.jpg",
-    "switch2|Village in the Shade": "data/us/art/village-in-the-shade.jpg"
+    "switch2|Village in the Shade": "data/us/art/village-in-the-shade.jpg",
+    "switch2|The Legend of Zelda: Ocarina of Time": "data/us/art/the-legend-of-zelda-ocarina-of-time.jpg"
   },
-  "updatedAt": "2026-10-29T05:46:20Z"
+  "updatedAt": "2026-10-30T05:53:30Z"
 }
