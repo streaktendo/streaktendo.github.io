@@ -5360,9 +5360,162 @@
           }
         ]
       }
+    },
+    "2026-10-31": {
+      "capturedAt": "2026-10-31T17:41:54.161Z",
+      "no1": {
+        "switch1": "Hogwarts Legacy",
+        "switch2": "The Legend of Zelda: Ocarina of Time"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Hogwarts Legacy",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000062277",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/2/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2_1785990148.jpg",
+            "image": "data/au/art/hogwarts-legacy-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "LEGO Marvel Super Heroes",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000025460",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/a/8a87b6c21c03139337dccc2b7b89c15278c52997e65bdd088e52ba7006d0e3de_1785801774.jpg",
+            "image": "data/au/art/lego-marvel-super-heroes-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Cult of the Lamb",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000047974",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/4/f4bf3b2748a6571b0f0c62369b733a8386347abdb158fb985f9ffdf36a5567a6_1793192124.jpg",
+            "image": "data/au/art/cult-of-the-lamb-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Spiritfarer",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000020665",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/3/4/34bacca9ca746602ef64c27b7b7e981e667e872d99e40bfa17086dccf57b81e2_1785788304.jpg",
+            "image": "data/au/art/spiritfarer-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Street Fighter 30th Anniversary Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003621",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/a/9a1158fcc33e69e933b43343097d6d56f022c76e1fe8b404fbe88c2f5326ba33_1785748040.jpg",
+            "image": "data/au/art/street-fighter-30th-anniversary-collection-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Death's Door",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000046942",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/b/1bd971db9b44f6cd0b0293392fb97d33055786bd9db98d8353aed65ff5f192a5_1785907630.jpg",
+            "image": "data/au/art/death-s-door-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Crash Bandicoot N. Sane Trilogy",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000002089",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/c/ecfc64f339579b17ed8d12d5bdb4acd0cad2811cb2ff7dd0a02ce7e512c2d26a_1785740409.jpg",
+            "image": "data/au/art/crash-bandicoot-n-sane-trilogy-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Overcooked! 2",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/5/057249cf707a2a733c876c0eb453bb018ee6ea09f3aea5c350f4d76f70840d00_1785747859.jpg",
+            "image": "data/au/art/overcooked-2-switch1.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Subnautica",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000030090",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/5/0500a5492e479ace4bdbfcf93048cb4b1464d3c5836a566e9f16f03d4d8b15ba_1785815439.jpg",
+            "image": "data/au/art/subnautica-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000130793",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/5/8507e0aad9ed021b24bb3ae45209e71be675557d3579f1577f4127fd965b9dd9_1789452081.jpg",
+            "image": "data/au/art/the-legend-of-zelda-ocarina-of-time-switch2.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1792677271.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1786170279.jpg",
+            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1786170308.jpg",
+            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Minecraft",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000119401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a_1793080003.jpg",
+            "image": "data/au/art/minecraft-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "PEAK",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118560",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/3/b31250be9c1c12cd9d2d7a1800ba11635858346f085ffe0ee90ffe3cb9905a9b_1793010315.jpg",
+            "image": "data/au/art/peak-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Cities: Skylines - Expanded Edition",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000119230",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/c/9cf6fb4be9484a31c8ee229e260f84b2020c13f8508d35905d4a697bd5ba7f4e_1791902236.jpg",
+            "image": "data/au/art/cities-skylines-expanded-edition-switch2.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Hogwarts Legacy",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000095418",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/0/f0354775ff98c5321fb6cab8e35c721118fa2f7eab7197b85d526c1e921c275e_1790151788.jpg",
+            "image": "data/au/art/hogwarts-legacy-switch2.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "Animal Crossing: New Horizons – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000065275",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/3/43fe4c85db89d8881dc38e3942fb94742b55a33d2996956a159f45552397c5f8_1786201480.jpg",
+            "image": "data/au/art/animal-crossing-new-horizons-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-10-30T18:35:59.190Z",
+  "updatedAt": "2026-10-31T17:41:54.161Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -5488,6 +5641,7 @@
     "switch1|Subnautica": "data/au/art/subnautica-switch1.jpg",
     "switch1|Death's Door": "data/au/art/death-s-door-switch1.jpg",
     "switch2|The Legend of Zelda: Ocarina of Time": "data/au/art/the-legend-of-zelda-ocarina-of-time-switch2.jpg",
-    "switch2|Cities: Skylines - Expanded Edition": "data/au/art/cities-skylines-expanded-edition-switch2.jpg"
+    "switch2|Cities: Skylines - Expanded Edition": "data/au/art/cities-skylines-expanded-edition-switch2.jpg",
+    "switch1|Overcooked! 2": "data/au/art/overcooked-2-switch1.jpg"
   }
 }
