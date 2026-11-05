@@ -4081,6 +4081,120 @@
           }
         ]
       }
+    },
+    "2026-11-05": {
+      "capturedAt": "2026-11-05T06:49:18Z",
+      "method": "app",
+      "no1": {
+        "switch2": "The Legend of Zelda: Ocarina of Time",
+        "switch1": "Super Smash Bros. Ultimate"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "image": "data/us/art/the-legend-of-zelda-ocarina-of-time.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Nintendo Switch Sports Resort",
+            "image": "data/us/art/nintendo-switch-sports-resort.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "FINAL FANTASY VII REBIRTH",
+            "image": "data/us/art/final-fantasy-vii-rebirth.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+            "image": "data/us/art/final-fantasy-vii-remake-intergrade.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Godzilla: Destroy All Monsters Melee Remastered - Digital Deluxe Edition",
+            "image": "data/us/art/godzilla-destroy-all-monsters-melee-remastered-digital-deluxe-edition.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+            "image": "data/us/art/final-fantasy-vii-rebirth-digital-deluxe-edition.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Godzilla: Destroy All Monsters Melee Remastered",
+            "image": "data/us/art/godzilla-destroy-all-monsters-melee-remastered.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "FINAL FANTASY RESONANCE",
+            "image": "data/us/art/final-fantasy-resonance.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+            "image": "data/us/art/grand-theft-auto-the-trilogy-the-definitive-edition-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Animal Crossing: New Horizons",
+            "image": "data/us/art/animal-crossing-new-horizons-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Pokémon Legends: Z-A",
+            "image": "data/us/art/pokemon-legends-z-a-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "image": "data/us/art/the-legend-of-zelda-breath-of-the-wild-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -4170,7 +4284,10 @@
     "switch1|Pokémon Legends: Z-A": "data/us/art/pokemon-legends-z-a-switch1.jpg",
     "switch1|Animal Crossing: New Horizons": "data/us/art/animal-crossing-new-horizons-switch1.jpg",
     "switch2|FINAL FANTASY VII REMAKE INTERGRADE": "data/us/art/final-fantasy-vii-remake-intergrade.jpg",
-    "switch2|FINAL FANTASY VII REBIRTH Digital Deluxe Edition": "data/us/art/final-fantasy-vii-rebirth-digital-deluxe-edition.jpg"
+    "switch2|FINAL FANTASY VII REBIRTH Digital Deluxe Edition": "data/us/art/final-fantasy-vii-rebirth-digital-deluxe-edition.jpg",
+    "switch2|Godzilla: Destroy All Monsters Melee Remastered - Digital Deluxe Edition": "data/us/art/godzilla-destroy-all-monsters-melee-remastered-digital-deluxe-edition.jpg",
+    "switch2|Godzilla: Destroy All Monsters Melee Remastered": "data/us/art/godzilla-destroy-all-monsters-melee-remastered.jpg",
+    "switch1|The Legend of Zelda: Breath of the Wild": "data/us/art/the-legend-of-zelda-breath-of-the-wild-switch1.jpg"
   },
-  "updatedAt": "2026-11-04T06:53:07Z"
+  "updatedAt": "2026-11-05T06:49:18Z"
 }
