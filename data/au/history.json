@@ -6890,9 +6890,162 @@
           }
         ]
       }
+    },
+    "2026-11-10": {
+      "capturedAt": "2026-11-10T20:27:14.605Z",
+      "no1": {
+        "switch1": "Hogwarts Legacy",
+        "switch2": "The Legend of Zelda: Ocarina of Time"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Hogwarts Legacy",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000062277",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/2/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2_1785990148.jpg",
+            "image": "data/au/art/hogwarts-legacy-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Boomerang Fu - Street Food DLC",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000081964",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/c/7c27d2c5ac63b019a037533c7054d8cadbebc88e29822f06e8101aca5d4c2ca2_1793714509.jpg",
+            "image": "data/au/art/boomerang-fu-street-food-dlc-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "LEGO Marvel Super Heroes",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000025460",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/a/8a87b6c21c03139337dccc2b7b89c15278c52997e65bdd088e52ba7006d0e3de_1785801774.jpg",
+            "image": "data/au/art/lego-marvel-super-heroes-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Boomerang Fu",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000021919",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/2/b/2b483f4e9672eabc347b1e154082cd7d65660c05405679ca405b7b7b9b23e60c_1793287756.jpg",
+            "image": "data/au/art/boomerang-fu-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "(English) Pokémon FireRed Version",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000118614",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/a/fa215e42ab1979155b1b659797005424e2fb5068eab5a35818ccd2e59d891d54_1787803486.jpg",
+            "image": "data/au/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Overcooked! 2",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000003401",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/5/057249cf707a2a733c876c0eb453bb018ee6ea09f3aea5c350f4d76f70840d00_1785747859.jpg",
+            "image": "data/au/art/overcooked-2-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "LEGO Jurassic World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000021758",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/c/f/cfa88477d217957b412f6a8f0fa170f3693167fa35e864ce8066109b54b23d48_1785790324.jpg",
+            "image": "data/au/art/lego-jurassic-world-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "LEGO Star Wars: The Skywalker Saga Galactic Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000015283",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/2/12bbea537c1da89105a4b0314a3de883244c5b3fcbcd4b868b580eb04aacc5c9_1786341814.jpg",
+            "image": "data/au/art/lego-star-wars-the-skywalker-saga-galactic-edition-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Needle In A Haystack 2026",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000141019",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/d/e/dea29a268899f5e9f80ef4f5fa3d422fa67afbc8aa3ee93be8d7bce58af0f48d_1793584884.jpg",
+            "image": "data/au/art/needle-in-a-haystack-2026-switch1.jpg"
+          },
+          {
+            "rank": 13,
+            "title": "LEGO Star Wars: The Skywalker Saga",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000049041",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/5/e52844f237f452c187db5daec14c3300f45d7be100c1dcff88c7188c8b9b48a9_1785924152.jpg",
+            "image": "data/au/art/lego-star-wars-the-skywalker-saga-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000130793",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/5/8507e0aad9ed021b24bb3ae45209e71be675557d3579f1577f4127fd965b9dd9_1793960481.jpg",
+            "image": "data/au/art/the-legend-of-zelda-ocarina-of-time-switch2.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "FINAL FANTASY VII REBIRTH",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000112478",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/d/1d398651099000ad96b0004c737eee678c185884856a670ba086512f47b4048f_1786120459.jpg",
+            "image": "data/au/art/final-fantasy-vii-rebirth-switch2.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000101699",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/4/e/4e51758a913dd23ce9acec4124ae49ce7a4099ecaf4aae536d8ae5fd6843c3ba_1786098288.jpg",
+            "image": "data/au/art/final-fantasy-vii-remake-intergrade-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000032076",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/7/0/70a52793fabd75c01580b945597cb4f623deab21280189a093e449049687ee9d_1786392767.jpg",
+            "image": "data/au/art/final-fantasy-vii-rebirth-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1792677271.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "FINAL FANTASY VII REMAKE INTERGRADE Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000030730",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/8/58905ba6f43df0cc84b722cb9e6f137dbd115e08a5c691d111f567bf8c84e130_1786388690.jpg",
+            "image": "data/au/art/final-fantasy-vii-remake-intergrade-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1793637086.jpg",
+            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Warhammer Survivors",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000112390",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/3/530c3c41d5635893b66c8ff7e63c4e4cecc3c5dda91d3a8bb5c64309abe5e7ce_1791538035.jpg",
+            "image": "data/au/art/warhammer-survivors-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "The Legend of Zelda: Tears of the Kingdom – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056808",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/b/bb3b21f6022340a2f1c115399435ba5bae453f8e02da263f110bc874da94bf2b_1793637162.jpg",
+            "image": "data/au/art/the-legend-of-zelda-tears-of-the-kingdom-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-11-09T22:58:43.238Z",
+  "updatedAt": "2026-11-10T20:27:14.605Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -7029,6 +7182,9 @@
     "switch1|Boomerang Fu - Street Food DLC": "data/au/art/boomerang-fu-street-food-dlc-switch1.jpg",
     "switch2|DRAGON QUEST XI S: Echoes of an Elusive Age - Definitive Edition": "data/au/art/dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition-switch2.jpg",
     "switch2|Pikmin 4 – Nintendo Switch 2 Edition + Dandori Academy Upgrade Pack": "data/au/art/pikmin-4-nintendo-switch-2-edition-dandori-academy-upgrade-pack-switch2.jpg",
-    "switch2|Shrek 2 Remastered": "data/au/art/shrek-2-remastered-switch2.jpg"
+    "switch2|Shrek 2 Remastered": "data/au/art/shrek-2-remastered-switch2.jpg",
+    "switch1|Needle In A Haystack 2026": "data/au/art/needle-in-a-haystack-2026-switch1.jpg",
+    "switch1|LEGO Star Wars: The Skywalker Saga": "data/au/art/lego-star-wars-the-skywalker-saga-switch1.jpg",
+    "switch2|Warhammer Survivors": "data/au/art/warhammer-survivors-switch2.jpg"
   }
 }
