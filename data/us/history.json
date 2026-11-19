@@ -5295,6 +5295,120 @@
           }
         ]
       }
+    },
+    "2026-11-19": {
+      "capturedAt": "2026-11-19T06:49:51Z",
+      "method": "app",
+      "no1": {
+        "switch2": "The Legend of Zelda: Ocarina of Time",
+        "switch1": "Super Smash Bros. Ultimate"
+      },
+      "charts": {
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "image": "data/us/art/the-legend-of-zelda-ocarina-of-time.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Nintendo Switch Sports Resort",
+            "image": "data/us/art/nintendo-switch-sports-resort.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Mario Kart World",
+            "image": "data/us/art/mario-kart-world.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Pokémon Pokopia",
+            "image": "data/us/art/pokemon-pokopia.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Call of Duty: Modern Warfare 4 - Standard Edition",
+            "image": "data/us/art/call-of-duty-modern-warfare-4-standard-edition.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition",
+            "image": "data/us/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "FINAL FANTASY VII REBIRTH",
+            "image": "data/us/art/final-fantasy-vii-rebirth.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Fire Emblem: Fortune’s Weave",
+            "image": "data/us/art/fire-emblem-fortune-s-weave.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+            "image": "data/us/art/final-fantasy-vii-remake-intergrade.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "LEGO Batman: Legacy of the Dark Knight Deluxe Edition",
+            "image": "data/us/art/lego-batman-legacy-of-the-dark-knight-deluxe-edition.jpg"
+          }
+        ],
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "Super Smash Bros. Ultimate",
+            "image": "data/us/art/super-smash-bros-ultimate-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Tomodachi Life: Living the Dream",
+            "image": "data/us/art/tomodachi-life-living-the-dream-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Mario Kart 8 Deluxe",
+            "image": "data/us/art/mario-kart-8-deluxe-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Minecraft",
+            "image": "data/us/art/minecraft-switch1.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "The Legend of Zelda: Skyward Sword HD",
+            "image": "data/us/art/the-legend-of-zelda-skyward-sword-hd-switch1.jpg"
+          },
+          {
+            "rank": 6,
+            "title": "Super Mario Party Jamboree",
+            "image": "data/us/art/super-mario-party-jamboree-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "image": "data/us/art/the-legend-of-zelda-breath-of-the-wild-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "LEGO Star Wars: The Skywalker Saga Galactic Edition",
+            "image": "data/us/art/lego-star-wars-the-skywalker-saga-galactic-edition-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "(English) Pokémon FireRed Version",
+            "image": "data/us/art/english-pokemon-firered-version-switch1.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Animal Crossing: New Horizons",
+            "image": "data/us/art/animal-crossing-new-horizons-switch1.jpg"
+          }
+        ]
+      }
     }
   },
   "images": {
@@ -5394,7 +5508,8 @@
     "switch1|LEGO Star Wars: The Skywalker Saga Galactic Edition": "data/us/art/lego-star-wars-the-skywalker-saga-galactic-edition-switch1.jpg",
     "switch2|Shrek 2 Remastered": "data/us/art/shrek-2-remastered.jpg",
     "switch2|Metaphor: ReFantazio": "data/us/art/metaphor-refantazio.jpg",
-    "switch2|The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition": "data/us/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition.jpg"
+    "switch2|The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition": "data/us/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition.jpg",
+    "switch2|LEGO Batman: Legacy of the Dark Knight Deluxe Edition": "data/us/art/lego-batman-legacy-of-the-dark-knight-deluxe-edition.jpg"
   },
-  "updatedAt": "2026-11-18T06:50:32Z"
+  "updatedAt": "2026-11-19T06:49:51Z"
 }
