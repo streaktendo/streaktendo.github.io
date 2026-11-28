@@ -9644,9 +9644,162 @@
           }
         ]
       }
+    },
+    "2026-11-28": {
+      "capturedAt": "2026-11-28T20:53:46.040Z",
+      "no1": {
+        "switch1": "LEGO Star Wars:The Skywalker Saga Deluxe Edition",
+        "switch2": "Mario Kart World"
+      },
+      "charts": {
+        "switch1": [
+          {
+            "rank": 1,
+            "title": "LEGO Star Wars:The Skywalker Saga Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000013577",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/1/1106107417908021b735454ab43cb0d034910b3c60f8b1afa58d42e2980fa39e_1786338379.jpg",
+            "image": "data/au/art/lego-star-wars-the-skywalker-saga-deluxe-edition-switch1.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Hogwarts Legacy: Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000019472",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/d/8d6950111fb9a0ece31708dcd6ac893f93c012bc585a6a09dfd986d56ab483d1_1786354448.jpg",
+            "image": "data/au/art/hogwarts-legacy-digital-deluxe-edition-switch1.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "Unravel Two",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000015566",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/e/3/e39e17159b7aa3770398e4dc1ebd15eb15377c6cbad55d2256f84e55394436de_1785775131.jpg",
+            "image": "data/au/art/unravel-two-switch1.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "LEGO Harry Potter Collection",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000013534",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/6/16692d987f2984b4b32b81859e1448f3e3abfcf1d8d644c73b74c8921ef32975_1785764186.jpg",
+            "image": "data/au/art/lego-harry-potter-collection-switch1.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "House Flipper",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000021181",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/6/86e058156a4b7ac6d7972bd70d0d7b195479ad5d37dbf10a5419e811fa1c182c_1785789925.jpg",
+            "image": "data/au/art/house-flipper-switch1.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "Need for Speed Hot Pursuit Remastered",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000029275",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/d/b/db1a656b6d00996f978483999ddd9221aa6c5680d6cfae60ccf9566d4e444a5d_1785814662.jpg",
+            "image": "data/au/art/need-for-speed-hot-pursuit-remastered-switch1.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "LEGO Marvel Super Heroes 2",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000000731",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/9/c/9c5ac391a9b7b817d833afbca60e9ae50a2de9d4150644f21abcba5c7ca6cde8_1785738599.jpg",
+            "image": "data/au/art/lego-marvel-super-heroes-2-switch1.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "Disney Dreamlight Valley",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000033557",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/a/2/a217e59ff2d136b1142bcc73e4759f9a9b927c998caadf1fd7ebaa7f60fadae1_1794310036.jpg",
+            "image": "data/au/art/disney-dreamlight-valley-switch1.jpg"
+          },
+          {
+            "rank": 12,
+            "title": "Slay the Spire",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000012387",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/6/d/6d1d0c45eef34e20f352bd2222e036b619fa382f47385f2a8f80c137a523533e_1785762519.jpg",
+            "image": "data/au/art/slay-the-spire-switch1.jpg"
+          },
+          {
+            "rank": 13,
+            "title": "Overcooked! 2 - Gourmet Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000010112",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/0/e/0ed913093fe7309b2254a4c5b20962b02690645c3ab0f68d407bec68bdbac3e9_1786332675.jpg",
+            "image": "data/au/art/overcooked-2-gourmet-edition-switch1.jpg"
+          }
+        ],
+        "switch2": [
+          {
+            "rank": 1,
+            "title": "Mario Kart World",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000096802",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/5/e/5e2547f766550ce295528c347b5c200272b5d71bf45a791682c96729051ac3d9_1788929239.jpg",
+            "image": "data/au/art/mario-kart-world-switch2.jpg"
+          },
+          {
+            "rank": 2,
+            "title": "Xenoblade Chronicles 3 – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000074399",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/6/f68dbc003845a73241f6cbbf69ac4bddb954e68d0bff6c308a189866d83565a4_1794822091.jpg",
+            "image": "data/au/art/xenoblade-chronicles-3-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          },
+          {
+            "rank": 3,
+            "title": "The Legend of Zelda: Ocarina of Time",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000130793",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/8/5/8507e0aad9ed021b24bb3ae45209e71be675557d3579f1577f4127fd965b9dd9_1794835036.jpg",
+            "image": "data/au/art/the-legend-of-zelda-ocarina-of-time-switch2.jpg"
+          },
+          {
+            "rank": 4,
+            "title": "Monster Hunter Wilds",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000102603",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/1/b13aa9e8d83b6fed7ca32b0289fb35b14a9269c04239490b5a24dfb6493663c0_1793331373.jpg",
+            "image": "data/au/art/monster-hunter-wilds-switch2.jpg"
+          },
+          {
+            "rank": 5,
+            "title": "Hogwarts Legacy: Digital Deluxe Edition",
+            "url": "https://ec.nintendo.com/AU/en/bundles/70070000027745",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/7/174545ceaee13785f7e73dc9dac60bf7d8e17f510170192a84a9136ae188920d_1786379673.jpg",
+            "image": "data/au/art/hogwarts-legacy-digital-deluxe-edition-switch2.jpg"
+          },
+          {
+            "rank": 7,
+            "title": "Split Fiction",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000097435",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/6/d/6de085f1efb6c90b754e383fe810f3cb0e847105bb584c706f4cd3b5c66491f4_1786087522.jpg",
+            "image": "data/au/art/split-fiction-switch2.jpg"
+          },
+          {
+            "rank": 8,
+            "title": "SONIC X SHADOW GENERATIONS",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000095221",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/d/bd042de319136af8b91fd23ca401ccab764cfe24aadfdd97e7e7c3498d7071ed_1786082727.jpg",
+            "image": "data/au/art/sonic-x-shadow-generations-switch2.jpg"
+          },
+          {
+            "rank": 9,
+            "title": "Plants vs. Zombies: Replanted",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000098463",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/b/1/b192bd37698dbead21d4b0ff84a8d5f985a804f93ad767a29f9127bbf7aa904d_1793750516.jpg",
+            "image": "data/au/art/plants-vs-zombies-replanted-switch2.jpg"
+          },
+          {
+            "rank": 10,
+            "title": "Nintendo Switch Sports Resort",
+            "url": "https://ec.nintendo.com/AU/en/titles/70010000125146",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/1/c/1c311d937802aa93c1f48f9922a58f916eb3ddc9370050b131ec3d2c3d1502ac_1792677271.jpg",
+            "image": "data/au/art/nintendo-switch-sports-resort-switch2.jpg"
+          },
+          {
+            "rank": 11,
+            "title": "The Legend of Zelda: Breath of the Wild – Nintendo Switch 2 Edition Upgrade Pack",
+            "url": "https://ec.nintendo.com/AU/en/aocs/70050000056836",
+            "imageUrl": "https://store.nintendo.com.au/media/catalog/product/cache/55351146f864384e20b16a2043f3a323/f/e/feeba23325d25c05a02bfe2f1888077b581abce80cf094d18aa2febd25be100a_1793637086.jpg",
+            "image": "data/au/art/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2-edition-upgrade-pack-switch2.jpg"
+          }
+        ]
+      }
     }
   },
-  "updatedAt": "2026-11-27T21:57:14.000Z",
+  "updatedAt": "2026-11-28T20:53:46.040Z",
   "images": {
     "Minecraft": "data/au/art/minecraft.jpg",
     "(English) Pokémon FireRed Version": "data/au/art/english-pokemon-firered-version.jpg",
@@ -9812,6 +9965,7 @@
     "switch2|Kirby and the Forgotten Land – Nintendo Switch 2 Edition + Star-Crossed World Upgrade Pack": "data/au/art/kirby-and-the-forgotten-land-nintendo-switch-2-edition-star-crossed-world-upgrad-switch2.jpg",
     "switch1|Disney Dreamlight Valley": "data/au/art/disney-dreamlight-valley-switch1.jpg",
     "switch2|Xenoblade Chronicles 3 – Nintendo Switch 2 Edition Upgrade Pack": "data/au/art/xenoblade-chronicles-3-nintendo-switch-2-edition-upgrade-pack-switch2.jpg",
-    "switch2|Monster Hunter Wilds": "data/au/art/monster-hunter-wilds-switch2.jpg"
+    "switch2|Monster Hunter Wilds": "data/au/art/monster-hunter-wilds-switch2.jpg",
+    "switch1|Overcooked! 2 - Gourmet Edition": "data/au/art/overcooked-2-gourmet-edition-switch1.jpg"
   }
 }
